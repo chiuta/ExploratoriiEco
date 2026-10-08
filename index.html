@@ -234,6 +234,7 @@ tr:hover td{background:var(--panel-2);color:var(--ink);}
 }
 .searchbox input::placeholder{color:var(--ink-faint);}
 .searchbox .ico{color:var(--ink-faint);font-family:var(--font-mono);}
+.searchbox:focus-within{border-color:var(--verde);box-shadow:0 0 0 2px var(--verde-glow);}
 .count-pill{font-family:var(--font-mono);font-size:11px;color:var(--ink-faint);background:var(--panel-2);padding:2px 8px;border-radius:20px;}
 
 /* ---------- buttons ---------- */
@@ -583,7 +584,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
     <div class="tl-item"><div class="yr">1948</div><h4>Se înființează IUCN</h4><p>Uniunea Internațională pentru Conservarea Naturii ia ființă — azi autoarea Listei Roșii, referința globală pentru statutul de conservare al speciilor.</p></div>
     <div class="tl-item"><div class="yr">1970</div><h4>Prima Zi a Pământului</h4><p>22 aprilie 1970: peste 20 de milioane de americani ies în stradă pentru mediu — momentul adesea citat ca naștere a mișcării ecologiste moderne de masă.</p></div>
     <div class="tl-item"><div class="yr">1992</div><h4>Summit-ul de la Rio</h4><p>Se semnează Convenția privind Diversitatea Biologică — biodiversitatea devine, formal, o prioritate a dreptului internațional.</p></div>
-    <div class="tl-item"><div class="yr">2000</div><h4>Se naște iNaturalist (2008 ca platformă publică)</h4><p>Ideea de „citizen science” pentru biodiversitate capătă o unealtă digitală serioasă — azi conectată cu Global Biodiversity Information Facility (GBIF), folosită de cercetători din toată lumea.</p></div>
+    <div class="tl-item"><div class="yr">2008</div><h4>Se naște iNaturalist</h4><p>Ideea de „citizen science” pentru biodiversitate capătă o unealtă digitală serioasă — azi conectată cu Global Biodiversity Information Facility (GBIF), folosită de cercetători din toată lumea.</p></div>
   </div>
 
   <h3><span class="n">02</span>În România</h3>
@@ -652,7 +653,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
 
   <div class="searchbox">
     <span class="ico">⌕</span>
-    <input type="text" id="semneSearch" placeholder="Caută o specie sau un tip de semn… (ex: urs, amprentă, excremente)">
+    <input type="text" id="semneSearch" aria-label="Caută semne și urme" placeholder="Caută o specie sau un tip de semn… (ex: urs, amprentă, excremente)">
     <span class="count-pill" id="semneCount"></span>
   </div>
   <div class="qlist" id="semneList"><!-- populated by JS --></div>
@@ -695,7 +696,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <h3><span class="n">03</span>Index de chemări &amp; denumiri populare onomatopeice</h3>
   <div class="searchbox">
     <span class="ico">⌕</span>
-    <input type="text" id="sunetSearch" placeholder="Caută o specie… (ex: cuc, buhă, ciocănitoare)">
+    <input type="text" id="sunetSearch" aria-label="Caută chemări" placeholder="Caută o specie… (ex: cuc, buhă, ciocănitoare)">
     <span class="count-pill" id="sunetCount"></span>
   </div>
   <div class="qlist" id="sunetList"></div>
@@ -746,7 +747,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
 
   <h3><span class="n">02</span>Biomuri speciale — dincolo de munte</h3>
   <div class="grid3">
-    <div class="panel"><h3 style="margin-top:0;border:none;padding:0;">🌾 Delta Dunării</h3><p style="font-size:13.5px;margin:0;">Cea mai întinsă zonă umedă compactă din Europa — stufărișuri, grinduri, brațe și lacuri. Rezervație a biosferei UNESCO din 1991, refugiu pentru pelicani, cormorani și zeci de specii de pești de apă dulce.</p></div>
+    <div class="panel"><h3 style="margin-top:0;border:none;padding:0;">🌾 Delta Dunării</h3><p style="font-size:13.5px;margin:0;">Cea mai întinsă zonă umedă compactă din Europa — stufărișuri, grinduri, brațe și lacuri. Rezervație a biosferei UNESCO și sit al Patrimoniului Mondial (înscris în 1991), refugiu pentru pelicani, cormorani și zeci de specii de pești de apă dulce.</p></div>
     <div class="panel"><h3 style="margin-top:0;border:none;padding:0;">🌊 Litoralul Mării Negre</h3><p style="font-size:13.5px;margin:0;">Plaje, faleze și lacuri litorale (Techirghiol, Razim) — o mare aproape fără maree, cu salinitate redusă și o faună marină distinctă de restul Mediteranei.</p></div>
     <div class="panel"><h3 style="margin-top:0;border:none;padding:0;">🕳️ Zone carstice</h3><p style="font-size:13.5px;margin:0;">Podișurile calcaroase (Apuseni, Mehedinți) găzduiesc mii de peșteri — ecosisteme întunecate, cu faună adaptată la absența luminii, domeniul biospeologiei lui Racoviță.</p></div>
   </div>
@@ -839,7 +840,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
 
   <div class="searchbox">
     <span class="ico">⌕</span>
-    <input type="text" id="floraSearch" placeholder="Caută o specie… (ex: fag, floarea-de-colț, gutui)">
+    <input type="text" id="floraSearch" aria-label="Caută floră" placeholder="Caută o specie… (ex: fag, floarea-de-colț, gutui)">
     <span class="count-pill" id="floraCount"></span>
   </div>
   <div class="qlist" id="floraList"></div>
@@ -857,7 +858,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   </table></div>
 
   <h3><span class="n">02</span>Atenție la ciuperci</h3>
-  <div class="note warn">Câteva specii mortale au sosii comestibile aproape identice pentru un ochi neantrenat — cea mai cunoscută: <b>buretele de fiere / pălăria morții</b> (<i>Amanita phalloides</i>), confundabilă cu bureții comestibili din genul <i>Agaricus</i> sau cu unele <i>Russula</i>. Regula de aur: <b>nu consuma nicio ciupercă din natură fără confirmare de la un micolog sau un centru de identificare autorizat</b> — nicio aplicație de telefon și niciun ghid foto nu oferă siguranță deplină singure.</div>
+  <div class="note warn">Câteva specii mortale au sosii comestibile aproape identice pentru un ochi neantrenat — cea mai cunoscută: <b>pălăria morții</b> (<i>Amanita phalloides</i>), confundabilă cu bureții comestibili din genul <i>Agaricus</i> sau cu unele <i>Russula</i>. Regula de aur: <b>nu consuma nicio ciupercă din natură fără confirmare de la un micolog sau un centru de identificare autorizat</b> — nicio aplicație de telefon și niciun ghid foto nu oferă siguranță deplină singure.</div>
 
   <h3><span class="n">03</span>Specii invazive de urmărit</h3>
   <p style="font-size:13.5px;color:var(--ink-dim);">Nu tot ce e verde și crește repede e binevenit — unele specii introduse copleșesc flora locală.</p>
@@ -872,18 +873,18 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
 <section class="section" id="sec-fauna">
   <div class="eyebrow">§9 · Ecosisteme &amp; mediu</div>
   <h2>Faună de teren</h2>
-  <p class="lede">De la cea mai mare populație de urși bruni din UE (în afara Rusiei) până la fluturi alpini protejați — o selecție pe grupe majore.</p>
+  <p class="lede">De la cea mai mare populație de urși bruni din Europa (în afara Rusiei) până la fluturi alpini protejați — o selecție pe grupe majore.</p>
 
   <div class="searchbox">
     <span class="ico">⌕</span>
-    <input type="text" id="faunaSearch" placeholder="Caută o specie sau un grup… (ex: urs, zimbru, Apollo)">
+    <input type="text" id="faunaSearch" aria-label="Caută faună" placeholder="Caută o specie sau un grup… (ex: urs, zimbru, Apollo)">
     <span class="count-pill" id="faunaCount"></span>
   </div>
   <div class="qlist" id="faunaList"></div>
 
   <h3><span class="n">§</span>Poveste de conservare: zimbrul</h3>
   <div class="panel">
-    <p style="font-size:13.5px;margin:0;">Zimbrul (<i>Bison bonasus</i>) a dispărut din sălbăticia românească în secolul XIX. Programe de reintroducere — la Vânători-Neamț și, mai recent, în Munții Făgăraș (prin Fundația Conservation Carpathia) și Munții Țarcu — au adus din nou turme sălbatice libere, unul dintre puținele succese europene de „rewilding" la scară mare cu o specie de talia asta.</p>
+    <p style="font-size:13.5px;margin:0;">Zimbrul (<i>Bison bonasus</i>) a dispărut din sălbăticia românească în secolele XVIII–XIX. Programe de reintroducere — la Vânători-Neamț și, mai recent, în Munții Făgăraș (prin Fundația Conservation Carpathia) și Munții Țarcu — au adus din nou turme sălbatice libere, unul dintre puținele succese europene de „rewilding" la scară mare cu o specie de talia asta.</p>
   </div>
 
   <h3><span class="n">§</span>Legenda etichetelor</h3>
@@ -1000,7 +1001,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
       <div class="field" style="margin:0;"><label for="lapseTopAlt">Altitudine țintă (m)</label><input type="number" id="lapseTopAlt" value="2000" step="10"></div>
     </div>
     <div class="field-out" id="lapseOut" style="text-align:center;">— rezultatul apare aici —</div>
-    <div class="note warn">Foloseste rata medie „de mediu" de <b>0,65 °C / 100 m</b> — o aproximare de manual, nu o prognoză. Inversiunile termice (aer rece „capcană" în vale) o pot contrazice complet, mai ales dimineața, iarna.</div>
+    <div class="note warn">Folosește rata medie „de mediu" de <b>0,65 °C / 100 m</b> — o aproximare de manual, nu o prognoză. Inversiunile termice (aer rece „capcană" în vale) o pot contrazice complet, mai ales dimineața, iarna.</div>
   </div>
 
   <h3><span class="n">05</span>Amprenta de carbon a unei deplasări</h3>
@@ -1010,7 +1011,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
         <select id="carbonMode">
           <option value="0.021">Mers pe jos / bicicletă (~0)</option>
           <option value="0.171" selected>Mașină, o persoană</option>
-          <option value="0.104">Mașină, patru persoane (per persoană)</option>
+          <option value="0.043">Mașină, patru persoane (per persoană)</option>
           <option value="0.089">Autobuz</option>
           <option value="0.041">Tren</option>
           <option value="0.255">Avion, curse scurte</option>
@@ -1263,7 +1264,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <h3><span class="n">02</span>Cele 13 parcuri naționale</h3>
   <div class="searchbox">
     <span class="ico">⌕</span>
-    <input type="text" id="parcSearch" placeholder="Caută un parc sau un masiv muntos… (ex: Retezat, Bicaz, Măcin)">
+    <input type="text" id="parcSearch" aria-label="Caută parcuri naționale" placeholder="Caută un parc sau un masiv muntos… (ex: Retezat, Bicaz, Măcin)">
     <span class="count-pill" id="parcCount"></span>
   </div>
   <div class="qlist" id="parcList"></div>
@@ -1297,7 +1298,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
     <div class="quiz-score" id="quizScore">Scor: 0 / 0</div>
     <div class="quiz-q" id="quizQ">Alege o categorie sau apasă direct pe un răspuns pentru a începe.</div>
     <div id="quizOpts"></div>
-    <div class="quiz-explain" id="quizExplain"></div>
+    <div class="quiz-explain" id="quizExplain" aria-live="polite"></div>
     <div class="btnrow">
       <button class="btn primary" id="quizNextBtn" type="button">Următoarea întrebare →</button>
       <button class="btn" id="quizResetBtn" type="button">↺ Resetează scorul</button>
@@ -1379,7 +1380,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
 
   <div class="searchbox">
     <span class="ico">⌕</span>
-    <input type="text" id="glosarSearch" placeholder="Caută un termen… (ex: ecoton, endemism, LNT, fenologie)">
+    <input type="text" id="glosarSearch" aria-label="Caută în glosar" placeholder="Caută un termen… (ex: ecoton, endemism, LNT, fenologie)">
     <span class="count-pill" id="glosarCount"></span>
   </div>
 
@@ -1436,7 +1437,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
     <b style="color:var(--ink-dim);">Istoric</b> — <span style="font-family:var(--font-mono);">v1.0</span> (2026-08-06): versiune inițială — 20 de secțiuni, jurnal de teren, indice de biodiversitate, identitate criptografică locală și certificate semnate, antrenor de chemări, calculatoare de mediu, glosar A–Z. Construită după modelul ETER (chiuta.github.io/eter), aceeași arhitectură off-line, recontextualizată pentru explorarea naturii.
   </div>
   <div class="legal">
-    Conținut educațional, verificat la 2026-08-06 (v1.0 de mai sus) — dar regulamentele și denumirile instituțiilor se schimbă. Pentru orice decizie care contează (acces în arii protejate, specii strict protejate, proceduri de urgență), <b>ANMAP</b> și <b>Salvamont România</b> rămân sursele autoritare, nu acest fișier. Fără cookie-uri, fără analytics, fără apeluri către niciun server — tot ce vezi rulează local, în browserul tău.
+    Conținut educațional, verificat la 2026-08-06 (v1.0 de mai sus) — dar regulamentele și denumirile instituțiilor se schimbă. Pentru orice decizie care contează (acces în arii protejate, specii strict protejate, proceduri de urgență), <b>ANMAP</b> și <b>Salvamont România</b> rămân sursele autoritare, nu acest fișier. Fără cookie-uri, fără analytics, fără apeluri către niciun server (singura excepție, doar la cerere: butonul „Verifică integritatea fișierului” re-citește acest fișier de la adresa de unde e servit) — tot ce vezi rulează local, în browserul tău.
   </div>
 </footer>
 </main>
@@ -1561,10 +1562,10 @@ var FLORA = [
    DATE — faună de teren
    ============================================================ */
 var FAUNA = [
-  {sp:'Urs brun', la:'Ursus arctos', grup:'Mamifere', def:'România găzduiește cea mai numeroasă populație de urși bruni din UE, în afara Rusiei. Omnivor oportunist — de la fructe de pădure la cadavre.', tag:'protejat'},
+  {sp:'Urs brun', la:'Ursus arctos', grup:'Mamifere', def:'România găzduiește cea mai numeroasă populație de urși bruni din Europa, în afara Rusiei (și cea mai mare din UE). Omnivor oportunist — de la fructe de pădure la cadavre.', tag:'protejat'},
   {sp:'Lup', la:'Canis lupus', grup:'Mamifere', def:'Trăiește în haite teritoriale de 4–8 indivizi; revenit puternic în ultimele decenii pe fondul reducerii vânătorii și al abundenței de pradă sălbatică.', tag:'protejat'},
   {sp:'Râs', la:'Lynx lynx', grup:'Mamifere', def:'Cel mai mare felin sălbatic european; extrem de discret — cei mai mulți naturaliști de teren îi găsesc urmele, nu animalul.', tag:'protejat'},
-  {sp:'Zimbru', la:'Bison bonasus', grup:'Mamifere', def:'Dispărut din sălbăticie în secolul XIX, reintrodus prin programe la Vânători-Neamț, Făgăraș și Munții Țarcu — un succes emblematic de „rewilding" european.', tag:'protejat'},
+  {sp:'Zimbru', la:'Bison bonasus', grup:'Mamifere', def:'Dispărut din sălbăticia românească în secolele XVIII–XIX, reintrodus prin programe la Vânători-Neamț, Făgăraș și Munții Țarcu — un succes emblematic de „rewilding" european.', tag:'protejat'},
   {sp:'Capră neagră', la:'Rupicapra rupicapra', grup:'Mamifere', def:'Agilă pe stâncării abrupte, deasupra limitei pădurii; simbol al zonelor alpine carpatice, prezentă pe stema unor parcuri naționale.'},
   {sp:'Vidră', la:'Lutra lutra', grup:'Mamifere', def:'Indicator al calității apei — prezența ei constantă arată un curs de apă relativ nepoluat și bine oxigenat.', tag:'protejat'},
   {sp:'Acvilă de munte', la:'Aquila chrysaetos', grup:'Păsări', def:'Anvergură de până la 2,3 m; cuibărește pe pereți stâncoși greu accesibili, teritoriu de vânătoare de zeci de kilometri pătrați.', tag:'protejat'},
@@ -1589,11 +1590,11 @@ var PARKS = [
   {nume:'Domogled – Valea Cernei', judet:'Caraș-Severin, Gorj, Mehedinți', info:'Cel mai întins parc național al țării; climă cu influențe submediteraneene, izvoare termale (Băile Herculane) și o floră neobișnuit de bogată pentru latitudine.'},
   {nume:'Buila – Vânturarița', judet:'Vâlcea', info:'Cel mai mic parc național; creastă calcaroasă abruptă, chei, peșteri și mănăstiri vechi la poalele muntelui.'},
   {nume:'Călimani', judet:'Suceava, Harghita, Bistrița-Năsăud, Mureș', info:'Cel mai întins masiv vulcanic din Carpați, azi stins; formațiuni de eroziune spectaculoase în zona „12 Apostoli".'},
-  {nume:'Ceahlău', judet:'Neamț', info:'Munte legendar în cultura populară moldovenească, cu platou vulcanic ridicat abrupt deasupra depresiunilor din jur.'},
+  {nume:'Ceahlău', judet:'Neamț', info:'Munte legendar în cultura populară moldovenească, cu un masiv de conglomerate ridicat abrupt deasupra depresiunilor din jur.'},
   {nume:'Cheile Bicazului – Hășmaș', judet:'Neamț, Harghita', info:'Chei calcaroase spectaculoase, tăiate de șoseaua ce leagă Moldova de Transilvania — unul dintre cele mai vizitate trasee rutiere montane.'},
-  {nume:'Cheile Nerei – Beușnița', judet:'Caraș-Severin', info:'Cascade, chei adânci și lacuri carstice colorate (Ochiul Beibei) — una dintre cele mai fotografiate zone carstice din Banat.'},
+  {nume:'Cheile Nerei – Beușnița', judet:'Caraș-Severin', info:'Cascade, chei adânci și lacuri carstice colorate (Ochiul Beiului) — una dintre cele mai fotografiate zone carstice din Banat.'},
   {nume:'Cozia', judet:'Vâlcea', info:'Defileul Oltului, cu mănăstiri medievale la poale — cea mai mare diferență de nivel pe verticală de pe un traseu turistic din Carpații Meridionali.'},
-  {nume:'Defileul Jiului', judet:'Gorj, Hunedoara', info:'Cel mai lung defileu din România, tăiat de Jiu între Munții Retezat și Munții Vâlcan.'},
+  {nume:'Defileul Jiului', judet:'Gorj, Hunedoara', info:'Defileu spectaculos, tăiat de Jiu printre masivele Parâng, Vâlcan și Retezat–Godeanu.'},
   {nume:'Munții Măcinului', judet:'Tulcea', info:'Singurul parc național din afara Carpaților — cei mai vechi munți (geologic) de pe teritoriul actual al țării, azi joși și rotunjiți de eroziune, cu stepă mediteraneană relictă.'},
   {nume:'Munții Rodnei', judet:'Bistrița-Năsăud, Maramureș', info:'Cel mai înalt masiv din Carpații Orientali; rezervație a biosferei UNESCO, cu circuri glaciare bine conservate.'},
   {nume:'Piatra Craiului', judet:'Brașov, Argeș', info:'Creastă calcaroasă îngustă și abruptă, de aproape 25 km — una dintre siluetele montane cele mai recognoscibile din România.'},
@@ -1689,7 +1690,7 @@ var PACKLIST = [
   'Cremă de protecție solară și pălărie',
   'Carnet de teren și pix rezistent la umezeală',
   'Binoclu',
-  'Fluier (semnal de urgență — trei fluierături scurte, repetate)',
+  'Fluier (semnal de urgență în munți — șase fluierături pe minut, apoi un minut pauză, repetat; răspunsul: trei pe minut)',
   'Folie termică de supraviețuire',
   'Documentul de identitate și un card cu contact de urgență'
 ];
@@ -1732,7 +1733,7 @@ var QUIZ_BANK = [
   {cat:'semne', q:'Cum arată tipic un trunchi retezat de castor?', opts:['Tăiat perfect drept, ca ferăstrăul','În formă de creion ascuțit, cu urme de incisivi','Rupt brusc, fără formă','Cojit complet, dar netăiat'], correct:1, exp:'Incisivii castorului lasă un tipar caracteristic „de creion ascuțit" pe lemn.'},
   // SUNETE
   {cat:'sunete', q:'Care e principala diferență dintre „cântec" și „chemare" la păsări?', opts:['Cântecul e mai scurt','Chemarea e doar la femele','Cântecul e mai lung/elaborat, cu rol teritorial/nupțial; chemarea e scurtă și funcțională','Nu există nicio diferență reală'], correct:2, exp:'Cântecul marchează teritoriu/atrage partener; chemarea servește contact sau alarmă, tot anul.'},
-  {cat:'sunete', q:'Ce pasăre „își spune" numele în chemarea proprie, cu două note descrescătoare?', opts:['Pupăza','Cucul','Cinteza','Piţigoiul mare'], correct:1, exp:'Chemarea „cu-cu" a dat, direct, numele popular al speciei.'},
+  {cat:'sunete', q:'Ce pasăre „își spune" numele în chemarea proprie, cu două note descrescătoare?', opts:['Pupăza','Cucul','Cinteza','Pițigoiul mare'], correct:1, exp:'Chemarea „cu-cu" a dat, direct, numele popular al speciei.'},
   {cat:'sunete', q:'Cum produce ciocănitoarea sunetul de „tobă" teritorial?', opts:['Vocal, din laringe','Mecanic, prin lovituri rapide cu ciocul','Prin frecarea aripilor','Nu produce niciun sunet de tobă'], correct:1, exp:'„Toba" e pur mecanică — o rafală rapidă de ciocănituri, nu un sunet vocal.'},
   {cat:'sunete', q:'Care e cea mai mare bufniță din Europa?', opts:['Cucuveaua','Buha (Bubo bubo)','Ciuful de pădure','Huhurezul mic'], correct:1, exp:'Buha (Bubo bubo) e cea mai mare specie de bufniță europeană.'},
   {cat:'sunete', q:'Care specie cântă adesea și noaptea, nu doar ziua?', opts:['Privighetoarea','Barza albă','Fazanul','Turturica'], correct:0, exp:'Privighetoarea e cunoscută tocmai pentru cântecul ei nocturn, elaborat.'},
@@ -1761,7 +1762,7 @@ var QUIZ_BANK = [
   {cat:'flora', q:'Ce specie invazivă e cunoscută popular drept „arborele cerului"?', opts:['Salcâmul obișnuit','Ailanthus altissima (cenușerul)','Plopul','Teiul'], correct:1, exp:'Cenușerul crește extrem de repede și eliberează substanțe care inhibă alte plante din jur.'},
   {cat:'flora', q:'Care e, tipic, prima floare de primăvară protejată prin lege în România?', opts:['Lalea pestriță','Ghiocelul','Narcisa','Bujorul'], correct:1, exp:'Ghiocelul (Galanthus nivalis) are recoltarea și comercializarea restricționate prin lege.'},
   // FAUNA
-  {cat:'fauna', q:'România are cea mai numeroasă populație de urși bruni din UE, în afara cărei țări?', opts:['Suediei','Rusiei (care nu e UE, dar are populații mai mari global)','Finlandei','Poloniei'], correct:1, exp:'În Uniunea Europeană, România are cea mai numeroasă populație de urși bruni.'},
+  {cat:'fauna', q:'România are cea mai numeroasă populație de urși bruni din Europa, în afara cărei țări?', opts:['Suediei','Rusiei','Finlandei','Poloniei'], correct:1, exp:'În Europa, în afara Rusiei, România are cea mai numeroasă populație de urși bruni (și cea mai mare din UE).'},
   {cat:'fauna', q:'În ce masiv montan a avut loc, recent, un proiect notabil de reintroducere a zimbrului?', opts:['Bucegi','Făgăraș','Ceahlău','Semenic'], correct:1, exp:'Fundația Conservation Carpathia a reintrodus zimbri sălbatici liberi în Munții Făgăraș.'},
   {cat:'fauna', q:'Ce specie e considerată indicator al apei curate, bine oxigenate?', opts:['Crapul','Păstrăvul indigen','Bibanul','Somnul'], correct:1, exp:'Păstrăvul (Salmo trutta fario) e printre primele specii care dispar când calitatea apei scade.'},
   {cat:'fauna', q:'Care e cel mai mare coleopter din fauna europeană?', opts:['Rădașca (Lucanus cervus)','Gândacul de bălegar','Croitorul mare al stejarului','Buburuza'], correct:0, exp:'Masculii de rădașcă au mandibule mărite impresionante, folosite în lupte pentru femele.'},
@@ -1862,6 +1863,7 @@ function renderWaterfall(){
 }
 function scrambleIn(el){
   if(!el) return;
+  if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   var final = el.textContent;
   var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZĂÂÎȘȚ    ';
   var frame = 0, maxFrames = 16;
@@ -2083,8 +2085,8 @@ function addBiodivRow(sp, ct){
   var div = document.createElement('div');
   div.className = 'grid2';
   div.style.marginBottom = '8px';
-  div.innerHTML = '<div class="field" style="margin:0;"><label>Specie</label><input type="text" class="biodivSp" placeholder="ex: fag" value="'+esc(sp||'')+'"></div>'
-    + '<div class="field" style="margin:0;display:flex;gap:8px;align-items:flex-end;"><div style="flex:1;"><label>Nr. indivizi</label><input type="number" class="biodivCt" min="0" value="'+(ct!=null?ct:'')+'"></div><button type="button" class="btn small biodivRmBtn" style="height:38px;">✕</button></div>';
+  div.innerHTML = '<div class="field" style="margin:0;"><label>Specie</label><input type="text" class="biodivSp" aria-label="Specie" placeholder="ex: fag" value="'+esc(sp||'')+'"></div>'
+    + '<div class="field" style="margin:0;display:flex;gap:8px;align-items:flex-end;"><div style="flex:1;"><label>Nr. indivizi</label><input type="number" class="biodivCt" aria-label="Număr de indivizi" min="0" value="'+(ct!=null?ct:'')+'"></div><button type="button" class="btn small biodivRmBtn" aria-label="Elimină specia" style="height:38px;">✕</button></div>';
   wrap.appendChild(div);
   div.querySelector('.biodivRmBtn').addEventListener('click', function(){ wrap.removeChild(div); });
 }
@@ -2115,8 +2117,8 @@ function toGrid(lat, lon){
   }
   var FIELD = 'ABCDEFGHIJKLMNOPQR';
   var SUB = 'abcdefghijklmnopqrstuvwx';
-  var lonA = lon + 180;
-  var latA = lat + 90;
+  var lonA = Math.min(lon + 180, 360 - 1e-9);
+  var latA = Math.min(lat + 90, 180 - 1e-9);
   var f1 = FIELD.charAt(Math.floor(lonA/20));
   var f2 = FIELD.charAt(Math.floor(latA/10));
   var lonRem1 = lonA - Math.floor(lonA/20)*20;
@@ -2125,8 +2127,8 @@ function toGrid(lat, lon){
   var s2 = Math.floor(latRem1/1);
   var lonRem2 = lonRem1 - s1*2;
   var latRem2 = latRem1 - s2*1;
-  var sub1 = SUB.charAt(Math.floor(lonRem2/(2/24)));
-  var sub2 = SUB.charAt(Math.floor(latRem2/(1/24)));
+  var sub1 = SUB.charAt(Math.min(23, Math.floor(lonRem2/(2/24))));
+  var sub2 = SUB.charAt(Math.min(23, Math.floor(latRem2/(1/24))));
   return f1+f2+s1+s2+sub1+sub2;
 }
 
@@ -2153,7 +2155,7 @@ function bearingToCompass(deg){
 var targetBearing = null;
 function computeBearing(){
   var lat2 = parseFloat($('#bearLat2').value), lon2 = parseFloat($('#bearLon2').value);
-  if(!isFinite(lat2) || !isFinite(lon2)){ $('#bearOut').textContent = 'Completează latitudinea și longitudinea țintei.'; return; }
+  if(!isFinite(lat2) || !isFinite(lon2) || lat2<-90 || lat2>90 || lon2<-180 || lon2>180){ $('#bearOut').textContent = 'Completează latitudinea (−90…90) și longitudinea (−180…180) țintei.'; return; }
   if(userPosCache){ useBearingFrom(userPosCache.lat, userPosCache.lon, lat2, lon2); return; }
   // fallback: reia poziția ta din câmpurile Locator Maidenhead (§11.02), dacă au fost completate manual
   var lat1 = parseFloat($('#gridLat').value), lon1 = parseFloat($('#gridLon').value);
@@ -2190,7 +2192,7 @@ function calcCarbon(){
   var factor = parseFloat($('#carbonMode').value);
   var km = parseFloat($('#carbonKm').value);
   var trips = parseFloat($('#carbonTrips').value);
-  if(!isFinite(factor)||!isFinite(km)||!isFinite(trips)){ $('#carbonOut').textContent='Completează toate câmpurile.'; return; }
+  if(!isFinite(factor)||!isFinite(km)||!isFinite(trips)||km<0||trips<0){ $('#carbonOut').textContent='Completează toate câmpurile (valori pozitive).'; return; }
   var total = factor*km*trips;
   $('#carbonOut').textContent = '≈ '+total.toFixed(1)+' kg CO₂e, pentru '+trips+' ieșire(i) a câte '+km+' km.';
 }
@@ -2198,7 +2200,7 @@ function calcTree(){
   var n = parseFloat($('#treeCount').value);
   var perYear = parseFloat($('#treeAge').value);
   var years = parseFloat($('#treeYears').value);
-  if(!isFinite(n)||!isFinite(perYear)||!isFinite(years)){ $('#treeOut').textContent='Completează toate câmpurile.'; return; }
+  if(!isFinite(n)||!isFinite(perYear)||!isFinite(years)||n<0||years<0){ $('#treeOut').textContent='Completează toate câmpurile (valori pozitive).'; return; }
   var totalKg = n*perYear*years;
   $('#treeOut').textContent = '≈ '+(totalKg/1000).toFixed(1)+' tone CO₂ sechestrate în '+years+' ani, de '+n+' copaci ('+perYear+' kg/an/copac).';
 }
@@ -2306,7 +2308,7 @@ var journalEntries = [];
 function renderJournal(){
   var list = $('#jList');
   if(!list) return;
-  var sorted = journalEntries.slice().sort(function(a,b){ return (b.data+b.ora)>(a.data+a.ora)?1:-1; });
+  var sorted = journalEntries.slice().sort(function(a,b){ var x=String(a.data||'')+String(a.ora||''), y=String(b.data||'')+String(b.ora||''); return x<y?1:(x>y?-1:0); });
   list.innerHTML = sorted.map(function(e){
     var idx = journalEntries.indexOf(e);
     var meta = [e.data, e.ora, e.numar+' ex.', e.loc].filter(Boolean).join(' · ');
@@ -2358,7 +2360,7 @@ function importJournalFile(file){
     try{
       var data = JSON.parse(reader.result);
       if(Array.isArray(data.observatii)){
-        data.observatii.forEach(function(o){ if(o && o.specie) journalEntries.push(o); });
+        data.observatii.forEach(function(o){ if(o && o.specie){ journalEntries.push({specie:String(o.specie).slice(0,200), numar:String(o.numar||'1').slice(0,10), data:String(o.data||'').slice(0,10), ora:String(o.ora||'').slice(0,5), loc:String(o.loc||'').slice(0,200), comportament:String(o.comportament||'').slice(0,200), note:String(o.note||'').slice(0,200)}); } });
         renderJournal(); renderJournalStats(); renderBadges();
         $('#jStatus').textContent = 'Importat: '+data.observatii.length+' observații.';
       } else { $('#jStatus').textContent = 'Fișier nerecunoscut.'; }
@@ -2494,15 +2496,18 @@ function srsImportFile(file){
   reader.onload = function(){
     try{
       var data = JSON.parse(reader.result);
-      if(data.srsState){ for(var k in data.srsState){ srsState[k]=data.srsState[k]; } }
+      if(data.srsState && typeof data.srsState==='object'){ Object.keys(data.srsState).forEach(function(k){ if(/^\d+$/.test(k) && data.srsState[k] && typeof data.srsState[k]==='object') srsState[k]=data.srsState[k]; }); }
       if(data.quizStats){
-        quizStats.totalCorrect += data.quizStats.totalCorrect||0;
-        quizStats.totalAnswered += data.quizStats.totalAnswered||0;
+        var nn = function(x){ x = Number(x); return isFinite(x) && x>0 ? Math.floor(x) : 0; };
+        quizStats.totalCorrect += nn(data.quizStats.totalCorrect);
+        quizStats.totalAnswered += nn(data.quizStats.totalAnswered);
         var bc = data.quizStats.byCat||{};
         Object.keys(bc).forEach(function(c){
+          if(QUIZ_CATS.indexOf(c)<0 || !bc[c]) return;
           if(!quizStats.byCat[c]) quizStats.byCat[c]={correct:0,total:0};
-          quizStats.byCat[c].correct += bc[c].correct||0;
-          quizStats.byCat[c].total += bc[c].total||0;
+          var tt = nn(bc[c].total), cc = Math.min(nn(bc[c].correct), tt);
+          quizStats.byCat[c].correct += cc;
+          quizStats.byCat[c].total += tt;
         });
       }
       updateQuizScore(); renderMasteryList(); renderBadges();
@@ -2617,6 +2622,7 @@ function renderSeal(hex){
 
 async function generateCertificate(){
   if(!identity){ await generateIdentity(); }
+  if(!identity) return;
   var masteredList = QUIZ_CATS.filter(function(c){ return categoryMastery(c).mastered; });
   if(!masteredList.length){
     $('#certResult').innerHTML = '<div class="note warn">Nicio categorie stăpânită încă (nevoie de minimum 5 întrebări răspunse și ≥80% corect, într-o categorie). Continuă testul de mai sus.</div>';
@@ -2654,11 +2660,13 @@ function verifyCertificateFile(file){
       var pub = await crypto.subtle.importKey('jwk', cert.cheiePublica, {name:'ECDSA', namedCurve:'P-256'}, true, ['verify']);
       var ok = await verifyPayload(pub, cert.claims, cert.semnatura);
       if(!ok){ out.innerHTML = '<span style="color:var(--danger);">✗ Semnătură invalidă — fișierul a fost modificat sau e corupt.</span>'; return; }
+      var declId = cert.claims.tip==='marturie-explorator-eco' ? cert.claims.martor : cert.claims.subiect;
+      if(declId !== 'urn:eco:'+(await fingerprintObj(cert.cheiePublica))){ out.innerHTML = '<span style="color:var(--danger);">✗ Identitatea declarată nu corespunde cheii publice din fișier — certificat nevalid.</span>'; return; }
       var revoked = knownRevocations.some(function(r){ return r.subiect===cert.claims.subiect && r.emis===cert.claims.emis; });
       var isWitness = cert.claims.tip==='marturie-explorator-eco';
       var html = '<span style="color:var(--verde);">✓ Semnătură validă.</span><br><b>'+esc((isWitness?cert.claims.martorNume:cert.claims.nume)||'(fără nume)')+'</b>'+(isWitness?' <span style="font-size:11px;color:var(--ink-faint);">(martor)</span>':'');
       if(cert.claims.categoriiStapinite){
-        html += ' — '+cert.claims.categoriiStapinite.map(function(c){ return esc(QUIZ_CAT_LABELS[c.categorie]||c.categorie)+' ('+c.pct+'%)'; }).join(', ');
+        html += ' — '+cert.claims.categoriiStapinite.map(function(c){ return esc(QUIZ_CAT_LABELS[c.categorie]||c.categorie)+' ('+esc(c.pct)+'%)'; }).join(', ');
       }
       if(isWitness){ html += '<br><span style="font-size:12px;color:var(--ink-dim);">Mărturie despre: '+esc(cert.claims.despreNume||'')+'</span>'; }
       html += '<br><span style="font-family:var(--font-mono);font-size:11px;color:var(--ink-faint);">emis: '+esc(cert.claims.emis)+'</span>';
@@ -2716,10 +2724,14 @@ function importRevocationFiles(fileList){
   var count = 0, total = fileList.length;
   Array.prototype.forEach.call(fileList, function(file){
     var reader = new FileReader();
-    reader.onload = function(){
+    reader.onload = async function(){
       try{
         var rev = JSON.parse(reader.result);
-        if(rev.claims && rev.claims.subiect){ knownRevocations.push({subiect:rev.claims.subiect, emis:rev.claims.emisOriginal}); }
+        if(rev.claims && rev.claims.subiect && rev.semnatura && rev.cheiePublica){
+          var rpub = await crypto.subtle.importKey('jwk', rev.cheiePublica, {name:'ECDSA', namedCurve:'P-256'}, true, ['verify']);
+          var rok = await verifyPayload(rpub, rev.claims, rev.semnatura);
+          if(rok && rev.claims.subiect === 'urn:eco:'+(await fingerprintObj(rev.cheiePublica))){ knownRevocations.push({subiect:rev.claims.subiect, emis:rev.claims.emisOriginal}); }
+        }
       }catch(e){}
       count++;
       if(count===total){ $('#revocationListStatus').textContent = knownRevocations.length+' revocări cunoscute, importate.'; }
@@ -2747,7 +2759,7 @@ function playCallPattern(tones){
       var osc = ctx.createOscillator(), gain = ctx.createGain();
       osc.type = 'sine'; osc.frequency.value = freq;
       gain.gain.setValueAtTime(0.0001, t);
-      gain.gain.linearRampToValueAtTime(0.3, t+0.012);
+      gain.gain.linearRampToValueAtTime(0.2, t+0.012);
       var relEnd = t+dur-0.012>t+0.012 ? t+dur-0.012 : t+dur;
       gain.gain.linearRampToValueAtTime(0.0001, relEnd);
       osc.connect(gain); gain.connect(ctx.destination);
@@ -2766,6 +2778,7 @@ function updateCallOut(){
 /* ============================================================
    Busolă live (folosită de calculatorul de azimut)
    ============================================================ */
+var compassOn = false;
 function activateCompass(){
   function handler(e){
     var heading = null;
@@ -2777,6 +2790,8 @@ function activateCompass(){
     if(needle) needle.style.transform = 'rotate('+rel.toFixed(1)+'deg)';
   }
   function start(){
+    if(compassOn) return;
+    compassOn = true;
     $('#compassNeedle').style.display = 'block';
     window.addEventListener('deviceorientation', handler);
   }
@@ -2875,6 +2890,7 @@ async function checkFileIntegrity(){
   el.textContent = 'Se calculează…';
   try{
     var resp = await fetch(window.location.href);
+    if(!resp.ok) throw new Error('HTTP '+resp.status);
     var buf = await resp.arrayBuffer();
     var hash = await crypto.subtle.digest('SHA-256', buf);
     el.textContent = 'SHA-256 al acestui fișier: '+bufToHex(hash);
@@ -2989,7 +3005,8 @@ function init(){
   calcTree();
 
   // calculatoare — răsărit/apus/lună
-  var todayStr = new Date().toISOString().slice(0,10);
+  var d0 = new Date();
+  var todayStr = d0.getFullYear()+'-'+pad2(d0.getMonth()+1)+'-'+pad2(d0.getDate());
   $('#sunDate').value = todayStr;
   $('#sunCalcBtn').addEventListener('click', calcSun);
   $('#sunGeoBtn').addEventListener('click', function(){
