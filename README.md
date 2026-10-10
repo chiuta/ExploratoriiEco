@@ -33,6 +33,10 @@ Un ghid complet pentru explorarea naturii, în 20 de secțiuni (§0–§19): cla
 6. Pentru un certificat: **🔑 Generează identitate**, apoi **📜 Generează certificat**; exportă identitatea ca rezervă.
 7. Schimbă tema cu **☾ Noapte / ☀ Zi**; imprimă secțiunea curentă cu **🖨️ Printează secțiunea curentă**.
 
+## Avertisment
+
+Conținut educațional/orientativ. Secțiunile despre urgențe, șerpi, căpușe, ciuperci și plante nu înlocuiesc un curs de prim ajutor, sfatul medical sau autoritățile (112, Salvamont, ANMAP); plantele și ciupercile nu se consumă pe baza ghidului. Aplicația afișează o notă în același sens în subsol. „Certificatele" generate sunt dovezi auto-semnate ale progresului propriu, nu diplome oficiale.
+
 ## Confidențialitate și rețea
 
 - **Stocare:** aplicația nu folosește localStorage, sessionStorage sau IndexedDB. Jurnalul, scorurile, notițele din glosar și identitatea criptografică stau doar în memorie și dispar la reîncărcarea paginii, dacă nu le exporți.
@@ -46,6 +50,10 @@ Descarcă `index.html` și deschide-l în browser. Aplicația funcționează fă
 ## Licență
 
 Licența nu este încă declarată explicit în acest repository; vezi nota din aplicație. (Aplicația nu conține o mențiune de licență în text.)
+
+## Audit
+
+Audit: 2026-10-10 — verificat cu Playwright și axe-core (toate cele 20 de secțiuni, ambele teme); fără `localStorage`; jurnalul și importul testate cu `<img onerror>` (escapat). Corectate: titluri invizibile în tema „Zi" (text alb pe fundal deschis), contrast, listă de definiții invalidă în glosar.
 
 ## Autor
 

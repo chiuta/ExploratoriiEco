@@ -29,7 +29,7 @@
   --paper-2:#ddd0ab;
   --ink:#dde7d9;
   --ink-dim:#8ea48e;
-  --ink-faint:#5c6d5e;
+  --ink-faint:#8a9a8c;
   --ink-dark:#1c1810;
   --danger:#d3685f;
   --radius:2px;
@@ -46,16 +46,16 @@
   --panel-2:#ece3c8;
   --line:#cabf9c;
   --line-soft:#ddd3b0;
-  --verde:#2d7a3d;
+  --verde:#256633;
   --verde-dim:#5c8f63;
   --verde-glow:rgba(45,122,61,.18);
-  --amber:#a8641a;
+  --amber:#8f520c;
   --amber-dim:#c98f4a;
   --paper:#fffdf5;
   --paper-2:#f2ecd4;
   --ink:#23200f;
   --ink-dim:#5c5638;
-  --ink-faint:#8c8560;
+  --ink-faint:#655e3b;
   --ink-dark:#181810;
   --danger:#a83c34;
 }
@@ -93,6 +93,7 @@ h1,h2,h3,h4{
   color:var(--paper);
 }
 [data-theme="zi"] h1,[data-theme="zi"] h2,[data-theme="zi"] h3,[data-theme="zi"] h4{color:var(--ink-dark);}
+[data-theme="zi"] .bandrow .lbl b,[data-theme="zi"] .quiz-q,[data-theme="zi"] .journal-entry .jsp,[data-theme="zi"] .badge-card .btitle,[data-theme="zi"] #certResult b{color:var(--ink-dark) !important;}
 p{margin:0 0 1em;color:var(--ink);}
 a{color:var(--verde);}
 code,.mono,.val{font-family:var(--font-mono);}
@@ -244,7 +245,7 @@ tr:hover td{background:var(--panel-2);color:var(--ink);}
   font-family:var(--font-body);
 }
 .btn:hover{border-color:var(--verde-dim);color:var(--verde);}
-.btn.primary{background:var(--verde-dim);border-color:var(--verde-dim);color:#07170a;}
+.btn.primary{background:#5f9a4a;border-color:#5f9a4a;color:#07170a;}
 .btn.primary:hover{background:var(--verde);color:#07170a;}
 .btn.small{padding:5px 11px;font-size:12px;}
 .btn:disabled{opacity:.4;cursor:not-allowed;}
@@ -306,6 +307,8 @@ label{display:block;font-size:11px;color:var(--ink-faint);letter-spacing:.05em;t
 .glossitem{padding:12px 0;border-bottom:1px solid var(--line-soft);}
 .glossitem dt{font-family:var(--font-mono);color:var(--verde);font-weight:700;font-size:14px;}
 .glossitem dd{margin:4px 0 0;color:var(--ink-dim);font-size:13.5px;}
+.glossitem.lh{margin-top:22px;padding-top:0;}
+.glossitem.lh::before{content:attr(data-letter);display:block;font-family:var(--font-mono);color:var(--amber);font-size:12px;letter-spacing:.3em;margin:0 0 12px;padding-bottom:4px;border-bottom:1px solid var(--line-soft);}
 .letterhead{
   font-family:var(--font-mono);color:var(--amber);font-size:12px;letter-spacing:.3em;
   margin:22px 0 4px;padding-bottom:4px;border-bottom:1px solid var(--line-soft);
@@ -326,11 +329,12 @@ label{display:block;font-size:11px;color:var(--ink-faint);letter-spacing:.05em;t
 .bandrow .lbl b{color:var(--paper);font-family:var(--font-body);}
 .bandbar{display:flex;height:30px;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);}
 .bandbar.vert{flex-direction:column;height:auto;}
-.bandbar .seg{position:relative;display:flex;align-items:center;justify-content:center;font-size:9px;font-family:var(--font-mono);color:rgba(0,0,0,.6);cursor:default;padding:2px 4px;text-align:center;}
+.bandbar .seg{position:relative;display:flex;align-items:center;justify-content:center;font-size:9px;font-family:var(--font-mono);color:rgba(0,0,0,.82);cursor:default;padding:2px 4px;text-align:center;}
 .bandbar .seg:hover{filter:brightness(1.18);}
 .seg.alpin{background:#c9d6e0;}
 .seg.subalpin{background:#7fb894;}
-.seg.conifere{background:#3f7a4c;}
+.seg.conifere{background:#3f7a4c;color:#fff;}
+[data-theme="zi"] .seg.campie,[data-theme="zi"] .seg.foioase{color:#fff;}
 .seg.foioase{background:var(--verde);}
 .seg.deal{background:#a9a06a;}
 .seg.campie{background:var(--amber);}
@@ -388,8 +392,9 @@ label{display:block;font-size:11px;color:var(--ink-faint);letter-spacing:.05em;t
 
 /* ---------- badges ---------- */
 .badge-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;margin:16px 0;}
-.badge-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px;text-align:center;opacity:.5;filter:grayscale(.6);transition:opacity .3s,filter .3s;}
-.badge-card.earned{opacity:1;filter:none;border-color:var(--amber-dim);}
+.badge-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px;text-align:center;transition:opacity .3s,filter .3s;}
+.badge-card:not(.earned) .bico{opacity:.5;filter:grayscale(.6);}
+.badge-card.earned{border-color:var(--amber-dim);}
 .badge-card .bico{font-size:28px;margin-bottom:8px;}
 .badge-card .btitle{font-weight:700;color:var(--paper);font-size:13px;margin-bottom:4px;}
 .badge-card .bdesc{font-size:11.5px;color:var(--ink-faint);}
@@ -1437,7 +1442,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
     <b style="color:var(--ink-dim);">Istoric</b> — <span style="font-family:var(--font-mono);">v1.0</span> (2026-08-06): versiune inițială — 20 de secțiuni, jurnal de teren, indice de biodiversitate, identitate criptografică locală și certificate semnate, antrenor de chemări, calculatoare de mediu, glosar A–Z. Construită după modelul ETER (chiuta.github.io/eter), aceeași arhitectură off-line, recontextualizată pentru explorarea naturii.
   </div>
   <div class="legal">
-    Conținut educațional, verificat la 2026-08-06 (v1.0 de mai sus) — dar regulamentele și denumirile instituțiilor se schimbă. Pentru orice decizie care contează (acces în arii protejate, specii strict protejate, proceduri de urgență), <b>ANMAP</b> și <b>Salvamont România</b> rămân sursele autoritare, nu acest fișier. Fără cookie-uri, fără analytics, fără apeluri către niciun server (singura excepție, doar la cerere: butonul „Verifică integritatea fișierului” re-citește acest fișier de la adresa de unde e servit) — tot ce vezi rulează local, în browserul tău.
+    Conținut educațional, verificat la 2026-08-06 (v1.0 de mai sus) — dar regulamentele și denumirile instituțiilor se schimbă. Pentru orice decizie care contează (acces în arii protejate, specii strict protejate, proceduri de urgență), <b>ANMAP</b> și <b>Salvamont România</b> rămân sursele autoritare, nu acest fișier. Informațiile despre urgențe, șerpi, căpușe, ciuperci și plante sunt orientative: nu înlocuiesc un curs de prim ajutor sau sfatul medical (în urgență: 112), iar plantele și ciupercile nu se consumă pe baza acestui ghid. Fără cookie-uri, fără analytics, fără apeluri către niciun server (singura excepție, doar la cerere: butonul „Verifică integritatea fișierului” re-citește acest fișier de la adresa de unde e servit) — tot ce vezi rulează local, în browserul tău.
   </div>
 </footer>
 </main>
@@ -1979,8 +1984,9 @@ function renderGlossary(filter){
   var html = '', lastLetter = '';
   items.forEach(function(x){
     var letter = fold(x.t).charAt(0).toUpperCase();
-    if(letter!==lastLetter){ html += '<div class="letterhead">'+letter+'</div>'; lastLetter = letter; }
-    html += '<div class="glossitem"><dt>'+esc(x.t)+'</dt><dd>'+esc(x.d)+'</dd></div>';
+    var lh = '';
+    if(letter!==lastLetter){ lh = ' lh" data-letter="'+esc(letter); lastLetter = letter; }
+    html += '<div class="glossitem'+lh+'"><dt>'+esc(x.t)+'</dt><dd>'+esc(x.d)+'</dd></div>';
   });
   list.innerHTML = html || '<div class="glossitem"><dt>—</dt><dd>Niciun termen găsit.</dd></div>';
   $('#glosarCount').textContent = items.length+' termeni';
