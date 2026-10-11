@@ -16,7 +16,7 @@ Un ghid complet pentru explorarea naturii, în 20 de secțiuni (§0–§19): cla
 - **Căutare în ghid** (meniul lateral): caută în textul integral al celor 20 de secțiuni, fără diacritice (ex. „bufnita”, „Shannon”); filtrează meniul, Enter deschide secțiunea cea mai potrivită, Esc golește câmpul.
 - **Calculatoare și unelte** (§11): indice de biodiversitate Shannon–Wiener, locator Maidenhead, azimut și distanță spre o țintă (cu busolă live, dacă dispozitivul o permite), răcirea aerului cu altitudinea, amprenta de carbon a unei deplasări, sechestrare de carbon pentru copaci. Calculele se fac local, în pagină.
 - **Antrenor de chemări** (§4): tonuri sintetizate (nu înregistrări reale) pentru recunoașterea unor tipare, plus citirea cu voce a denumirii onomatopeice prin sinteza vocală a browserului, dacă este disponibilă.
-- **Jurnal de teren** (§13): adaugi observații (specie, număr, dată, oră, loc, comportament, note), cu completare a locului din GPS la cerere; export și import `.json`, partajare ca fișier. Contorul arată „neexportat” până la export, iar la părăsirea paginii cu observații neexportate browserul cere confirmare (jurnalul nu se păstrează în browser).
+- **Jurnal de teren** (§13): adaugi observații (specie, număr, dată, oră, loc, comportament, note), cu completare a locului din GPS la cerere; export și import `.json`, partajare ca fișier. Contorul arată „neexportat” până la export, iar la părăsirea paginii cu observații neexportate browserul cere confirmare (jurnalul nu se păstrează în browser decât dacă bifezi „Păstrează jurnalul pe acest dispozitiv”).
 - **Test de cunoștințe** (§18): mod aleator sau pe categorii, scor, progres pe categorii cu export/import.
 - **Identitate locală și certificate**: generare de cheie ECDSA P-256 în browser, certificat auto-semnat al categoriilor stăpânite (minimum 80% corect și 5 întrebări pe categorie), verificare, „martor”, revocare. Nu este o diplomă oficială.
 - **Glosar A–Z** cu căutare și notițe proprii (export/import).
@@ -40,7 +40,7 @@ Conținut educațional/orientativ. Secțiunile despre urgențe, șerpi, căpușe
 
 ## Confidențialitate și rețea
 
-- **Stocare:** aplicația nu folosește localStorage, sessionStorage sau IndexedDB. Jurnalul, scorurile, notițele din glosar și identitatea criptografică stau doar în memorie și dispar la reîncărcarea paginii, dacă nu le exporți.
+- **Stocare:** singura utilizare a `localStorage` (cheia `exploratorii-eco-jurnal-v1`) este copia opțională a jurnalului, activă doar dacă bifezi „Păstrează jurnalul pe acest dispozitiv”; fără sessionStorage sau IndexedDB. Jurnalul (fără bifă), scorurile, notițele din glosar și identitatea criptografică stau doar în memorie și dispar la reîncărcarea paginii, dacă nu le exporți.
 - **Rețea:** pagina nu încarcă scripturi, fonturi sau imagini externe și nu are analytics. Singura cerere de rețea este la cererea utilizatorului: butonul „Verifică integritatea fișierului” re-citește fișierul de la adresa de unde este servit. Linkurile din subsol (ANMAP, iNaturalist, GBIF, IUCN, Salvamont, fiipregatit.ro, GitHub, TROM, Patreon) se deschid doar la clic.
 - Permisiuni ale browserului cerute doar la acțiune: localizare (GPS), orientare/busolă, sinteză vocală, partajare de fișiere.
 
@@ -58,7 +58,8 @@ Audit: 2026-10-10 — verificat cu Playwright și axe-core (toate cele 20 de sec
 
 ## Istoric / Changelog
 
-Ultima actualizare: 11 octombrie 2026 — v1.0.2 (în aplicație; conținutul factual verificat ultima dată la 2026-08-06; reorganizarea ANANP → ANMAP reconfirmată prin căutare web la 11.10.2026).
+Ultima actualizare: 11 octombrie 2026 — v1.0.3 (în aplicație; conținutul factual verificat ultima dată la 2026-08-06; reorganizarea ANANP → ANMAP reconfirmată prin căutare web la 11.10.2026).
+- v1.0.3: **păstrare opțională a jurnalului pe dispozitiv** (casetă în §13, implicit dezactivată; `localStorage`, cheia `exploratorii-eco-jurnal-v1`, cu avertisment pentru dispozitive comune; debifarea șterge copia; când e activă, avertizarea la părăsirea paginii nu mai apare); **importul jurnalului omite observațiile identice deja prezente** (nu mai dublează la reimport). Hash-ul CSP recalculat; axe-core = 0 violări la 1280 și 360 px.
 - v1.0.2: căutare în tot ghidul; avertizare la părăsirea paginii cu observații neexportate (+ indicator „neexportat/exportat” în jurnal); tema inițială urmează `prefers-color-scheme`. Hash-ul CSP recalculat; axe-core = 0 violări la 1280 și 360 px, în ambele teme.
 - v1.0.1: calculatorul Shannon–Wiener pornește cu un exemplu precompletat (fag, brad, molid, carpen, paltin) și afișează H′ de la început.
 - Bara de categorii din hero se împachetează pe mobil (nu se mai lipesc etichetele); marginile paginii de start sunt reduse la 20 px pe ecrane înguste.

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-+uu2QPn45LoGG/iIRhTaOt5YwC8o7qf1mKnJQFneULg='; style-src 'unsafe-inline'; img-src data: blob:; media-src data: blob:; font-src data:; connect-src 'self'; base-uri 'none'; form-action 'none'; frame-src 'none'; object-src 'none'; worker-src 'none'; manifest-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-KUqejblqwsPGyj6QzhSz5cnBLa/WImlij9bheLGAlag='; style-src 'unsafe-inline'; img-src data: blob:; media-src data: blob:; font-src data:; connect-src 'self'; base-uri 'none'; form-action 'none'; frame-src 'none'; object-src 'none'; worker-src 'none'; manifest-src 'none'">
 <title>EXPLORATORII ECO — Enciclopedia exploratorului de teren</title>
 <meta name="description" content="Ghid complet, off-line, despre explorarea naturii: taxonomie, urme și semne, biomurile României, metode de observare, jurnal de teren, arii protejate și multe altele.">
 <style>
@@ -468,7 +468,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <div class="brandblock">
     <div class="brand"><span class="dot"></span> EXPLORATORII ECO</div>
     <div class="tagline">Enciclopedia exploratorului de teren · off-line</div>
-    <div class="tagline">v1.0.2 · actualizat 2026-10-11 · conținut verificat 2026-08-06</div>
+    <div class="tagline">v1.0.3 · actualizat 2026-10-11 · conținut verificat 2026-08-06</div>
     <div class="clock"><span>local <b id="localClock2">--:--</b></span><span id="sunClock">☀ --:--</span></div>
   </div>
 
@@ -1140,7 +1140,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <div class="note">Publică poziția exactă doar dacă specia nu e vulnerabilă la braconaj sau deranj (vezi §12, regula 03) — majoritatea platformelor permit „estomparea" locației pentru specii sensibile.</div>
 
   <h3><span class="n">03</span>Jurnalul tău de teren</h3>
-  <p style="font-size:13px;color:var(--ink-faint);">Ține doar în memorie, nu în browser — dispare la reîncărcare, exact ca restul stării acestei pagini. Exportă-l ca fișier ca să nu-l pierzi, și îl poți reîncărca oricând, chiar și într-o vizită viitoare.</p>
+  <p style="font-size:13px;color:var(--ink-faint);">Implicit ține doar în memorie, nu în browser — dispare la reîncărcare, exact ca restul stării acestei pagini (sau bifează mai jos păstrarea pe dispozitiv). Exportă-l ca fișier ca să nu-l pierzi, și îl poți reîncărca oricând, chiar și într-o vizită viitoare.</p>
   <div class="panel">
     <div class="grid2">
       <div class="field" style="margin:0;"><label for="jSpecies">Specie (sau cea mai bună aproximare)</label><input type="text" id="jSpecies" placeholder="ex: Bubo bubo / buhă"></div>
@@ -1163,6 +1163,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
       <button class="btn" id="jImportBtn" type="button">📂 Importă</button>
       <input type="file" id="jImportFile" accept="application/json" style="display:none;">
     </div>
+    <label style="display:flex;gap:8px;align-items:flex-start;font-size:13px;margin-top:10px;cursor:pointer;"><input type="checkbox" id="jKeep" style="margin-top:3px;"><span>Păstrează jurnalul pe acest dispozitiv (în acest browser; include locurile notate — nu bifa pe un dispozitiv comun). Debifarea șterge copia păstrată; exportul rămâne cea mai sigură copie.</span></label>
     <div id="jStatus" style="font-size:12px;color:var(--ink-faint);margin-top:6px;"></div>
     <div id="jStats" style="font-family:var(--font-mono);font-size:12px;color:var(--amber);margin-top:8px;"></div>
     <div class="journal-list" id="jList"></div>
@@ -1456,7 +1457,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
     </div>
   </div>
   <div style="margin-top:18px;font-size:11.5px;color:var(--ink-faint);line-height:1.7;">
-    <b style="color:var(--ink-dim);">Istoric</b> — <span style="font-family:var(--font-mono);">v1.0.2</span> (2026-10-11): căutare în tot ghidul, avertizare la părăsirea paginii cu observații neexportate, tema inițială urmează preferința sistemului. <span style="font-family:var(--font-mono);">v1.0.1</span> (2026-10-11): calculatorul Shannon–Wiener pornește cu un exemplu calculat, etichetele din hero se împachetează pe mobil, repere și titluri accesibile, politică CSP. <span style="font-family:var(--font-mono);">v1.0</span> (2026-08-06): versiune inițială — 20 de secțiuni, jurnal de teren, indice de biodiversitate, identitate criptografică locală și certificate semnate, antrenor de chemări, calculatoare de mediu, glosar A–Z. Construită după modelul ETER (chiuta.github.io/eter), aceeași arhitectură off-line, recontextualizată pentru explorarea naturii.
+    <b style="color:var(--ink-dim);">Istoric</b> — <span style="font-family:var(--font-mono);">v1.0.3</span> (2026-10-11): păstrare opțională a jurnalului de teren pe dispozitiv (implicit dezactivată), importul nu mai dublează observațiile deja prezente; conținutul factual nu s-a schimbat. <span style="font-family:var(--font-mono);">v1.0.2</span> (2026-10-11): căutare în tot ghidul, avertizare la părăsirea paginii cu observații neexportate, tema inițială urmează preferința sistemului. <span style="font-family:var(--font-mono);">v1.0.1</span> (2026-10-11): calculatorul Shannon–Wiener pornește cu un exemplu calculat, etichetele din hero se împachetează pe mobil, repere și titluri accesibile, politică CSP. <span style="font-family:var(--font-mono);">v1.0</span> (2026-08-06): versiune inițială — 20 de secțiuni, jurnal de teren, indice de biodiversitate, identitate criptografică locală și certificate semnate, antrenor de chemări, calculatoare de mediu, glosar A–Z. Construită după modelul ETER (chiuta.github.io/eter), aceeași arhitectură off-line, recontextualizată pentru explorarea naturii.
   </div>
   <div class="legal">
     Conținut educațional, verificat la 2026-08-06 (v1.0 de mai sus) — dar regulamentele și denumirile instituțiilor se schimbă. Pentru orice decizie care contează (acces în arii protejate, specii strict protejate, proceduri de urgență), <b>ANMAP</b> și <b>Salvamont România</b> rămân sursele autoritare, nu acest fișier. Informațiile despre urgențe, șerpi, căpușe, ciuperci și plante sunt orientative: nu înlocuiesc un curs de prim ajutor sau sfatul medical (în urgență: 112), iar plantele și ciupercile nu se consumă pe baza acestui ghid. Fără cookie-uri, fără analytics, fără apeluri către niciun server (singura excepție, doar la cerere: butonul „Verifică integritatea fișierului” re-citește acest fișier de la adresa de unde e servit) — tot ce vezi rulează local, în browserul tău.
@@ -2329,7 +2330,21 @@ function updateFenoSim(){
    ============================================================ */
 var journalEntries = [];
 var journalSavedSig = '[]';   /* starea la ultimul export; jurnalul nu se păstrează în browser */
-function journalDirty(){ return journalEntries.length>0 && JSON.stringify(journalEntries)!==journalSavedSig; }
+var JKEY = 'exploratorii-eco-jurnal-v1';
+var journalKept = false;
+function journalStore(op){
+  try{
+    if(op==='clear') localStorage.removeItem(JKEY);
+    else if(op==='save') localStorage.setItem(JKEY, JSON.stringify(journalEntries));
+    else if(op==='load'){ var raw = localStorage.getItem(JKEY); return raw ? JSON.parse(raw) : null; }
+    return true;
+  }catch(e){ return op==='load' ? null : false; }
+}
+function journalPersist(){
+  if(!journalKept) return;
+  if(!journalStore('save')){ journalKept = false; var k=$('#jKeep'); if(k) k.checked=false; var st=$('#jStatus'); if(st) st.textContent='Nu s-a putut păstra jurnalul (stocarea e blocată în acest browser) — exportă-l ca fișier.'; }
+}
+function journalDirty(){ return !journalKept && journalEntries.length>0 && JSON.stringify(journalEntries)!==journalSavedSig; }
 window.addEventListener('beforeunload', function(e){ if(journalDirty()){ e.preventDefault(); e.returnValue=''; } });
 function renderJournal(){
   var list = $('#jList');
@@ -2344,7 +2359,7 @@ function renderJournal(){
       + '<button class="jdel journalDelBtn" data-i="'+idx+'" type="button">șterge</button></div>';
   }).join('') || '<div class="note">Niciun jurnal încă — adaugă prima observație mai sus.</div>';
   $$('.journalDelBtn').forEach(function(b){
-    b.addEventListener('click', function(){ journalEntries.splice(+b.dataset.i,1); renderJournal(); renderJournalStats(); renderBadges(); });
+    b.addEventListener('click', function(){ journalEntries.splice(+b.dataset.i,1); journalPersist(); renderJournal(); renderJournalStats(); renderBadges(); });
   });
 }
 function renderJournalStats(){
@@ -2353,7 +2368,7 @@ function renderJournalStats(){
   if(!journalEntries.length){ el.textContent=''; return; }
   var species = {};
   journalEntries.forEach(function(e){ if(e.specie) species[fold(e.specie)]=true; });
-  el.textContent = journalEntries.length+' observații · '+Object.keys(species).length+' specii unice'+(journalDirty() ? ' · neexportat — se pierde la reîncărcarea paginii' : ' · exportat');
+  el.textContent = journalEntries.length+' observații · '+Object.keys(species).length+' specii unice'+(journalKept ? ' · păstrat pe acest dispozitiv' : (journalDirty() ? ' · neexportat — se pierde la reîncărcarea paginii' : ' · exportat'));
 }
 function addJournalEntry(){
   var specie = $('#jSpecies').value.trim();
@@ -2369,7 +2384,7 @@ function addJournalEntry(){
   });
   $('#jSpecies').value=''; $('#jLoc').value=''; $('#jBehav').value=''; $('#jNote').value='';
   $('#jStatus').textContent = 'Observație adăugată.';
-  renderJournal(); renderJournalStats(); renderBadges();
+  journalPersist(); renderJournal(); renderJournalStats(); renderBadges();
 }
 function journalBlob(){ return {tip:'exploratorii-eco-jurnal', versiune:1, generat:new Date().toISOString(), observatii:journalEntries}; }
 function exportJournal(){ downloadJSON(journalBlob(), 'jurnal-teren-exploratorii-eco.json'); journalSavedSig = JSON.stringify(journalEntries); $('#jStatus').textContent='Exportat.'; renderJournalStats(); }
@@ -2386,9 +2401,11 @@ function importJournalFile(file){
     try{
       var data = JSON.parse(reader.result);
       if(Array.isArray(data.observatii)){
-        data.observatii.forEach(function(o){ if(o && o.specie){ journalEntries.push({specie:String(o.specie).slice(0,200), numar:String(o.numar||'1').slice(0,10), data:String(o.data||'').slice(0,10), ora:String(o.ora||'').slice(0,5), loc:String(o.loc||'').slice(0,200), comportament:String(o.comportament||'').slice(0,200), note:String(o.note||'').slice(0,200)}); } });
-        renderJournal(); renderJournalStats(); renderBadges();
-        $('#jStatus').textContent = 'Importat: '+data.observatii.length+' observații.';
+        var added = 0, seenSig = {};
+        journalEntries.forEach(function(x){ seenSig[JSON.stringify(x)] = true; });
+        data.observatii.forEach(function(o){ if(o && o.specie){ var ne = {specie:String(o.specie).slice(0,200), numar:String(o.numar||'1').slice(0,10), data:String(o.data||'').slice(0,10), ora:String(o.ora||'').slice(0,5), loc:String(o.loc||'').slice(0,200), comportament:String(o.comportament||'').slice(0,200), note:String(o.note||'').slice(0,200)}; var sg = JSON.stringify(ne); if(!seenSig[sg]){ seenSig[sg] = true; journalEntries.push(ne); added++; } } });
+        journalPersist(); renderJournal(); renderJournalStats(); renderBadges();
+        $('#jStatus').textContent = 'Importat: '+added+' observații noi'+(added<data.observatii.length ? ' ('+(data.observatii.length-added)+' deja prezente sau invalide, omise)' : '')+'.';
       } else { $('#jStatus').textContent = 'Fișier nerecunoscut.'; }
     }catch(e){ $('#jStatus').textContent = 'Eroare la citirea fișierului.'; }
   };
@@ -2849,7 +2866,7 @@ function updateReportLink(sectionEl){
 }
 async function copyReportInfo(){
   var active = $('.section.active h2');
-  var txt = 'Exploratorii Eco v1.0.2 — secțiune: '+(active?active.textContent:'necunoscută')+' — '+navigator.userAgent;
+  var txt = 'Exploratorii Eco v1.0.3 — secțiune: '+(active?active.textContent:'necunoscută')+' — '+navigator.userAgent;
   try{
     await navigator.clipboard.writeText(txt);
     var btn = $('#reportCopyBtn'); var orig = btn.textContent;
@@ -3098,6 +3115,18 @@ function init(){
   $('#jDate').value = todayStr;
   var now0 = new Date();
   $('#jTime').value = pad2(now0.getHours())+':'+pad2(now0.getMinutes());
+  var jsaved = journalStore('load');
+  if(Array.isArray(jsaved) && jsaved.length){
+    jsaved.forEach(function(o){ if(o && o.specie){ journalEntries.push({specie:String(o.specie).slice(0,200), numar:String(o.numar||'1').slice(0,10), data:String(o.data||'').slice(0,10), ora:String(o.ora||'').slice(0,5), loc:String(o.loc||'').slice(0,200), comportament:String(o.comportament||'').slice(0,200), note:String(o.note||'').slice(0,200)}); } });
+    journalKept = true; $('#jKeep').checked = true;
+    $('#jStatus').textContent = 'Jurnal încărcat din copia păstrată pe acest dispozitiv ('+journalEntries.length+' observații).';
+    renderBadges();
+  }
+  $('#jKeep').addEventListener('change', function(e){
+    if(e.target.checked){ journalKept = true; journalPersist(); if(journalKept) $('#jStatus').textContent = 'Jurnalul este păstrat pe acest dispozitiv.'; }
+    else { journalKept = false; journalStore('clear'); $('#jStatus').textContent = 'Copia păstrată a fost ștearsă (jurnalul rămâne în pagină până la reîncărcare; exportă-l dacă îl vrei).'; }
+    renderJournalStats();
+  });
   renderJournal(); renderJournalStats();
   $('#jAddBtn').addEventListener('click', addJournalEntry);
   $('#jExportBtn').addEventListener('click', exportJournal);
