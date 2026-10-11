@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-BnPjQHLjQBiLBlWiA97jSit+oWTgl+awf0jirTCk09I='; style-src 'unsafe-inline'; img-src data: blob:; media-src data: blob:; font-src data:; connect-src 'self'; base-uri 'none'; form-action 'none'; frame-src 'none'; object-src 'none'; worker-src 'none'; manifest-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-+uu2QPn45LoGG/iIRhTaOt5YwC8o7qf1mKnJQFneULg='; style-src 'unsafe-inline'; img-src data: blob:; media-src data: blob:; font-src data:; connect-src 'self'; base-uri 'none'; form-action 'none'; frame-src 'none'; object-src 'none'; worker-src 'none'; manifest-src 'none'">
 <title>EXPLORATORII ECO — Enciclopedia exploratorului de teren</title>
 <meta name="description" content="Ghid complet, off-line, despre explorarea naturii: taxonomie, urme și semne, biomurile României, metode de observare, jurnal de teren, arii protejate și multe altele.">
 <style>
@@ -414,7 +414,14 @@ footer a:hover{color:var(--verde);}
 footer .legal{margin-top:26px;padding-top:16px;border-top:1px solid var(--line-soft);font-size:11.5px;color:var(--ink-faint);}
 @media (max-width:720px){footer .fgrid{grid-template-columns:1fr;}}
 
+/* Runda 6: căutare în ghid */
+.navsearch{padding:0 18px 12px;border-bottom:1px solid var(--line-soft);margin-bottom:10px;}
+.navsearch input{width:100%;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:9px 10px;font:inherit;font-size:13.5px;}
+.navsearch input::placeholder{color:var(--ink-faint);}
+.navq-status{font-size:12px;color:var(--ink-dim);min-height:16px;margin-top:6px;}
+.nq-hide{display:none !important;}
 @media print{
+  .navsearch{display:none !important;}
   .topbar,.sidebar,.scrim,footer,.btn,.btnrow,#waterfall,.hero-stats,.lamp,#compassWrap,input,.searchbox,.chip,.quiz-opt,.quiz-explain,button{display:none !important;}
   html,body{background:#fff !important;}
   .shell{display:block !important;}
@@ -461,8 +468,14 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <div class="brandblock">
     <div class="brand"><span class="dot"></span> EXPLORATORII ECO</div>
     <div class="tagline">Enciclopedia exploratorului de teren · off-line</div>
-    <div class="tagline">v1.0.1 · actualizat 2026-10-11 · conținut verificat 2026-08-06</div>
+    <div class="tagline">v1.0.2 · actualizat 2026-10-11 · conținut verificat 2026-08-06</div>
     <div class="clock"><span>local <b id="localClock2">--:--</b></span><span id="sunClock">☀ --:--</span></div>
+  </div>
+
+  <div class="navsearch" role="search">
+    <label for="navq" class="navlabel" style="display:block">Caută în ghid</label>
+    <input id="navq" type="search" placeholder="ex. bufniță, Shannon, urme, ursul" autocomplete="off" enterkeyhint="search">
+    <div class="navq-status" id="navqStatus" role="status" aria-live="polite"></div>
   </div>
 
   <div class="navgroup">
@@ -1443,7 +1456,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
     </div>
   </div>
   <div style="margin-top:18px;font-size:11.5px;color:var(--ink-faint);line-height:1.7;">
-    <b style="color:var(--ink-dim);">Istoric</b> — <span style="font-family:var(--font-mono);">v1.0.1</span> (2026-10-11): calculatorul Shannon–Wiener pornește cu un exemplu calculat, etichetele din hero se împachetează pe mobil, repere și titluri accesibile, politică CSP. <span style="font-family:var(--font-mono);">v1.0</span> (2026-08-06): versiune inițială — 20 de secțiuni, jurnal de teren, indice de biodiversitate, identitate criptografică locală și certificate semnate, antrenor de chemări, calculatoare de mediu, glosar A–Z. Construită după modelul ETER (chiuta.github.io/eter), aceeași arhitectură off-line, recontextualizată pentru explorarea naturii.
+    <b style="color:var(--ink-dim);">Istoric</b> — <span style="font-family:var(--font-mono);">v1.0.2</span> (2026-10-11): căutare în tot ghidul, avertizare la părăsirea paginii cu observații neexportate, tema inițială urmează preferința sistemului. <span style="font-family:var(--font-mono);">v1.0.1</span> (2026-10-11): calculatorul Shannon–Wiener pornește cu un exemplu calculat, etichetele din hero se împachetează pe mobil, repere și titluri accesibile, politică CSP. <span style="font-family:var(--font-mono);">v1.0</span> (2026-08-06): versiune inițială — 20 de secțiuni, jurnal de teren, indice de biodiversitate, identitate criptografică locală și certificate semnate, antrenor de chemări, calculatoare de mediu, glosar A–Z. Construită după modelul ETER (chiuta.github.io/eter), aceeași arhitectură off-line, recontextualizată pentru explorarea naturii.
   </div>
   <div class="legal">
     Conținut educațional, verificat la 2026-08-06 (v1.0 de mai sus) — dar regulamentele și denumirile instituțiilor se schimbă. Pentru orice decizie care contează (acces în arii protejate, specii strict protejate, proceduri de urgență), <b>ANMAP</b> și <b>Salvamont România</b> rămân sursele autoritare, nu acest fișier. Informațiile despre urgențe, șerpi, căpușe, ciuperci și plante sunt orientative: nu înlocuiesc un curs de prim ajutor sau sfatul medical (în urgență: 112), iar plantele și ciupercile nu se consumă pe baza acestui ghid. Fără cookie-uri, fără analytics, fără apeluri către niciun server (singura excepție, doar la cerere: butonul „Verifică integritatea fișierului” re-citește acest fișier de la adresa de unde e servit) — tot ce vezi rulează local, în browserul tău.
@@ -2315,6 +2328,9 @@ function updateFenoSim(){
    Jurnal de teren — în memorie, export/import JSON
    ============================================================ */
 var journalEntries = [];
+var journalSavedSig = '[]';   /* starea la ultimul export; jurnalul nu se păstrează în browser */
+function journalDirty(){ return journalEntries.length>0 && JSON.stringify(journalEntries)!==journalSavedSig; }
+window.addEventListener('beforeunload', function(e){ if(journalDirty()){ e.preventDefault(); e.returnValue=''; } });
 function renderJournal(){
   var list = $('#jList');
   if(!list) return;
@@ -2337,7 +2353,7 @@ function renderJournalStats(){
   if(!journalEntries.length){ el.textContent=''; return; }
   var species = {};
   journalEntries.forEach(function(e){ if(e.specie) species[fold(e.specie)]=true; });
-  el.textContent = journalEntries.length+' observații · '+Object.keys(species).length+' specii unice';
+  el.textContent = journalEntries.length+' observații · '+Object.keys(species).length+' specii unice'+(journalDirty() ? ' · neexportat — se pierde la reîncărcarea paginii' : ' · exportat');
 }
 function addJournalEntry(){
   var specie = $('#jSpecies').value.trim();
@@ -2356,7 +2372,7 @@ function addJournalEntry(){
   renderJournal(); renderJournalStats(); renderBadges();
 }
 function journalBlob(){ return {tip:'exploratorii-eco-jurnal', versiune:1, generat:new Date().toISOString(), observatii:journalEntries}; }
-function exportJournal(){ downloadJSON(journalBlob(), 'jurnal-teren-exploratorii-eco.json'); $('#jStatus').textContent='Exportat.'; }
+function exportJournal(){ downloadJSON(journalBlob(), 'jurnal-teren-exploratorii-eco.json'); journalSavedSig = JSON.stringify(journalEntries); $('#jStatus').textContent='Exportat.'; renderJournalStats(); }
 async function shareJournalFile(){
   try{
     var blob = new Blob([JSON.stringify(journalBlob(),null,2)], {type:'application/json'});
@@ -2833,7 +2849,7 @@ function updateReportLink(sectionEl){
 }
 async function copyReportInfo(){
   var active = $('.section.active h2');
-  var txt = 'Exploratorii Eco v1.0.1 — secțiune: '+(active?active.textContent:'necunoscută')+' — '+navigator.userAgent;
+  var txt = 'Exploratorii Eco v1.0.2 — secțiune: '+(active?active.textContent:'necunoscută')+' — '+navigator.userAgent;
   try{
     await navigator.clipboard.writeText(txt);
     var btn = $('#reportCopyBtn'); var orig = btn.textContent;
@@ -2859,6 +2875,53 @@ function initNav(){
   });
   var first = document.querySelector('.navlink[data-sec="acasa"]');
   if(first){ first.classList.add('active'); updateReportLink($('#sec-acasa')); }
+  initNavSearch();
+}
+/* Căutare în tot ghidul (text integral al secțiunilor, fără diacritice, local). Enter deschide cea mai potrivită secțiune. */
+function normQ(t){ return String(t||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/\s+/g,' ').trim(); }
+function initNavSearch(){
+  var inp = $('#navq'), st = $('#navqStatus');
+  var A = function(sel, el){ return Array.prototype.slice.call((el||document).querySelectorAll(sel)); };
+  if(!inp) return;
+  var idx = null;
+  function build(){
+    idx = A('.navlink').map(function(b){
+      var sec = document.getElementById('sec-'+b.dataset.sec);
+      return { btn:b, title:normQ(b.textContent), body: sec ? normQ(sec.textContent) : '' };
+    });
+  }
+  function run(){
+    var q = normQ(inp.value);
+    if(!idx) build();
+    var words = q ? q.split(' ') : [];
+    var n = 0;
+    idx.forEach(function(it){
+      var hay = it.title+' '+it.body;
+      var hit = !words.length || words.every(function(w){ return hay.indexOf(w)!==-1; });
+      it.btn.classList.toggle('nq-hide', !hit);
+      if(hit) n++;
+    });
+    A('.navgroup').forEach(function(g){
+      var any = A('.navlink', g).some(function(b){ return !b.classList.contains('nq-hide'); });
+      g.classList.toggle('nq-hide', !any);
+    });
+    st.textContent = !q ? '' : (n ? (n===1 ? '1 secțiune găsită' : n+' secțiuni găsite')+' · Enter deschide cea mai potrivită' : 'Nicio secțiune nu conține „'+inp.value.trim()+'”');
+  }
+  inp.addEventListener('input', run);
+  inp.addEventListener('keydown', function(e){
+    if(e.key==='Enter'){
+      var q = normQ(inp.value), ws = q.split(' ');
+      var vis = idx ? idx.filter(function(it){ return !it.btn.classList.contains('nq-hide'); }) : [];
+      var best = null, bs = -1;   /* cea mai potrivită: titlu (+1000), apoi numărul de apariții */
+      vis.forEach(function(it){
+        var sc = ws.every(function(w){ return it.title.indexOf(w)!==-1; }) ? 1000 : 0;
+        ws.forEach(function(w){ sc += it.body.split(w).length-1; });
+        if(it.btn.dataset.sec==='acasa') sc -= 0.5;   /* la egalitate, nu prima pagină */
+        if(sc>bs){ bs = sc; best = it; }
+      });
+      if(best && q){ e.preventDefault(); best.btn.click(); }
+    } else if(e.key==='Escape' && inp.value){ inp.value=''; run(); }
+  });
 }
 function openDrawer(){ $('#sidebar').classList.add('open'); $('#scrim').classList.add('show'); $('#drawerBtn').setAttribute('aria-expanded','true'); }
 function closeDrawer(){ $('#sidebar').classList.remove('open'); $('#scrim').classList.remove('show'); $('#drawerBtn').setAttribute('aria-expanded','false'); }
@@ -2880,7 +2943,10 @@ function initTheme(){
   $('#themeBtnMobile').addEventListener('click', function(){
     setTheme(document.documentElement.getAttribute('data-theme')==='zi' ? 'noapte' : 'zi');
   });
-  setTheme('noapte');
+  /* Respectă preferința sistemului (lumină) la prima afișare. */
+  var light = false;
+  try{ light = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches); }catch(e){}
+  setTheme(light ? 'zi' : 'noapte');
 }
 function tickClocks(){
   var now = new Date();
