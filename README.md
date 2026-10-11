@@ -55,6 +55,13 @@ Licența nu este încă declarată explicit în acest repository; vezi nota din 
 
 Audit: 2026-10-10 — verificat cu Playwright și axe-core (toate cele 20 de secțiuni, ambele teme); fără `localStorage`; jurnalul și importul testate cu `<img onerror>` (escapat). Corectate: titluri invizibile în tema „Zi" (text alb pe fundal deschis), contrast, listă de definiții invalidă în glosar.
 
+## Istoric / Changelog
+
+Ultima actualizare: 11 octombrie 2026 — v1.0.1 (în aplicație; conținutul factual verificat ultima dată la 2026-08-06; reorganizarea ANANP → ANMAP reconfirmată prin căutare web la 11.10.2026).
+- Calculatorul Shannon–Wiener pornește cu un exemplu precompletat (fag, brad, molid, carpen, paltin) și afișează H′ de la început.
+- Bara de categorii din hero se împachetează pe mobil (nu se mai lipesc etichetele); marginile paginii de start sunt reduse la 20 px pe ecrane înguste.
+- Bara de sus este `<header>`, titlurile din subsol h2; politică CSP adăugată (`connect-src 'self'` pentru verificarea integrității). axe-core = 0 violări la 1280 și 360 px.
+
 ## Autor
 
 Alexio — Alexandru-Ionuț Chiuță. Aplicația trimite din subsol la Centrul STRING (CSPCF). Contact: alexio@trom.tf

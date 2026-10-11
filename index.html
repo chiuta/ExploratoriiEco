@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-BnPjQHLjQBiLBlWiA97jSit+oWTgl+awf0jirTCk09I='; style-src 'unsafe-inline'; img-src data: blob:; media-src data: blob:; font-src data:; connect-src 'self'; base-uri 'none'; form-action 'none'; frame-src 'none'; object-src 'none'; worker-src 'none'; manifest-src 'none'">
 <title>EXPLORATORII ECO — Enciclopedia exploratorului de teren</title>
 <meta name="description" content="Ghid complet, off-line, despre explorarea naturii: taxonomie, urme și semne, biomurile României, metode de observare, jurnal de teren, arii protejate și multe altele.">
 <style>
@@ -177,6 +178,7 @@ button{font-family:inherit;}
 /* ---------- main ---------- */
 main{min-width:0;}
 .section{display:none;padding:40px 44px 90px;max-width:920px;}
+.acasa-body{padding:36px 44px 10px;max-width:920px;}
 .section.active{display:block;animation:fadein .35s ease;}
 @keyframes fadein{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
 .eyebrow{
@@ -404,7 +406,7 @@ label{display:block;font-size:11px;color:var(--ink-faint);letter-spacing:.05em;t
 /* ---------- footer ---------- */
 footer{border-top:1px solid var(--line);padding:34px 44px 50px;max-width:920px;}
 footer .fgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:26px;}
-footer h5{font-family:var(--font-mono);color:var(--amber);font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 10px;}
+footer h2{font-family:var(--font-mono);color:var(--amber);font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 10px;}
 footer p,footer li{font-size:12.5px;color:var(--ink-dim);}
 footer ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;}
 footer a{color:var(--ink-dim);text-decoration:none;}
@@ -439,17 +441,19 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   .section{padding:28px 20px 70px;}
   .hero{padding:36px 20px 30px;}
   footer{padding:28px 20px 40px;}
+  .acasa-body{padding:28px 20px 10px;}
 }
+@media (max-width:600px){.waterfall-labels{flex-wrap:wrap;justify-content:flex-start;gap:3px 10px;}}
 </style>
 </head>
 <body>
 <a href="#main" class="skip-link">Sări la conținut</a>
 
-<div class="topbar">
+<header class="topbar">
   <button id="drawerBtn" aria-label="Deschide meniul" aria-expanded="false">☰</button>
   <div class="brand">EXPLORATORII ECO</div>
   <button id="themeBtnMobile" aria-label="Comută tema">◐</button>
-</div>
+</header>
 <div class="scrim" id="scrim"></div>
 
 <div class="shell">
@@ -457,7 +461,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <div class="brandblock">
     <div class="brand"><span class="dot"></span> EXPLORATORII ECO</div>
     <div class="tagline">Enciclopedia exploratorului de teren · off-line</div>
-    <div class="tagline">v1.0 · verificat 2026-08-06</div>
+    <div class="tagline">v1.0.1 · actualizat 2026-10-11 · conținut verificat 2026-08-06</div>
     <div class="clock"><span>local <b id="localClock2">--:--</b></span><span id="sunClock">☀ --:--</span></div>
   </div>
 
@@ -540,7 +544,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
     <div style="font-size:10px;color:var(--ink-faint);margin-top:8px;">Cifre verificate la 6 august 2026 — vezi Istoric, în subsol, pentru ce s-a corectat și când.</div>
   </div>
 
-  <div style="padding:36px 44px 10px;max-width:920px;" id="acasaBody">
+  <div class="acasa-body" id="acasaBody">
   <div class="eyebrow">Ce este explorarea ecologică</div>
   <h2 style="font-size:22px;">Ultimul hobby care te învață să te uiți, cu adevărat, unde calci</h2>
   <p class="lede" style="margin-bottom:18px;">Explorarea ecologică — naturalismul de teren — este practica de a observa, identifica, înțelege și documenta sistematic viața sălbatică și ecosistemele din jurul tău. Nu e nevoie de laborator, de diplomă sau de echipament scump: doar de un carnet, de răbdare și de un set de întrebări bune. E o disciplină la fel de veche ca omenirea și, azi, e totodată o rețea globală de <b>știință cetățenească</b> — observațiile tale de weekend pot ajunge, prin platforme precum GBIF, în lucrări științifice reale.</p>
@@ -957,7 +961,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
     </div>
     <div class="smeter-wrap" style="margin-top:12px;">
       <div class="smeter" id="biodivSmeter"></div>
-      <div class="readout"><b id="biodivReadout">—</b><span id="biodivText">Adaugă cel puțin două specii și apasă Calculează.</span></div>
+      <div class="readout"><b id="biodivReadout">—</b><span id="biodivText">Exemplu precompletat — modifică speciile și numărul de indivizi, apoi apasă Calculează.</span></div>
     </div>
     <div class="note">Formula: H′ = −Σ(pᵢ × ln pᵢ), unde pᵢ e proporția speciei i din total. Un teren cu 2–3 specii dominante clar are H′ mic; un teren cu multe specii, în număr asemănător, are H′ mare. Nu compara direct indici calculați din eșantioane de mărimi foarte diferite.</div>
   </div>
@@ -1412,12 +1416,12 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
 <footer>
   <div class="fgrid">
     <div>
-      <h5>Exploratorii Eco</h5>
+      <h2>Exploratorii Eco</h2>
       <p>Un ghid de referință despre explorarea naturii, într-un singur fișier HTML — fără server, fără cont, fără telemetrie. Se deschide la fel de bine offline ca online, azi sau peste zece ani.</p>
       <p style="margin-top:10px;">Construit în spiritul <b>trade-free</b>: cunoașterea nu ar trebui să aibă nevoie de intermediari — nici comerciali, nici birocratici — între tine și ea.</p>
     </div>
     <div>
-      <h5>Autor</h5>
+      <h2>Autor</h2>
       <ul>
         <li><a href="https://chiuta.github.io" target="_blank" rel="noopener">chiuta.github.io</a></li>
         <li><a href="https://centrulstring.ro" target="_blank" rel="noopener">Centrul STRING (CSPCF)</a></li>
@@ -1427,7 +1431,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
       </ul>
     </div>
     <div>
-      <h5>Surse &amp; resurse</h5>
+      <h2>Surse &amp; resurse</h2>
       <ul>
         <li><a href="https://anmap.gov.ro" target="_blank" rel="noopener">anmap.gov.ro</a> — autoritatea pentru arii protejate</li>
         <li><a href="https://www.inaturalist.org" target="_blank" rel="noopener">inaturalist.org</a> — citizen science, identificare</li>
@@ -1439,7 +1443,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
     </div>
   </div>
   <div style="margin-top:18px;font-size:11.5px;color:var(--ink-faint);line-height:1.7;">
-    <b style="color:var(--ink-dim);">Istoric</b> — <span style="font-family:var(--font-mono);">v1.0</span> (2026-08-06): versiune inițială — 20 de secțiuni, jurnal de teren, indice de biodiversitate, identitate criptografică locală și certificate semnate, antrenor de chemări, calculatoare de mediu, glosar A–Z. Construită după modelul ETER (chiuta.github.io/eter), aceeași arhitectură off-line, recontextualizată pentru explorarea naturii.
+    <b style="color:var(--ink-dim);">Istoric</b> — <span style="font-family:var(--font-mono);">v1.0.1</span> (2026-10-11): calculatorul Shannon–Wiener pornește cu un exemplu calculat, etichetele din hero se împachetează pe mobil, repere și titluri accesibile, politică CSP. <span style="font-family:var(--font-mono);">v1.0</span> (2026-08-06): versiune inițială — 20 de secțiuni, jurnal de teren, indice de biodiversitate, identitate criptografică locală și certificate semnate, antrenor de chemări, calculatoare de mediu, glosar A–Z. Construită după modelul ETER (chiuta.github.io/eter), aceeași arhitectură off-line, recontextualizată pentru explorarea naturii.
   </div>
   <div class="legal">
     Conținut educațional, verificat la 2026-08-06 (v1.0 de mai sus) — dar regulamentele și denumirile instituțiilor se schimbă. Pentru orice decizie care contează (acces în arii protejate, specii strict protejate, proceduri de urgență), <b>ANMAP</b> și <b>Salvamont România</b> rămân sursele autoritare, nu acest fișier. Informațiile despre urgențe, șerpi, căpușe, ciuperci și plante sunt orientative: nu înlocuiesc un curs de prim ajutor sau sfatul medical (în urgență: 112), iar plantele și ciupercile nu se consumă pe baza acestui ghid. Fără cookie-uri, fără analytics, fără apeluri către niciun server (singura excepție, doar la cerere: butonul „Verifică integritatea fișierului” re-citește acest fișier de la adresa de unde e servit) — tot ce vezi rulează local, în browserul tău.
@@ -2103,7 +2107,7 @@ function calcBiodiv(){
     var n = parseFloat(cts[i].value);
     if(sps[i].value.trim() && n>0) counts.push(n);
   }
-  if(counts.length<2){ $('#biodivText').textContent='Adaugă cel puțin două specii, fiecare cu număr de indivizi > 0.'; return; }
+  if(counts.length<2){ $('#biodivReadout').textContent='—'; $('#biodivText').textContent='Adaugă cel puțin două specii, fiecare cu număr de indivizi > 0.'; return; }
   var total = counts.reduce(function(a,b){return a+b;},0);
   var H = 0;
   counts.forEach(function(n){ var p = n/total; H += -p*Math.log(p); });
@@ -2829,7 +2833,7 @@ function updateReportLink(sectionEl){
 }
 async function copyReportInfo(){
   var active = $('.section.active h2');
-  var txt = 'Exploratorii Eco v1.0 — secțiune: '+(active?active.textContent:'necunoscută')+' — '+navigator.userAgent;
+  var txt = 'Exploratorii Eco v1.0.1 — secțiune: '+(active?active.textContent:'necunoscută')+' — '+navigator.userAgent;
   try{
     await navigator.clipboard.writeText(txt);
     var btn = $('#reportCopyBtn'); var orig = btn.textContent;
@@ -2971,9 +2975,10 @@ function init(){
   });
 
   // calculatoare — biodiversitate
-  addBiodivRow('',''); addBiodivRow('','');
+  addBiodivRow('Fag',42); addBiodivRow('Brad',23); addBiodivRow('Molid',17); addBiodivRow('Carpen',11); addBiodivRow('Paltin',7);
   $('#biodivAddBtn').addEventListener('click', function(){ addBiodivRow('',''); });
   $('#biodivCalcBtn').addEventListener('click', calcBiodiv);
+  calcBiodiv();   // exemplu precompletat: rezultat vizibil de la început
 
   // calculatoare — locator
   $('#gridCalcBtn').addEventListener('click', function(){
