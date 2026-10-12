@@ -1,5 +1,7 @@
 # Exploratorii Eco
 
+**Versiune:** 1.0.4 · **Ultima actualizare:** 12 octombrie 2026
+
 Enciclopedia exploratorului de teren: ghid de natură, jurnal de observații și unelte de teren într-un singur fișier HTML.
 
 **Live:** https://chiuta.github.io/ExploratoriiEco/
@@ -58,7 +60,7 @@ Audit: 2026-10-10 — verificat cu Playwright și axe-core (toate cele 20 de sec
 
 ## Istoric / Changelog
 
-Ultima actualizare: 11 octombrie 2026 — v1.0.3 (în aplicație; conținutul factual verificat ultima dată la 2026-08-06; reorganizarea ANANP → ANMAP reconfirmată prin căutare web la 11.10.2026).
+- 1.0.4 — 2026-10-12: versiunea și data ultimei actualizări sunt afișate în aplicație (conținutul factual verificat ultima dată la 2026-08-06; reorganizarea ANANP → ANMAP reconfirmată prin căutare web la 11.10.2026).
 - v1.0.3: **păstrare opțională a jurnalului pe dispozitiv** (casetă în §13, implicit dezactivată; `localStorage`, cheia `exploratorii-eco-jurnal-v1`, cu avertisment pentru dispozitive comune; debifarea șterge copia; când e activă, avertizarea la părăsirea paginii nu mai apare); **importul jurnalului omite observațiile identice deja prezente** (nu mai dublează la reimport). Hash-ul CSP recalculat; axe-core = 0 violări la 1280 și 360 px.
 - v1.0.2: căutare în tot ghidul; avertizare la părăsirea paginii cu observații neexportate (+ indicator „neexportat/exportat” în jurnal); tema inițială urmează `prefers-color-scheme`. Hash-ul CSP recalculat; axe-core = 0 violări la 1280 și 360 px, în ambele teme.
 - v1.0.1: calculatorul Shannon–Wiener pornește cu un exemplu precompletat (fag, brad, molid, carpen, paltin) și afișează H′ de la început.

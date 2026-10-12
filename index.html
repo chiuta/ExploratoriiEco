@@ -3,8 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-KUqejblqwsPGyj6QzhSz5cnBLa/WImlij9bheLGAlag='; style-src 'unsafe-inline'; img-src data: blob:; media-src data: blob:; font-src data:; connect-src 'self'; base-uri 'none'; form-action 'none'; frame-src 'none'; object-src 'none'; worker-src 'none'; manifest-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-+UGhgKLpCEYegPOUiQBXnMveviO7IARmBPhCQMkxJyI='; style-src 'unsafe-inline'; img-src data: blob:; media-src data: blob:; font-src data:; connect-src 'self'; base-uri 'none'; form-action 'none'; frame-src 'none'; object-src 'none'; worker-src 'none'; manifest-src 'none'">
 <title>EXPLORATORII ECO — Enciclopedia exploratorului de teren</title>
+<meta name="application-version" content="1.0.4">
+<meta name="last-updated" content="2026-10-12">
 <meta name="description" content="Ghid complet, off-line, despre explorarea naturii: taxonomie, urme și semne, biomurile României, metode de observare, jurnal de teren, arii protejate și multe altele.">
 <style>
 /* ============================================================
@@ -468,7 +470,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <div class="brandblock">
     <div class="brand"><span class="dot"></span> EXPLORATORII ECO</div>
     <div class="tagline">Enciclopedia exploratorului de teren · off-line</div>
-    <div class="tagline">v1.0.3 · actualizat 2026-10-11 · conținut verificat 2026-08-06</div>
+    <div class="tagline"><span id="app-version">v 1.0.4 · 2026-10-12</span> · conținut verificat 2026-08-06</div>
     <div class="clock"><span>local <b id="localClock2">--:--</b></span><span id="sunClock">☀ --:--</span></div>
   </div>
 
@@ -1457,7 +1459,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
     </div>
   </div>
   <div style="margin-top:18px;font-size:11.5px;color:var(--ink-faint);line-height:1.7;">
-    <b style="color:var(--ink-dim);">Istoric</b> — <span style="font-family:var(--font-mono);">v1.0.3</span> (2026-10-11): păstrare opțională a jurnalului de teren pe dispozitiv (implicit dezactivată), importul nu mai dublează observațiile deja prezente; conținutul factual nu s-a schimbat. <span style="font-family:var(--font-mono);">v1.0.2</span> (2026-10-11): căutare în tot ghidul, avertizare la părăsirea paginii cu observații neexportate, tema inițială urmează preferința sistemului. <span style="font-family:var(--font-mono);">v1.0.1</span> (2026-10-11): calculatorul Shannon–Wiener pornește cu un exemplu calculat, etichetele din hero se împachetează pe mobil, repere și titluri accesibile, politică CSP. <span style="font-family:var(--font-mono);">v1.0</span> (2026-08-06): versiune inițială — 20 de secțiuni, jurnal de teren, indice de biodiversitate, identitate criptografică locală și certificate semnate, antrenor de chemări, calculatoare de mediu, glosar A–Z. Construită după modelul ETER (chiuta.github.io/eter), aceeași arhitectură off-line, recontextualizată pentru explorarea naturii.
+    <b style="color:var(--ink-dim);">Istoric</b> — <span style="font-family:var(--font-mono);">v1.0.4</span> (2026-10-12): versiunea și data ultimei actualizări sunt afișate în aplicație; conținutul factual nu s-a schimbat. <span style="font-family:var(--font-mono);">v1.0.3</span> (2026-10-11): păstrare opțională a jurnalului de teren pe dispozitiv (implicit dezactivată), importul nu mai dublează observațiile deja prezente; conținutul factual nu s-a schimbat. <span style="font-family:var(--font-mono);">v1.0.2</span> (2026-10-11): căutare în tot ghidul, avertizare la părăsirea paginii cu observații neexportate, tema inițială urmează preferința sistemului. <span style="font-family:var(--font-mono);">v1.0.1</span> (2026-10-11): calculatorul Shannon–Wiener pornește cu un exemplu calculat, etichetele din hero se împachetează pe mobil, repere și titluri accesibile, politică CSP. <span style="font-family:var(--font-mono);">v1.0</span> (2026-08-06): versiune inițială — 20 de secțiuni, jurnal de teren, indice de biodiversitate, identitate criptografică locală și certificate semnate, antrenor de chemări, calculatoare de mediu, glosar A–Z. Construită după modelul ETER (chiuta.github.io/eter), aceeași arhitectură off-line, recontextualizată pentru explorarea naturii.
   </div>
   <div class="legal">
     Conținut educațional, verificat la 2026-08-06 (v1.0 de mai sus) — dar regulamentele și denumirile instituțiilor se schimbă. Pentru orice decizie care contează (acces în arii protejate, specii strict protejate, proceduri de urgență), <b>ANMAP</b> și <b>Salvamont România</b> rămân sursele autoritare, nu acest fișier. Informațiile despre urgențe, șerpi, căpușe, ciuperci și plante sunt orientative: nu înlocuiesc un curs de prim ajutor sau sfatul medical (în urgență: 112), iar plantele și ciupercile nu se consumă pe baza acestui ghid. Fără cookie-uri, fără analytics, fără apeluri către niciun server (singura excepție, doar la cerere: butonul „Verifică integritatea fișierului” re-citește acest fișier de la adresa de unde e servit) — tot ce vezi rulează local, în browserul tău.
@@ -2866,7 +2868,7 @@ function updateReportLink(sectionEl){
 }
 async function copyReportInfo(){
   var active = $('.section.active h2');
-  var txt = 'Exploratorii Eco v1.0.3 — secțiune: '+(active?active.textContent:'necunoscută')+' — '+navigator.userAgent;
+  var txt = 'Exploratorii Eco v1.0.4 — secțiune: '+(active?active.textContent:'necunoscută')+' — '+navigator.userAgent;
   try{
     await navigator.clipboard.writeText(txt);
     var btn = $('#reportCopyBtn'); var orig = btn.textContent;
