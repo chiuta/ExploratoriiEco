@@ -60,7 +60,7 @@ Descarcă `index.html` și deschide-l în browser. Aplicația funcționează fă
 
 ## Licență
 
-Licența nu este încă declarată explicit în acest repository; vezi nota din aplicație. (Aplicația nu conține o mențiune de licență în text.)
+MIT — vezi fișierul `LICENSE`. © 2026 Alexandru-Ionuț Chiuță (Alexio). Eventualele biblioteci terțe incluse în fișier își păstrează licențele proprii.
 
 ## Audit
 
