@@ -1,6 +1,6 @@
 # Exploratorii Eco
 
-**Versiune:** 1.0.4 · **Ultima actualizare:** 12 octombrie 2026
+**Versiune:** 1.1.0 · **Ultima actualizare:** 14 octombrie 2026
 
 Enciclopedia exploratorului de teren: ghid de natură, jurnal de observații și unelte de teren într-un singur fișier HTML.
 
@@ -25,6 +25,14 @@ Un ghid complet pentru explorarea naturii, în 20 de secțiuni (§0–§19): cla
 - Insigne calculate din jurnal și din testul de cunoștințe, cât timp pagina este deschisă.
 - **Printează secțiunea curentă**, mod ecran complet pentru test, buton „Raportează o eroare” (deschide formularul de issues GitHub).
 - **Verifică integritatea fișierului**: la cerere, calculează SHA-256 al fișierului servit.
+
+## Funcții noi (v1.1.0, 14 octombrie 2026)
+
+Fără funcții de învățare noi în această versiune: **repetiția spațiată există deja** (secțiunea Test cunoștințe, SM-2 cu export/import) și nu a fost dublată. Adăugirea este kitul de mai jos; copia de siguranță include **jurnalul de observații** dacă l-ai păstrat pe dispozitiv (`exploratorii-eco-jurnal-v1`).
+
+### Transparență și copie de siguranță (fff-kit)
+
+Un clic (sau Enter) pe versiunea afișată (`v 1.1.0 · 2026-10-14`) deschide fereastra „Transparență”: gazdele de rețea declarate (0 cereri externe), cheile de stocare locală cu dimensiuni, API-urile folosite, mărimea și SHA-256 al fișierului (cu verificator pentru un fișier descărcat) și **copia de siguranță** a datelor aplicației într-un fișier `.fff.json` (opțional criptat cu parolă, AES-GCM 256 / PBKDF2; parola nu poate fi recuperată), import cu confirmare și ștergerea datelor aplicației. Kitul (`fff-kit`, module: core, label, bundle) este lipit în `index.html`, nu face cereri de rețea și nu schimbă datele existente; fără el aplicația funcționează la fel. Jurnalul poate conține localizări și observații personale: folosește „Exportă criptat” pentru fișiere care circulă. Textele kitului sunt în 8 limbi (ro, en, fr, it, es, pt, hu, de); **traducerile fr/it/es/pt/hu/de sunt automate și neverificate nativ**. Interfața aplicației însăși rămâne în română.
 
 ## Manual de utilizare
 
@@ -59,6 +67,7 @@ Licența nu este încă declarată explicit în acest repository; vezi nota din 
 Audit: 2026-10-10 — verificat cu Playwright și axe-core (toate cele 20 de secțiuni, ambele teme); fără `localStorage`; jurnalul și importul testate cu `<img onerror>` (escapat). Corectate: titluri invizibile în tema „Zi" (text alb pe fundal deschis), contrast, listă de definiții invalidă în glosar.
 
 ## Istoric / Changelog
+- v1.1.0 — 2026-10-14: fff-kit (Transparență + copie de siguranță unitară, inclusiv jurnalul). Conținutul și repetiția spațiată nu s-au schimbat.
 
 - 1.0.4 — 2026-10-12: versiunea și data ultimei actualizări sunt afișate în aplicație (conținutul factual verificat ultima dată la 2026-08-06; reorganizarea ANANP → ANMAP reconfirmată prin căutare web la 11.10.2026).
 - v1.0.3: **păstrare opțională a jurnalului pe dispozitiv** (casetă în §13, implicit dezactivată; `localStorage`, cheia `exploratorii-eco-jurnal-v1`, cu avertisment pentru dispozitive comune; debifarea șterge copia; când e activă, avertizarea la părăsirea paginii nu mai apare); **importul jurnalului omite observațiile identice deja prezente** (nu mai dublează la reimport). Hash-ul CSP recalculat; axe-core = 0 violări la 1280 și 360 px.

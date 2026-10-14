@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "slug": "exploratoriieco",
+  "name": "EXPLORATORII ECO — Enciclopedia exploratorului de teren",
+  "version": "1.1.0",
+  "updated": "2026-10-14",
+  "description": "Ghid complet, off-line, despre explorarea naturii: taxonomie, urme și semne, biomurile României, metode de observare, jurnal de teren, arii protejate și multe altele.",
+  "egress": [],
+  "permissions": [
+    "geolocation",
+    "navigator.share",
+    "speechSynthesis",
+    "clipboard",
+    "serviceWorker",
+    "localStorage",
+    "Web Crypto"
+  ],
+  "storageKeys": [],
+  "sizeBytes": 329240,
+  "sha256": "65009b5a5be26313c76288ab616396faccb8f6bab2de5892a10cbef0d7507a6a",
+  "csp": {
+    "present": true,
+    "directives": {
+      "default-src": "'none'",
+      "script-src": "sha256×3",
+      "style-src": "'unsafe-inline'",
+      "img-src": "'self' data: blob:",
+      "media-src": "data: blob:",
+      "font-src": "data:",
+      "connect-src": "'self'",
+      "base-uri": "'none'",
+      "form-action": "'none'",
+      "frame-src": "'none'",
+      "object-src": "'none'",
+      "worker-src": "'self'",
+      "manifest-src": "'self'"
+    },
+    "scriptInline": "hash",
+    "connect": "'self'"
+  },
+  "features": {
+    "export": true,
+    "import": true,
+    "i18n": [],
+    "pwa": {
+      "manifest": true,
+      "serviceWorker": true
+    },
+    "modules": [
+      "core",
+      "label",
+      "bundle"
+    ]
+  },
+  "kit": {
+    "version": "1.0.0",
+    "modules": [
+      "core",
+      "label",
+      "bundle"
+    ]
+  },
+  "selfSerializing": false
+}
