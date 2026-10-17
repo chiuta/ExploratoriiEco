@@ -51,7 +51,7 @@ Conținut educațional/orientativ. Secțiunile despre urgențe, șerpi, căpușe
 ## Confidențialitate și rețea
 
 - **Stocare:** singura utilizare a `localStorage` (cheia `exploratorii-eco-jurnal-v1`) este copia opțională a jurnalului, activă doar dacă bifezi „Păstrează jurnalul pe acest dispozitiv”; fără sessionStorage sau IndexedDB. Jurnalul (fără bifă), scorurile, notițele din glosar și identitatea criptografică stau doar în memorie și dispar la reîncărcarea paginii, dacă nu le exporți.
-- **Rețea:** pagina nu încarcă scripturi, fonturi sau imagini externe și nu are analytics. Singura cerere de rețea este la cererea utilizatorului: butonul „Verifică integritatea fișierului” re-citește fișierul de la adresa de unde este servit. Linkurile din subsol (ANMAP, iNaturalist, GBIF, IUCN, Salvamont, fiipregatit.ro, GitHub, TROM, Patreon) se deschid doar la clic.
+- **Rețea:** pagina nu încarcă scripturi, fonturi sau imagini externe și nu are analytics. Singura cerere de rețea este la cererea utilizatorului: butonul „Verifică integritatea fișierului” re-citește fișierul de la adresa de unde este servit. Linkurile din subsol (ANMAP, iNaturalist, GBIF, IUCN, Salvamont, fiipregatit.ro, GitHub, TROM) se deschid doar la clic.
 - Permisiuni ale browserului cerute doar la acțiune: localizare (GPS), orientare/busolă, sinteză vocală, partajare de fișiere.
 
 ## Rulare locală / offline
