@@ -10,7 +10,7 @@ Die Enzyklopädie der Feldforscherin und des Feldforschers: Naturführer, Beobac
 
 **Live:** https://chiuta.github.io/ExploratoriiEco/
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.de.png)
 
 ## Was es ist
 

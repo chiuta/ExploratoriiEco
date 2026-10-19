@@ -10,7 +10,7 @@ L'enciclopedia dell'esploratore sul campo: guida alla natura, diario di osservaz
 
 **Online:** https://chiuta.github.io/ExploratoriiEco/
 
-![Schermata](screenshot.png)
+![Schermata](screenshot.it.png)
 
 ## Che cos'è
 

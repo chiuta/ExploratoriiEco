@@ -10,7 +10,7 @@ Enciclopedia exploratorului de teren: ghid de natură, jurnal de observații și
 
 **Live:** https://chiuta.github.io/ExploratoriiEco/
 
-![Captura de ecran](screenshot.png)
+![Captura de ecran](screenshot.ro.png)
 
 ## Ce este
 

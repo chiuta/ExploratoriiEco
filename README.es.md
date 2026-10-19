@@ -10,7 +10,7 @@ La enciclopedia del explorador de campo: guía de la naturaleza, diario de obser
 
 **En línea:** https://chiuta.github.io/ExploratoriiEco/
 
-![Captura de pantalla](screenshot.png)
+![Captura de pantalla](screenshot.es.png)
 
 ## Qué es
 

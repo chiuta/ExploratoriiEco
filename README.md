@@ -10,7 +10,7 @@ The field explorer's encyclopedia: a nature guide, an observation journal and fi
 
 **Live:** https://chiuta.github.io/ExploratoriiEco/
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.en.png)
 
 ## What it is
 

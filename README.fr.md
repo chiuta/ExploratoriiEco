@@ -10,7 +10,7 @@ L'encyclopédie de l'explorateur de terrain : guide de la nature, carnet d'obser
 
 **En ligne :** https://chiuta.github.io/ExploratoriiEco/
 
-![Capture d'écran](screenshot.png)
+![Capture d'écran](screenshot.fr.png)
 
 ## De quoi s'agit-il
 

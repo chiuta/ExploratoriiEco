@@ -10,7 +10,7 @@ A terepi felfedező enciklopédiája: természetismereti útmutató, megfigyelé
 
 **Élő verzió:** https://chiuta.github.io/ExploratoriiEco/
 
-![Képernyőkép](screenshot.png)
+![Képernyőkép](screenshot.hu.png)
 
 ## Mi ez
 
