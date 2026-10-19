@@ -1,85 +1,87 @@
 # Exploratorii Eco
 
-**Versiune:** 1.1.0 · **Ultima actualizare:** 14 octombrie 2026
+**English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-Enciclopedia exploratorului de teren: ghid de natură, jurnal de observații și unelte de teren într-un singur fișier HTML.
+**Version:** 1.1.0 · **Last updated:** 2026-10-14
+
+The field explorer's encyclopedia: a nature guide, an observation journal and field tools in a single HTML file.
 
 **Live:** https://chiuta.github.io/ExploratoriiEco/
 
-![Captura de ecran](screenshot.png)
+![Screenshot](screenshot.png)
 
-## Ce este
+## What it is
 
-Un ghid complet pentru explorarea naturii, în 20 de secțiuni (§0–§19): clasificarea vieții, semne și urme, cântece și chemări, biomuri ale României, metode de observare, floră și faună de teren, echipament, calculatoare, proceduri de teren, jurnal și citizen science, etică (Leave No Trace), insigne, urgențe, arii protejate, test de cunoștințe și glosar A–Z. Conținutul este educațional; pentru decizii importante (acces în arii protejate, specii strict protejate, urgențe) aplicația trimite la ANMAP și Salvamont România ca surse autoritare.
+A complete guide to exploring nature, in 20 sections (§0–§19): classification of life, signs and tracks, songs and calls, the biomes of Romania, observation methods, field flora and fauna, equipment, calculators, field procedures, journal and citizen science, ethics (Leave No Trace), badges, emergencies, protected areas, a knowledge quiz and an A–Z glossary. The content is educational; for important decisions (access to protected areas, strictly protected species, emergencies) the app refers to ANMAP and Salvamont România as authoritative sources.
 
-## Funcții
+## Features
 
-- Navigare pe secțiuni din meniul lateral (☰ pe mobil); temă **Noapte / Zi** (butoanele ☾ / ☀; la prima deschidere urmează preferința sistemului).
-- **Căutare în ghid** (meniul lateral): caută în textul integral al celor 20 de secțiuni, fără diacritice (ex. „bufnita”, „Shannon”); filtrează meniul, Enter deschide secțiunea cea mai potrivită, Esc golește câmpul.
-- **Calculatoare și unelte** (§11): indice de biodiversitate Shannon–Wiener, locator Maidenhead, azimut și distanță spre o țintă (cu busolă live, dacă dispozitivul o permite), răcirea aerului cu altitudinea, amprenta de carbon a unei deplasări, sechestrare de carbon pentru copaci. Calculele se fac local, în pagină.
-- **Antrenor de chemări** (§4): tonuri sintetizate (nu înregistrări reale) pentru recunoașterea unor tipare, plus citirea cu voce a denumirii onomatopeice prin sinteza vocală a browserului, dacă este disponibilă.
-- **Jurnal de teren** (§13): adaugi observații (specie, număr, dată, oră, loc, comportament, note), cu completare a locului din GPS la cerere; export și import `.json`, partajare ca fișier. Contorul arată „neexportat” până la export, iar la părăsirea paginii cu observații neexportate browserul cere confirmare (jurnalul nu se păstrează în browser decât dacă bifezi „Păstrează jurnalul pe acest dispozitiv”).
-- **Test de cunoștințe** (§18): mod aleator sau pe categorii, scor, progres pe categorii cu export/import.
-- **Identitate locală și certificate**: generare de cheie ECDSA P-256 în browser, certificat auto-semnat al categoriilor stăpânite (minimum 80% corect și 5 întrebări pe categorie), verificare, „martor”, revocare. Nu este o diplomă oficială.
-- **Glosar A–Z** cu căutare și notițe proprii (export/import).
-- Insigne calculate din jurnal și din testul de cunoștințe, cât timp pagina este deschisă.
-- **Printează secțiunea curentă**, mod ecran complet pentru test, buton „Raportează o eroare” (deschide formularul de issues GitHub).
-- **Verifică integritatea fișierului**: la cerere, calculează SHA-256 al fișierului servit.
+- Navigation by section from the side menu (☰ on mobile); **Night / Day** theme (the ☾ / ☀ buttons; on first opening it follows the system preference).
+- **Guide search** (side menu): searches the full text of the 20 sections, without diacritics (e.g. "bufnita", "Shannon"); it filters the menu, Enter opens the best-matching section, Esc clears the field.
+- **Calculators and tools** (§11): Shannon–Wiener biodiversity index, Maidenhead locator, bearing and distance to a target (with a live compass, if the device supports it), air cooling with altitude, the carbon footprint of a trip, carbon sequestration for trees. The calculations are done locally, in the page.
+- **Call trainer** (§4): synthesized tones (not real recordings) for recognizing certain patterns, plus reading the onomatopoeic name aloud through the browser's speech synthesis, if available.
+- **Field journal** (§13): you add observations (species, count, date, time, place, behaviour, notes), with the place filled in from GPS on request; `.json` export and import, sharing as a file. The counter shows "unexported" until exported, and when leaving the page with unexported observations the browser asks for confirmation (the journal is not kept in the browser unless you tick "Keep the journal on this device").
+- **Knowledge quiz** (§18): random mode or by category, score, progress by category with export/import.
+- **Local identity and certificates**: generation of an ECDSA P-256 key in the browser, a self-signed certificate of the mastered categories (at least 80% correct and 5 questions per category), verification, "witness", revocation. It is not an official diploma.
+- **A–Z glossary** with search and your own notes (export/import).
+- Badges computed from the journal and from the knowledge quiz, while the page is open.
+- **Print the current section**, full-screen mode for the quiz, a "Report an error" button (opens the GitHub issues form).
+- **Check file integrity**: on request, it computes the SHA-256 of the served file.
 
-## Funcții noi (v1.1.0, 14 octombrie 2026)
+## New features (v1.1.0, 14 October 2026)
 
-Fără funcții de învățare noi în această versiune: **repetiția spațiată există deja** (secțiunea Test cunoștințe, SM-2 cu export/import) și nu a fost dublată. Adăugirea este kitul de mai jos; copia de siguranță include **jurnalul de observații** dacă l-ai păstrat pe dispozitiv (`exploratorii-eco-jurnal-v1`).
+No new learning features in this version: **spaced repetition already exists** (the Knowledge quiz section, SM-2 with export/import) and was not duplicated. The addition is the kit below; the backup includes the **observation journal** if you kept it on the device (`exploratorii-eco-jurnal-v1`).
 
-### Transparență și copie de siguranță (fff-kit)
+### Transparency and backup (fff-kit)
 
-Un clic (sau Enter) pe versiunea afișată (`v 1.1.0 · 2026-10-14`) deschide fereastra „Transparență”: gazdele de rețea declarate (0 cereri externe), cheile de stocare locală cu dimensiuni, API-urile folosite, mărimea și SHA-256 al fișierului (cu verificator pentru un fișier descărcat) și **copia de siguranță** a datelor aplicației într-un fișier `.fff.json` (opțional criptat cu parolă, AES-GCM 256 / PBKDF2; parola nu poate fi recuperată), import cu confirmare și ștergerea datelor aplicației. Kitul (`fff-kit`, module: core, label, bundle) este lipit în `index.html`, nu face cereri de rețea și nu schimbă datele existente; fără el aplicația funcționează la fel. Jurnalul poate conține localizări și observații personale: folosește „Exportă criptat” pentru fișiere care circulă. Textele kitului sunt în 8 limbi (ro, en, fr, it, es, pt, hu, de); **traducerile fr/it/es/pt/hu/de sunt automate și neverificate nativ**. Interfața aplicației însăși rămâne în română.
+A click (or Enter) on the displayed version (`v 1.1.0 · 2026-10-14`) opens the "Transparency" window: the declared network hosts (0 external requests), the local storage keys with sizes, the APIs used, the size and SHA-256 of the file (with a verifier for a downloaded file) and the **backup** of the app's data to a `.fff.json` file (optionally encrypted with a password, AES-GCM 256 / PBKDF2; the password cannot be recovered), import with confirmation and deletion of the app's data. The kit (`fff-kit`, modules: core, label, bundle) is pasted into `index.html`, makes no network requests and does not change existing data; without it the app works the same. The journal may contain locations and personal observations: use "Export encrypted" for files that circulate. The kit's texts are in 8 languages (ro, en, fr, it, es, pt, hu, de); **the fr/it/es/pt/hu/de translations are machine-generated and not checked by native speakers**. The app's own interface remains in Romanian.
 
-## Manual de utilizare
+## User guide
 
-1. Deschide pagina și alege o secțiune din meniul din stânga.
-2. Pentru jurnal, mergi la „§13 Jurnal & citizen science”, completează câmpurile și apasă **+ Adaugă observație**; apoi **💾 Exportă (.json)** pentru a păstra datele.
-3. Pentru a relua jurnalul, apasă **📂 Importă** și alege fișierul exportat anterior.
-4. Pentru calculatoare, mergi la „§11 Calculatoare & unelte”; butoanele „📍 Folosește locația mea” cer permisiunea de localizare a browserului.
-5. La „§18 Test cunoștințe” alege o categorie sau răspunde direct; **💾 Exportă progresul** și **📂 Importă progresul** păstrează rezultatele între vizite.
-6. Pentru un certificat: **🔑 Generează identitate**, apoi **📜 Generează certificat**; exportă identitatea ca rezervă.
-7. Schimbă tema cu **☾ Noapte / ☀ Zi**; imprimă secțiunea curentă cu **🖨️ Printează secțiunea curentă**.
+1. Open the page and choose a section from the menu on the left.
+2. For the journal, go to "§13 Journal & citizen science", fill in the fields and press **+ Add observation**; then **💾 Export (.json)** to keep the data.
+3. To resume the journal, press **📂 Import** and choose the file exported earlier.
+4. For the calculators, go to "§11 Calculators & tools"; the "📍 Use my location" buttons ask for the browser's location permission.
+5. In "§18 Knowledge quiz" choose a category or answer directly; **💾 Export progress** and **📂 Import progress** keep the results between visits.
+6. For a certificate: **🔑 Generate identity**, then **📜 Generate certificate**; export the identity as a backup.
+7. Change the theme with **☾ Night / ☀ Day**; print the current section with **🖨️ Print the current section**.
 
-## Avertisment
+## Warning
 
-Conținut educațional/orientativ. Secțiunile despre urgențe, șerpi, căpușe, ciuperci și plante nu înlocuiesc un curs de prim ajutor, sfatul medical sau autoritățile (112, Salvamont, ANMAP); plantele și ciupercile nu se consumă pe baza ghidului. Aplicația afișează o notă în același sens în subsol. „Certificatele" generate sunt dovezi auto-semnate ale progresului propriu, nu diplome oficiale.
+Educational/indicative content. The sections on emergencies, snakes, ticks, mushrooms and plants do not replace a first-aid course, medical advice or the authorities (112, Salvamont, ANMAP); plants and mushrooms must not be eaten on the basis of the guide. The app displays a note to the same effect in the footer. The "certificates" generated are self-signed proofs of your own progress, not official diplomas.
 
-## Confidențialitate și rețea
+## Privacy and network
 
-- **Stocare:** singura utilizare a `localStorage` (cheia `exploratorii-eco-jurnal-v1`) este copia opțională a jurnalului, activă doar dacă bifezi „Păstrează jurnalul pe acest dispozitiv”; fără sessionStorage sau IndexedDB. Jurnalul (fără bifă), scorurile, notițele din glosar și identitatea criptografică stau doar în memorie și dispar la reîncărcarea paginii, dacă nu le exporți.
-- **Rețea:** pagina nu încarcă scripturi, fonturi sau imagini externe și nu are analytics. Singura cerere de rețea este la cererea utilizatorului: butonul „Verifică integritatea fișierului” re-citește fișierul de la adresa de unde este servit. Linkurile din subsol (ANMAP, iNaturalist, GBIF, IUCN, Salvamont, fiipregatit.ro, GitHub, TROM) se deschid doar la clic.
-- Permisiuni ale browserului cerute doar la acțiune: localizare (GPS), orientare/busolă, sinteză vocală, partajare de fișiere.
+- **Storage:** the only use of `localStorage` (key `exploratorii-eco-jurnal-v1`) is the optional copy of the journal, active only if you tick "Keep the journal on this device"; no sessionStorage or IndexedDB. The journal (without the tick), the scores, the glossary notes and the cryptographic identity live only in memory and disappear when the page is reloaded, unless you export them.
+- **Network:** the page loads no external scripts, fonts or images and has no analytics. The only network request is on the user's request: the "Check file integrity" button re-reads the file from the address it is served from. The footer links (ANMAP, iNaturalist, GBIF, IUCN, Salvamont, fiipregatit.ro, GitHub, TROM) open only on click.
+- Browser permissions requested only on action: location (GPS), orientation/compass, speech synthesis, file sharing.
 
-## Rulare locală / offline
+## Local / offline use
 
-Descarcă `index.html` și deschide-l în browser. Aplicația funcționează fără internet; verificarea integrității poate fi blocată de browser pentru fișiere deschise direct de pe disc (aplicația afișează un mesaj în acest caz).
+Download `index.html` and open it in a browser. The app works without internet; the integrity check may be blocked by the browser for files opened directly from disk (the app shows a message in that case).
 
-## Licență
+## License
 
-MIT — vezi fișierul `LICENSE`. © 2026 Alexandru-Ionuț Chiuță (Alexio). Eventualele biblioteci terțe incluse în fișier își păstrează licențele proprii.
+MIT — see the `LICENSE` file. © 2026 Alexandru-Ionuț Chiuță (Alexio). Any third-party libraries included in the file keep their own licenses.
 
 ## Audit
 
-Audit: 2026-10-10 — verificat cu Playwright și axe-core (toate cele 20 de secțiuni, ambele teme); fără `localStorage`; jurnalul și importul testate cu `<img onerror>` (escapat). Corectate: titluri invizibile în tema „Zi" (text alb pe fundal deschis), contrast, listă de definiții invalidă în glosar.
+Audit: 2026-10-10 — verified with Playwright and axe-core (all 20 sections, both themes); no `localStorage`; the journal and the import tested with `<img onerror>` (escaped). Fixed: invisible headings in the "Day" theme (white text on a light background), contrast, an invalid definition list in the glossary.
 
-## Istoric / Changelog
-- v1.1.0 — 2026-10-14: fff-kit (Transparență + copie de siguranță unitară, inclusiv jurnalul). Conținutul și repetiția spațiată nu s-au schimbat.
+## History / Changelog
+- v1.1.0 — 2026-10-14: fff-kit (Transparency + unified backup, including the journal). The content and the spaced repetition did not change.
 
-- 1.0.4 — 2026-10-12: versiunea și data ultimei actualizări sunt afișate în aplicație (conținutul factual verificat ultima dată la 2026-08-06; reorganizarea ANANP → ANMAP reconfirmată prin căutare web la 11.10.2026).
-- v1.0.3: **păstrare opțională a jurnalului pe dispozitiv** (casetă în §13, implicit dezactivată; `localStorage`, cheia `exploratorii-eco-jurnal-v1`, cu avertisment pentru dispozitive comune; debifarea șterge copia; când e activă, avertizarea la părăsirea paginii nu mai apare); **importul jurnalului omite observațiile identice deja prezente** (nu mai dublează la reimport). Hash-ul CSP recalculat; axe-core = 0 violări la 1280 și 360 px.
-- v1.0.2: căutare în tot ghidul; avertizare la părăsirea paginii cu observații neexportate (+ indicator „neexportat/exportat” în jurnal); tema inițială urmează `prefers-color-scheme`. Hash-ul CSP recalculat; axe-core = 0 violări la 1280 și 360 px, în ambele teme.
-- v1.0.1: calculatorul Shannon–Wiener pornește cu un exemplu precompletat (fag, brad, molid, carpen, paltin) și afișează H′ de la început.
-- Bara de categorii din hero se împachetează pe mobil (nu se mai lipesc etichetele); marginile paginii de start sunt reduse la 20 px pe ecrane înguste.
-- Bara de sus este `<header>`, titlurile din subsol h2; politică CSP adăugată (`connect-src 'self'` pentru verificarea integrității). axe-core = 0 violări la 1280 și 360 px.
+- 1.0.4 — 2026-10-12: the version and the date of the last update are shown in the app (factual content last verified on 2026-08-06; the ANANP → ANMAP reorganization reconfirmed by a web search on 11.10.2026).
+- v1.0.3: **optional keeping of the journal on the device** (checkbox in §13, disabled by default; `localStorage`, key `exploratorii-eco-jurnal-v1`, with a warning for shared devices; unticking deletes the copy; when active, the leave-page warning no longer appears); **the journal import skips identical observations already present** (no more duplicating on re-import). CSP hash recalculated; axe-core = 0 violations at 1280 and 360 px.
+- v1.0.2: search across the whole guide; a warning when leaving the page with unexported observations (+ an "unexported/exported" indicator in the journal); the initial theme follows `prefers-color-scheme`. CSP hash recalculated; axe-core = 0 violations at 1280 and 360 px, in both themes.
+- v1.0.1: the Shannon–Wiener calculator starts with a pre-filled example (beech, fir, spruce, hornbeam, sycamore maple) and shows H′ from the start.
+- The category bar in the hero wraps on mobile (the labels no longer stick together); the start page margins are reduced to 20 px on narrow screens.
+- The top bar is a `<header>`, the footer headings are h2; a CSP policy was added (`connect-src 'self'` for the integrity check). axe-core = 0 violations at 1280 and 360 px.
 
-## Autor
+## Author
 
-Alexio — Alexandru-Ionuț Chiuță. Aplicația trimite din subsol la Centrul STRING (CSPCF). Contact: alexio@trom.tf
+Alexio — Alexandru-Ionuț Chiuță. From the footer, the app links to Centrul STRING (CSPCF). Contact: alexio@trom.tf
 
-## English summary
+## Summary
 
 Exploratorii Eco is a single-file Romanian-language field naturalist's encyclopedia: 20 sections, calculators (Shannon–Wiener index, Maidenhead locator, bearing, lapse rate, carbon), a field journal with JSON export/import, a quiz, and locally generated signed certificates (ECDSA). It uses no browser storage (state is lost on reload unless exported) and makes no network requests except an optional file-integrity check. Licensed under MIT.
