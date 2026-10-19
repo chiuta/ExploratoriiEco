@@ -84,6 +84,6 @@ Audit: 2026-10-10 — verificat cu Playwright și axe-core (toate cele 20 de sec
 
 Alexio — Alexandru-Ionuț Chiuță. Aplicația trimite din subsol la Centrul STRING (CSPCF). Contact: alexio@trom.tf
 
-## English summary
+## Rezumat
 
-Exploratorii Eco is a single-file Romanian-language field naturalist's encyclopedia: 20 sections, calculators (Shannon–Wiener index, Maidenhead locator, bearing, lapse rate, carbon), a field journal with JSON export/import, a quiz, and locally generated signed certificates (ECDSA). It uses no browser storage (state is lost on reload unless exported) and makes no network requests except an optional file-integrity check. Licensed under MIT.
+Exploratorii Eco este o enciclopedie a naturalistului de teren într-un singur fișier, în limba română: 20 de secțiuni, calculatoare (indicele Shannon–Wiener, localizator Maidenhead, azimut, gradient termic, carbon), un jurnal de teren cu export/import JSON, un test și certificate semnate generate local (ECDSA). Nu folosește stocarea browserului (starea se pierde la reîncărcare dacă nu este exportată) și nu face cereri de rețea, cu excepția unei verificări opționale a integrității fișierului. Licență MIT.
