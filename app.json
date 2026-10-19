@@ -15,9 +15,11 @@
     "localStorage",
     "Web Crypto"
   ],
-  "storageKeys": [],
-  "sizeBytes": 330943,
-  "sha256": "9cd29f34a8afcc4137fa7b94dbed3b5415fe94ae32e601d2c9f84683692af2bf",
+  "storageKeys": [
+    "exploratorii-eco-jurnal-v1"
+  ],
+  "sizeBytes": 331607,
+  "sha256": "71d290dcd13674dae4b14bec18b5435b5557edf247576e471ca5aeb19485fbea",
   "csp": {
     "present": true,
     "directives": {
@@ -53,7 +55,7 @@
     ]
   },
   "kit": {
-    "version": "1.0.0",
+    "version": "1.1.1",
     "modules": [
       "core",
       "label",
