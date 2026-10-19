@@ -1062,7 +1062,7 @@
 <script type="application/json" id="fff-info">{"schema":1,"slug":"exploratoriieco","name":"EXPLORATORII ECO — Enciclopedia exploratorului de teren","version":"1.2.0","updated":"2026-10-19","description":"Ghid complet, off-line, despre explorarea naturii: taxonomie, urme și semne, biomurile României, metode de observare, jurnal de teren, arii protejate și multe altele.","egress":[],"permissions":["geolocation","navigator.share","speechSynthesis","clipboard","serviceWorker","localStorage","Web Crypto"],"storageKeys":["exploratorii-eco-jurnal-v1","exploratorii-eco-lang"],"sizeBytes":466639,"sha256":"baf9ae437c1241eaf58e0dbf57095a4d36650fe4922be914dd994fae34fafe8b","csp":{"present":true,"directives":{"default-src":"'none'","script-src":"sha256×3","style-src":"'unsafe-inline'","img-src":"'self' data: blob:","media-src":"data: blob:","font-src":"data:","connect-src":"'self'","base-uri":"'none'","form-action":"'none'","frame-src":"'none'","object-src":"'none'","worker-src":"'self'","manifest-src":"'self'"},"scriptInline":"hash","connect":"'self'"},"features":{"export":true,"import":true,"i18n":["ro","en","fr","it","es","pt","hu","de"],"pwa":{"manifest":true,"serviceWorker":true},"modules":["core","label","bundle"]},"kit":{"version":"1.1.1","modules":["core","label","bundle"]},"selfSerializing":false}</script>
 <!--fff:info:end-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-vYPdi/ArsSF/P0+T3/VF6X2PG9dca/AVodHyMbTq69g=' 'sha256-YO40Pa9U54kBXfBS8s7ySLVhwIuT7JC9cMSApha5DIk=' 'sha256-7KGTUJy8DK4hpLLlCUwT3bu85+wc9zVyybZuQ6sNzDA='; style-src 'unsafe-inline'; img-src 'self' data: blob:; media-src data: blob:; font-src data:; connect-src 'self'; base-uri 'none'; form-action 'none'; frame-src 'none'; object-src 'none'; worker-src 'self'; manifest-src 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-vYPdi/ArsSF/P0+T3/VF6X2PG9dca/AVodHyMbTq69g=' 'sha256-YO40Pa9U54kBXfBS8s7ySLVhwIuT7JC9cMSApha5DIk=' 'sha256-5AK2bxnKNqXOTDo73VMp3hPa8kHxqa1fANtDGOAHMSQ='; style-src 'unsafe-inline'; img-src 'self' data: blob:; media-src data: blob:; font-src data:; connect-src 'self'; base-uri 'none'; form-action 'none'; frame-src 'none'; object-src 'none'; worker-src 'self'; manifest-src 'self'">
 <title>EXPLORATORII ECO — Enciclopedia exploratorului de teren</title>
 <meta name="application-version" content="1.2.0">
 <meta name="last-updated" content="2026-10-19">
@@ -3132,6 +3132,70 @@ function registerDom(root){
   });
   for(var i=start;i<i18nReg.length;i++) i18nPaint(i18nReg[i]);
 }
+
+/* ---- Conținut lung: blocuri HTML traduse (cheie = hash al HTML-ului ro normalizat) ---- */
+var LX = {};            /*LX_BEGIN*/ /*LX_END*/
+var lxReg = [];
+var LX_STRUCT = 'p,li,td,th,h1,h2,h3,h4,h5,summary,dt,dd,figcaption,blockquote,caption,div,ul,ol,table,section,details,tr,tbody,thead,select,pre,form,nav,aside,article,header,footer,fieldset,dl';
+var LX_CAND = {P:1,LI:1,TD:1,TH:1,H1:1,H2:1,H3:1,H4:1,H5:1,SUMMARY:1,DT:1,DD:1,FIGCAPTION:1,BLOCKQUOTE:1,CAPTION:1,DIV:1,SPAN:1};
+function lxNorm(s){ return String(s).replace(/\s+/g,' ').trim(); }
+function lxHash(s){ var h = 5381, i; s = lxNorm(s); for(i=0;i<s.length;i++) h = ((h<<5)+h+s.charCodeAt(i))|0; return (h>>>0).toString(36)+s.length.toString(36); }
+function lxHasLetters(t){ return /[A-Za-zĂÂÎȘȚăâîșț]{3}/.test(t); }
+function lxCovered(el){
+  var w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null), n, any = false;
+  while((n = w.nextNode())){
+    var t = n.data; if(!lxHasLetters(t)) continue;
+    if(i18nStatic(t)===null) return false;
+    any = true;
+  }
+  return true;
+}
+function lxCollect(){
+  var out = [], roots = $$('section.section, footer');
+  roots.forEach(function(root){
+    var els = root.querySelectorAll('*');
+    for(var i=0;i<els.length;i++){
+      var e = els[i];
+      if(e.closest('[data-nolx]')) continue;
+      if(LX_CAND[e.nodeName]){
+        if(e.querySelector(LX_STRUCT)) { lxOrphans(e, out); continue; }
+        if(e.parentNode && e.parentNode.closest && e.parentNode.closest('[data-lxu]')) continue;
+        var t = e.textContent;
+        if(!lxHasLetters(t)) continue;
+        if(e.id || e.querySelector('[id],input,select,textarea,button')) continue;
+        if(lxCovered(e)) continue;
+        e.setAttribute('data-lxu','1');
+        out.push({e:e, o:e.innerHTML});
+      }
+    }
+  });
+  return out;
+}
+function lxOrphans(e, out){
+  for(var c=e.firstChild;c;c=c.nextSibling){
+    if(c.nodeType===3 && lxHasLetters(c.data) && i18nStatic(c.data)===null && !(c.parentNode.closest && c.parentNode.closest('[data-lxu]'))) out.push({n:c, o:c.data});
+  }
+}
+function lxInit(){
+  lxReg = [];
+  lxCollect().forEach(function(x){ x.h = lxHash(x.o); lxReg.push(x); });
+  window.__lxAll = lxReg.map(function(x){ return {h:x.h, kind:x.n?'t':'h', o:x.o}; });
+}
+function lxPaint(){
+  var idx = LANGS.indexOf(curLang) - 1;
+  lxReg.forEach(function(x){
+    var t = (curLang!=='ro' && LX[x.h]) ? LX[x.h][idx] : null;
+    if(x.n){
+      if(!x.n.isConnected) return;
+      var m = /^(\s*)([\s\S]*?)(\s*)$/.exec(x.o);
+      var nv = t ? m[1]+t+m[3] : x.o;
+      if(x.n.data!==nv) x.n.data = nv;
+    } else {
+      if(t){ if(x.cur!==curLang){ x.e.innerHTML = t; x.cur = curLang; } }
+      else if(x.cur && x.cur!=='ro'){ x.e.innerHTML = x.o; x.cur = 'ro'; registerDom(x.e); }
+    }
+  });
+}
 var navReset = function(){};
 function updateSrsBtn(){
   var b = $('#srsToggleBtn'); if(!b) return;
@@ -3164,12 +3228,15 @@ function setLang(l, save){
   var sel = $('#langSel'); if(sel && sel.value!==l) sel.value = l;
   i18nReg = i18nReg.filter(function(x){ return (x.n || x.e).isConnected; });
   i18nReg.forEach(i18nPaint);
+  lxPaint();
   refreshDynamic();
 }
 function initLang(){
   curLang = pickLang();
   document.documentElement.setAttribute('lang', curLang);
+  lxInit();
   registerDom(document.body);
+  lxPaint();
   var sel = $('#langSel');
   if(sel){
     sel.value = curLang;
