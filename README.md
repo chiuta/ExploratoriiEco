@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 1.2.5 · **Last updated:** 2026-10-22
+**Version:** 1.2.6 · **Last updated:** 2026-10-22
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -71,6 +71,10 @@ MIT — see the `LICENSE` file. © 2026 Alexandru-Ionuț Chiuță (Alexio). Any 
 Audit: 2026-10-10 — verified with Playwright and axe-core (all 20 sections, both themes); no `localStorage`; the journal and the import tested with `<img onerror>` (escaped). Fixed: invisible headings in the "Day" theme (white text on a light background), contrast, an invalid definition list in the glossary.
 
 ## History / Changelog
+
+### 1.2.6 — 2026-10-22
+
+fff-kit 1.1.4: touch targets and minimum text size. Touch targets/text fixed in the app.
 
 ### 1.2.5 — 2026-10-22
 

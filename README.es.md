@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · **Español** · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versión:** 1.2.5 · **Última actualización:** 2026-10-22
+**Versión:** 1.2.6 · **Última actualización:** 2026-10-22
 
 Idiomas de la interfaz: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -71,6 +71,10 @@ MIT — consulta el archivo `LICENSE`. © 2026 Alexandru-Ionuț Chiuță (Alexio
 Auditoría: 2026-10-10 — verificado con Playwright y axe-core (las 20 secciones, ambos temas); sin `localStorage`; el diario y la importación probados con `<img onerror>` (escapado). Corregidos: títulos invisibles en el tema «Día» (texto blanco sobre fondo claro), contraste, lista de definiciones no válida en el glosario.
 
 ## Historial / Changelog
+
+### 1.2.6 — 2026-10-22
+
+fff-kit 1.1.4: áreas táctiles y texto mínimo. Áreas táctiles/texto corregidos en la aplicación.
 
 ### 1.2.5 — 2026-10-22
 
