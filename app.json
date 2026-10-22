@@ -2,8 +2,8 @@
   "schema": 1,
   "slug": "exploratoriieco",
   "name": "EXPLORATORII ECO — Enciclopedia exploratorului de teren",
-  "version": "1.2.6",
-  "updated": "2026-10-22",
+  "version": "1.2.7",
+  "updated": "2026-10-23",
   "description": "Ghid complet, off-line, despre explorarea naturii: taxonomie, urme și semne, biomurile României, metode de observare, jurnal de teren, arii protejate și multe altele.",
   "egress": [],
   "permissions": [
@@ -19,8 +19,8 @@
     "exploratorii-eco-jurnal-v1",
     "exploratorii-eco-lang"
   ],
-  "sizeBytes": 1106084,
-  "sha256": "a8ff6c13d3f10c92f0d76cf2991625fe74ee6fd95aea6634f04322253c72e898",
+  "sizeBytes": 1135621,
+  "sha256": "9906fd83e956a4fca1e9a7d0ef7b732f5e4f4b3ece9b148e5edc1dbc20ea93b0",
   "csp": {
     "present": true,
     "directives": {
@@ -60,14 +60,18 @@
     },
     "modules": [
       "core",
+      "store",
+      "dialog",
       "label",
       "bundle"
     ]
   },
   "kit": {
-    "version": "1.1.4",
+    "version": "1.2.0",
     "modules": [
       "core",
+      "store",
+      "dialog",
       "label",
       "bundle"
     ]
