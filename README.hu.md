@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 1.2.1 · **Utolsó frissítés:** 2026-10-19
+**Verzió:** 1.2.2 · **Utolsó frissítés:** 2026-10-22
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -71,6 +71,9 @@ MIT — lásd a `LICENSE` fájlt. © 2026 Alexandru-Ionuț Chiuță (Alexio). A 
 Audit: 2026-10-10 — Playwrighttal és axe-core-ral ellenőrizve (mind a 20 szakasz, mindkét téma); nincs `localStorage`; a napló és az import `<img onerror>` mintával tesztelve (kikerülve). Javítva: láthatatlan címsorok a „Nappal” témában (fehér szöveg világos háttéren), kontraszt, érvénytelen definíciólista a szószedetben.
 
 ## Előzmények / Changelog
+### 1.2.2 — 2026-10-22
+- Fordítási javítás: a hívásgyakorló énekleírásai, az oldal címe és az alkalmazáson belüli előzmények mostantól a felület nyelvét követik.
+
 - v1.1.0 — 2026-10-14: fff-kit (Átláthatóság + egységes biztonsági mentés, a naplót is beleértve). A tartalom és a térközös ismétlés nem változott.
 
 - 1.0.4 — 2026-10-12: a verzió és az utolsó frissítés dátuma megjelenik az alkalmazásban (a ténybeli tartalmat utoljára 2026-08-06-án ellenőrizték; az ANANP → ANMAP átszervezést 2026. 10. 11-én webes kereséssel újra megerősítették).

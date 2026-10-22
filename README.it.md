@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 1.2.1 · **Ultimo aggiornamento:** 2026-10-19
+**Versione:** 1.2.2 · **Ultimo aggiornamento:** 2026-10-22
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -71,6 +71,9 @@ MIT — vedi il file `LICENSE`. © 2026 Alexandru-Ionuț Chiuță (Alexio). Even
 Audit: 2026-10-10 — verificato con Playwright e axe-core (tutte le 20 sezioni, entrambi i temi); nessun `localStorage`; diario e importazione testati con `<img onerror>` (con escape). Corretti: titoli invisibili nel tema «Giorno» (testo bianco su sfondo chiaro), contrasto, elenco di definizioni non valido nel glossario.
 
 ## Cronologia / Changelog
+### 1.2.2 — 2026-10-22
+- Correzione di traduzione: le descrizioni dei canti nell'allenatore di richiami, il titolo della pagina e la cronologia nell'app seguono ora la lingua dell'interfaccia.
+
 - v1.1.0 — 2026-10-14: fff-kit (Trasparenza + copia di sicurezza unificata, incluso il diario). Il contenuto e la ripetizione dilazionata non sono cambiati.
 
 - 1.0.4 — 2026-10-12: la versione e la data dell'ultimo aggiornamento sono mostrate nell'app (contenuto fattuale verificato l'ultima volta il 2026-08-06; la riorganizzazione ANANP → ANMAP riconfermata con una ricerca web l'11.10.2026).

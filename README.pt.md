@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 1.2.1 · **Última atualização:** 2026-10-19
+**Versão:** 1.2.2 · **Última atualização:** 2026-10-22
 
 Idiomas da interface: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -71,6 +71,9 @@ MIT — consulte o ficheiro `LICENSE`. © 2026 Alexandru-Ionuț Chiuță (Alexio
 Auditoria: 2026-10-10 — verificado com Playwright e axe-core (as 20 secções, ambos os temas); sem `localStorage`; o diário e a importação testados com `<img onerror>` (escapado). Corrigidos: títulos invisíveis no tema «Dia» (texto branco em fundo claro), contraste, lista de definições inválida no glossário.
 
 ## Histórico / Changelog
+### 1.2.2 — 2026-10-22
+- Correção de tradução: as descrições dos cantos no treinador de chamamentos, o título da página e o histórico da aplicação seguem agora o idioma da interface.
+
 - v1.1.0 — 2026-10-14: fff-kit (Transparência + cópia de segurança unificada, incluindo o diário). O conteúdo e a repetição espaçada não mudaram.
 
 - 1.0.4 — 2026-10-12: a versão e a data da última atualização são apresentadas na aplicação (conteúdo factual verificado pela última vez em 2026-08-06; a reorganização ANANP → ANMAP reconfirmada por pesquisa na web em 11.10.2026).

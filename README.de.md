@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 1.2.1 · **Zuletzt aktualisiert:** 2026-10-19
+**Version:** 1.2.2 · **Zuletzt aktualisiert:** 2026-10-22
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -71,6 +71,9 @@ MIT — siehe Datei `LICENSE`. © 2026 Alexandru-Ionuț Chiuță (Alexio). Event
 Audit: 2026-10-10 — geprüft mit Playwright und axe-core (alle 20 Abschnitte, beide Designs); kein `localStorage`; Journal und Import mit `<img onerror>` getestet (maskiert). Behoben: unsichtbare Überschriften im Design „Tag“ (weißer Text auf hellem Hintergrund), Kontrast, ungültige Definitionsliste im Glossar.
 
 ## Verlauf / Changelog
+### 1.2.2 — 2026-10-22
+- Übersetzungskorrektur: Die Gesangsbeschreibungen im Rufetrainer, der Seitentitel und der Verlauf in der App folgen jetzt der Oberflächensprache.
+
 - v1.1.0 — 2026-10-14: fff-kit (Transparenz + einheitliche Sicherung, einschließlich Journal). Inhalt und verteilte Wiederholung haben sich nicht geändert.
 
 - 1.0.4 — 2026-10-12: Version und Datum der letzten Aktualisierung werden in der App angezeigt (faktischer Inhalt zuletzt am 2026-08-06 geprüft; die Neuorganisation ANANP → ANMAP am 11.10.2026 per Websuche erneut bestätigt).
