@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 1.2.3 · **Última atualização:** 2026-10-22
+**Versão:** 1.2.4 · **Última atualização:** 2026-10-22
 
 Idiomas da interface: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -71,6 +71,13 @@ MIT — consulte o ficheiro `LICENSE`. © 2026 Alexandru-Ionuț Chiuță (Alexio
 Auditoria: 2026-10-10 — verificado com Playwright e axe-core (as 20 secções, ambos os temas); sem `localStorage`; o diário e a importação testados com `<img onerror>` (escapado). Corrigidos: títulos invisíveis no tema «Dia» (texto branco em fundo claro), contraste, lista de definições inválida no glossário.
 
 ## Histórico / Changelog
+
+### 1.2.4 — 2026-10-22
+- As sete caixas de diálogo bloqueantes do navegador (alertas de identidade, geolocalização e reposição do teste, mais a confirmação) são substituídas por diálogos modais traduzidos (8 idiomas).
+- Acessibilidade: exatamente um H1 por página (o título oculto visualmente é sempre exposto; o título decorativo do hero é ocultado dos leitores de ecrã); os oito campos de importação de ficheiros têm um nome anunciado pelos leitores de ecrã.
+- A animação de descodificação do título do hero dura no máximo 0,7 s em tempo real (em dispositivos lentos ficava ilegível) e o título tem contraste suficiente (tinta escura) no tema claro.
+- Móvel: o texto pequeno (rodapé, ligações de relatório, etiquetas do hero, botões de tema) tem pelo menos 12 px.
+
 ### 1.2.3 — 2026-10-22
 - Correção de tradução: a descrição (e o nome) do painel de transparência seguem agora o idioma da interface.
 

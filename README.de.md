@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 1.2.3 · **Zuletzt aktualisiert:** 2026-10-22
+**Version:** 1.2.4 · **Zuletzt aktualisiert:** 2026-10-22
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -71,6 +71,13 @@ MIT — siehe Datei `LICENSE`. © 2026 Alexandru-Ionuț Chiuță (Alexio). Event
 Audit: 2026-10-10 — geprüft mit Playwright und axe-core (alle 20 Abschnitte, beide Designs); kein `localStorage`; Journal und Import mit `<img onerror>` getestet (maskiert). Behoben: unsichtbare Überschriften im Design „Tag“ (weißer Text auf hellem Hintergrund), Kontrast, ungültige Definitionsliste im Glossar.
 
 ## Verlauf / Changelog
+
+### 1.2.4 — 2026-10-22
+- Die sieben blockierenden Browser-Dialoge (Hinweise zu Identität, Standort und Test-Zurücksetzen sowie die Bestätigung) werden durch übersetzte modale Dialoge (8 Sprachen) ersetzt.
+- Barrierefreiheit: genau eine H1 pro Seite (die visuell verborgene Überschrift wird immer bereitgestellt; der dekorative Hero-Titel ist für Screenreader verborgen); die acht Dateiimportfelder haben Namen, die Screenreader ansagen.
+- Die Dekodier-Animation des Hero-Titels dauert höchstens 0,7 s Echtzeit (auf langsamen Geräten blieb sie unleserlich), und der Titel hat im hellen Thema ausreichenden Kontrast (dunkle Tinte).
+- Mobil: kleiner Text (Fußzeile, Meldelinks, Hero-Beschriftungen, Themenschaltflächen) ist mindestens 12 px groß.
+
 ### 1.2.3 — 2026-10-22
 - Übersetzungskorrektur: Beschreibung (und Name) im Transparenzfenster folgen jetzt der Oberflächensprache.
 

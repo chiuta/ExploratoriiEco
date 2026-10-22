@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 1.2.3 · **Utolsó frissítés:** 2026-10-22
+**Verzió:** 1.2.4 · **Utolsó frissítés:** 2026-10-22
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -71,6 +71,13 @@ MIT — lásd a `LICENSE` fájlt. © 2026 Alexandru-Ionuț Chiuță (Alexio). A 
 Audit: 2026-10-10 — Playwrighttal és axe-core-ral ellenőrizve (mind a 20 szakasz, mindkét téma); nincs `localStorage`; a napló és az import `<img onerror>` mintával tesztelve (kikerülve). Javítva: láthatatlan címsorok a „Nappal” témában (fehér szöveg világos háttéren), kontraszt, érvénytelen definíciólista a szószedetben.
 
 ## Előzmények / Changelog
+
+### 1.2.4 — 2026-10-22
+- A hét blokkoló böngészőablakot (azonosító-, helymeghatározási és tesztvisszaállítási riasztások, valamint a megerősítés) lefordított modális ablakok váltják fel (8 nyelv).
+- Akadálymentesség: oldalanként pontosan egy H1 van (a vizuálisan rejtett címsor mindig elérhető; a díszítő hős-cím rejtve van a képernyőolvasók elől); a nyolc fájlimportáló mező a képernyőolvasók által felolvasott névvel rendelkezik.
+- A hős-cím dekódoló animációja legfeljebb 0,7 másodpercig tart valós időben (lassú eszközökön olvashatatlan maradt), a cím pedig világos témában megfelelő kontrasztú (sötét tinta).
+- Mobil: a kis szöveg (lábléc, jelentéshivatkozások, hős-feliratok, témagombok) legalább 12 px.
+
 ### 1.2.3 — 2026-10-22
 - Fordítási javítás: az átláthatósági panel leírása (és neve) mostantól a felület nyelvét követi.
 

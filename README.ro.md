@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 1.2.3 · **Ultima actualizare:** 2026-10-22
+**Versiune:** 1.2.4 · **Ultima actualizare:** 2026-10-22
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -71,6 +71,13 @@ MIT — vezi fișierul `LICENSE`. © 2026 Alexandru-Ionuț Chiuță (Alexio). Ev
 Audit: 2026-10-10 — verificat cu Playwright și axe-core (toate cele 20 de secțiuni, ambele teme); fără `localStorage`; jurnalul și importul testate cu `<img onerror>` (escapat). Corectate: titluri invizibile în tema „Zi" (text alb pe fundal deschis), contrast, listă de definiții invalidă în glosar.
 
 ## Istoric / Changelog
+
+### 1.2.4 — 2026-10-22
+- Cele șapte dialoguri blocante ale browserului (alertele pentru identitate, geolocalizare și resetarea testului, plus confirmarea) sunt înlocuite cu dialoguri modale traduse (8 limbi).
+- Accesibilitate: exact un H1 pe pagină (titlul ascuns vizual este mereu expus; titlul decorativ din hero este ascuns de cititoarele de ecran); cele opt câmpuri de import de fișiere au nume anunțate de cititoarele de ecran.
+- Animația de „decodare” a titlului din hero durează cel mult 0,7 s în timp real (pe dispozitive lente rămânea ilizibilă), iar titlul are contrast suficient (cerneală închisă) în tema luminoasă.
+- Mobil: textul mic (subsol, linkuri de raport, etichete din hero, butoanele de temă) are cel puțin 12 px.
+
 ### 1.2.3 — 2026-10-22
 - Fix de traducere: descrierea (și numele) din panoul de transparență urmează acum limba interfeței.
 
