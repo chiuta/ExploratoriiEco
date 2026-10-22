@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 1.2.7 · **Utolsó frissítés:** 2026-10-23
+**Verzió:** 1.2.8 · **Utolsó frissítés:** 2026-10-23
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -54,7 +54,7 @@ Ismeretterjesztő/tájékoztató tartalom. A vészhelyzetekről, kígyókról, k
 
 ## Adatvédelem és hálózat
 
-- **Tárolás:** a `localStorage` egyetlen használata (kulcs: `exploratorii-eco-jurnal-v1`) a napló opcionális másolata, amely csak akkor aktív, ha bejelölöd a „Napló megtartása ezen az eszközön” négyzetet; nincs sessionStorage vagy IndexedDB. A napló (jelölés nélkül), a pontszámok, a szószedet jegyzetei és a kriptográfiai azonosság csak a memóriában élnek, és az oldal újratöltésekor eltűnnek, ha nem exportálod őket.
+- **Tárolás:** a `localStorage` egyetlen használata (kulcs: `exploratoriieco.jurnal-v1`) a napló opcionális másolata, amely csak akkor aktív, ha bejelölöd a „Napló megtartása ezen az eszközön” négyzetet; nincs sessionStorage vagy IndexedDB. A napló (jelölés nélkül), a pontszámok, a szószedet jegyzetei és a kriptográfiai azonosság csak a memóriában élnek, és az oldal újratöltésekor eltűnnek, ha nem exportálod őket.
 - **Hálózat:** az oldal nem tölt be külső szkripteket, betűtípusokat vagy képeket, és nincs analitikája. Az egyetlen hálózati kérés a felhasználó kérésére történik: a „Fájlintegritás ellenőrzése” gomb újra beolvassa a fájlt arról a címről, ahonnan kiszolgálják. A lábléc hivatkozásai (ANMAP, iNaturalist, GBIF, IUCN, Salvamont, fiipregatit.ro, GitHub, TROM) csak kattintásra nyílnak meg.
 - A böngészőengedélyeket csak művelet közben kéri: helymeghatározás (GPS), tájolás/iránytű, beszédszintézis, fájlmegosztás.
 
@@ -71,6 +71,11 @@ MIT — lásd a `LICENSE` fájlt. © 2026 Alexandru-Ionuț Chiuță (Alexio). A 
 Audit: 2026-10-10 — Playwrighttal és axe-core-ral ellenőrizve (mind a 20 szakasz, mindkét téma); nincs `localStorage`; a napló és az import `<img onerror>` mintával tesztelve (kikerülve). Javítva: láthatatlan címsorok a „Nappal” témában (fehér szöveg világos háttéren), kontraszt, érvénytelen definíciólista a szószedetben.
 
 ## Előzmények / Changelog
+
+### 1.2.8 — 2026-10-23
+- A tárolókulcsok mostantól az alkalmazás előtagját viselik (`exploratoriieco.lang`, `exploratoriieco.jurnal-v1`); a meglévő adatok (nyelv, a napló opcionális másolata) indításkor automatikusan átkerülnek, a régi `.fff.json` másolatok továbbra is importálhatók.
+- fff-kit 1.2.0: előtag nélküli tárolás javítva
+- A natív alert/confirm/prompt ablakokat akadálymentes, lefordított FFF.dialog párbeszédablakok váltották fel (fff-kit 1.2.0).
 
 ### 1.2.6 — 2026-10-22
 

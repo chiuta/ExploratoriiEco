@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 1.2.7 · **Zuletzt aktualisiert:** 2026-10-23
+**Version:** 1.2.8 · **Zuletzt aktualisiert:** 2026-10-23
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -54,7 +54,7 @@ Bildungs- bzw. Orientierungsinhalt. Die Abschnitte über Notfälle, Schlangen, Z
 
 ## Datenschutz und Netzwerk
 
-- **Speicher:** Die einzige Verwendung von `localStorage` (Schlüssel `exploratorii-eco-jurnal-v1`) ist die optionale Kopie des Journals, aktiv nur, wenn du „Journal auf diesem Gerät behalten“ ankreuzt; kein sessionStorage oder IndexedDB. Das Journal (ohne Haken), die Punktestände, die Glossarnotizen und die kryptografische Identität liegen nur im Arbeitsspeicher und verschwinden beim Neuladen der Seite, wenn du sie nicht exportierst.
+- **Speicher:** Die einzige Verwendung von `localStorage` (Schlüssel `exploratoriieco.jurnal-v1`) ist die optionale Kopie des Journals, aktiv nur, wenn du „Journal auf diesem Gerät behalten“ ankreuzt; kein sessionStorage oder IndexedDB. Das Journal (ohne Haken), die Punktestände, die Glossarnotizen und die kryptografische Identität liegen nur im Arbeitsspeicher und verschwinden beim Neuladen der Seite, wenn du sie nicht exportierst.
 - **Netzwerk:** Die Seite lädt keine externen Skripte, Schriften oder Bilder und hat keine Analytik. Die einzige Netzwerkanfrage erfolgt auf Wunsch des Nutzers: Die Schaltfläche „Dateiintegrität prüfen“ liest die Datei erneut von der Adresse, von der sie ausgeliefert wird. Die Links in der Fußzeile (ANMAP, iNaturalist, GBIF, IUCN, Salvamont, fiipregatit.ro, GitHub, TROM) öffnen sich nur per Klick.
 - Browserberechtigungen werden nur bei der jeweiligen Aktion angefordert: Standort (GPS), Ausrichtung/Kompass, Sprachsynthese, Dateifreigabe.
 
@@ -71,6 +71,11 @@ MIT — siehe Datei `LICENSE`. © 2026 Alexandru-Ionuț Chiuță (Alexio). Event
 Audit: 2026-10-10 — geprüft mit Playwright und axe-core (alle 20 Abschnitte, beide Designs); kein `localStorage`; Journal und Import mit `<img onerror>` getestet (maskiert). Behoben: unsichtbare Überschriften im Design „Tag“ (weißer Text auf hellem Hintergrund), Kontrast, ungültige Definitionsliste im Glossar.
 
 ## Verlauf / Changelog
+
+### 1.2.8 — 2026-10-23
+- Die Speicherschlüssel tragen jetzt das App-Präfix (`exploratoriieco.lang`, `exploratoriieco.jurnal-v1`); vorhandene Daten (Sprache, optionale Journalkopie) werden beim Start automatisch migriert, alte `.fff.json`-Kopien lassen sich weiterhin importieren.
+- fff-kit 1.2.0: Speicher ohne Präfix behoben
+- Die nativen Dialoge alert/confirm/prompt wurden durch barrierefreie, übersetzte FFF.dialog-Dialoge ersetzt (fff-kit 1.2.0).
 
 ### 1.2.6 — 2026-10-22
 

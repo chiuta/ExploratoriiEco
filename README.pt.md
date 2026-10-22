@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 1.2.7 · **Última atualização:** 2026-10-23
+**Versão:** 1.2.8 · **Última atualização:** 2026-10-23
 
 Idiomas da interface: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -54,7 +54,7 @@ Conteúdo educativo/orientativo. As secções sobre emergências, cobras, carra�
 
 ## Privacidade e rede
 
-- **Armazenamento:** a única utilização de `localStorage` (chave `exploratorii-eco-jurnal-v1`) é a cópia opcional do diário, ativa apenas se assinalar «Manter o diário neste dispositivo»; sem sessionStorage nem IndexedDB. O diário (sem a marca), as pontuações, as notas do glossário e a identidade criptográfica ficam apenas em memória e desaparecem ao recarregar a página, a menos que os exporte.
+- **Armazenamento:** a única utilização de `localStorage` (chave `exploratoriieco.jurnal-v1`) é a cópia opcional do diário, ativa apenas se assinalar «Manter o diário neste dispositivo»; sem sessionStorage nem IndexedDB. O diário (sem a marca), as pontuações, as notas do glossário e a identidade criptográfica ficam apenas em memória e desaparecem ao recarregar a página, a menos que os exporte.
 - **Rede:** a página não carrega scripts, tipos de letra ou imagens externos e não tem análise de utilização. O único pedido de rede é feito a pedido do utilizador: o botão «Verificar a integridade do ficheiro» volta a ler o ficheiro a partir do endereço de onde é servido. As ligações do rodapé (ANMAP, iNaturalist, GBIF, IUCN, Salvamont, fiipregatit.ro, GitHub, TROM) só se abrem ao clicar.
 - Permissões do navegador pedidas apenas na ação: localização (GPS), orientação/bússola, síntese de voz, partilha de ficheiros.
 
@@ -71,6 +71,11 @@ MIT — consulte o ficheiro `LICENSE`. © 2026 Alexandru-Ionuț Chiuță (Alexio
 Auditoria: 2026-10-10 — verificado com Playwright e axe-core (as 20 secções, ambos os temas); sem `localStorage`; o diário e a importação testados com `<img onerror>` (escapado). Corrigidos: títulos invisíveis no tema «Dia» (texto branco em fundo claro), contraste, lista de definições inválida no glossário.
 
 ## Histórico / Changelog
+
+### 1.2.8 — 2026-10-23
+- As chaves de armazenamento têm agora o prefixo da aplicação (`exploratoriieco.lang`, `exploratoriieco.jurnal-v1`); os dados existentes (idioma, cópia opcional do diário) são migrados automaticamente no arranque e as cópias antigas `.fff.json` continuam a poder ser importadas.
+- fff-kit 1.2.0: armazenamento sem prefixo corrigido
+- As caixas nativas alert/confirm/prompt foram substituídas por diálogos FFF.dialog acessíveis e traduzidos (fff-kit 1.2.0).
 
 ### 1.2.6 — 2026-10-22
 

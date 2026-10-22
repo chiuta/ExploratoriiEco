@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · **Español** · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versión:** 1.2.7 · **Última actualización:** 2026-10-23
+**Versión:** 1.2.8 · **Última actualización:** 2026-10-23
 
 Idiomas de la interfaz: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -54,7 +54,7 @@ Contenido educativo/orientativo. Las secciones sobre emergencias, serpientes, ga
 
 ## Privacidad y red
 
-- **Almacenamiento:** el único uso de `localStorage` (clave `exploratorii-eco-jurnal-v1`) es la copia opcional del diario, activa solo si marcas «Conservar el diario en este dispositivo»; sin sessionStorage ni IndexedDB. El diario (sin la marca), las puntuaciones, las notas del glosario y la identidad criptográfica permanecen solo en memoria y desaparecen al recargar la página, salvo que los exportes.
+- **Almacenamiento:** el único uso de `localStorage` (clave `exploratoriieco.jurnal-v1`) es la copia opcional del diario, activa solo si marcas «Conservar el diario en este dispositivo»; sin sessionStorage ni IndexedDB. El diario (sin la marca), las puntuaciones, las notas del glosario y la identidad criptográfica permanecen solo en memoria y desaparecen al recargar la página, salvo que los exportes.
 - **Red:** la página no carga scripts, fuentes ni imágenes externos y no tiene analítica. La única petición de red se hace a petición del usuario: el botón «Comprobar la integridad del archivo» vuelve a leer el archivo desde la dirección desde la que se sirve. Los enlaces del pie de página (ANMAP, iNaturalist, GBIF, IUCN, Salvamont, fiipregatit.ro, GitHub, TROM) se abren solo al hacer clic.
 - Permisos del navegador solicitados solo al actuar: ubicación (GPS), orientación/brújula, síntesis de voz, compartir archivos.
 
@@ -71,6 +71,11 @@ MIT — consulta el archivo `LICENSE`. © 2026 Alexandru-Ionuț Chiuță (Alexio
 Auditoría: 2026-10-10 — verificado con Playwright y axe-core (las 20 secciones, ambos temas); sin `localStorage`; el diario y la importación probados con `<img onerror>` (escapado). Corregidos: títulos invisibles en el tema «Día» (texto blanco sobre fondo claro), contraste, lista de definiciones no válida en el glosario.
 
 ## Historial / Changelog
+
+### 1.2.8 — 2026-10-23
+- Las claves de almacenamiento llevan ahora el prefijo de la aplicación (`exploratoriieco.lang`, `exploratoriieco.jurnal-v1`); los datos existentes (idioma, copia opcional del diario) se migran automáticamente al iniciar y las copias antiguas `.fff.json` siguen pudiendo importarse.
+- fff-kit 1.2.0: almacenamiento sin prefijo corregido
+- Los cuadros nativos alert/confirm/prompt se sustituyen por diálogos FFF.dialog accesibles y traducidos (fff-kit 1.2.0).
 
 ### 1.2.6 — 2026-10-22
 

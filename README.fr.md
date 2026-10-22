@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 1.2.7 · **Dernière mise à jour :** 2026-10-23
+**Version :** 1.2.8 · **Dernière mise à jour :** 2026-10-23
 
 Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -54,7 +54,7 @@ Contenu éducatif/indicatif. Les sections sur les urgences, les serpents, les ti
 
 ## Confidentialité et réseau
 
-- **Stockage :** le seul usage de `localStorage` (clé `exploratorii-eco-jurnal-v1`) est la copie facultative du carnet, active uniquement si vous cochez « Conserver le carnet sur cet appareil » ; ni sessionStorage ni IndexedDB. Le carnet (sans la case cochée), les scores, les notes du glossaire et l'identité cryptographique ne résident qu'en mémoire et disparaissent au rechargement de la page, sauf si vous les exportez.
+- **Stockage :** le seul usage de `localStorage` (clé `exploratoriieco.jurnal-v1`) est la copie facultative du carnet, active uniquement si vous cochez « Conserver le carnet sur cet appareil » ; ni sessionStorage ni IndexedDB. Le carnet (sans la case cochée), les scores, les notes du glossaire et l'identité cryptographique ne résident qu'en mémoire et disparaissent au rechargement de la page, sauf si vous les exportez.
 - **Réseau :** la page ne charge aucun script, police ou image externe et n'a pas d'outil d'analyse. La seule requête réseau se fait à la demande de l'utilisateur : le bouton « Vérifier l'intégrité du fichier » relit le fichier à l'adresse d'où il est servi. Les liens du pied de page (ANMAP, iNaturalist, GBIF, IUCN, Salvamont, fiipregatit.ro, GitHub, TROM) ne s'ouvrent qu'au clic.
 - Autorisations du navigateur demandées uniquement à l'action : localisation (GPS), orientation/boussole, synthèse vocale, partage de fichiers.
 
@@ -71,6 +71,11 @@ MIT — voir le fichier `LICENSE`. © 2026 Alexandru-Ionuț Chiuță (Alexio). L
 Audit : 2026-10-10 — vérifié avec Playwright et axe-core (les 20 sections, les deux thèmes) ; pas de `localStorage` ; le carnet et l'import testés avec `<img onerror>` (échappé). Corrigés : titres invisibles dans le thème « Jour » (texte blanc sur fond clair), contraste, liste de définitions invalide dans le glossaire.
 
 ## Historique / Changelog
+
+### 1.2.8 — 2026-10-23
+- Les clés de stockage portent désormais le préfixe de l'application (`exploratoriieco.lang`, `exploratoriieco.jurnal-v1`) ; les données existantes (langue, copie facultative du carnet) sont migrées automatiquement au démarrage, et les anciennes copies `.fff.json` restent importables.
+- fff-kit 1.2.0 : stockage sans préfixe corrigé
+- Les boîtes natives alert/confirm/prompt sont remplacées par des dialogues FFF.dialog accessibles et traduits (fff-kit 1.2.0).
 
 ### 1.2.6 — 2026-10-22
 

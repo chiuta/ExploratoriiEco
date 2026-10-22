@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 1.2.7 · **Last updated:** 2026-10-23
+**Version:** 1.2.8 · **Last updated:** 2026-10-23
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -54,7 +54,7 @@ Educational/indicative content. The sections on emergencies, snakes, ticks, mush
 
 ## Privacy and network
 
-- **Storage:** the only use of `localStorage` (key `exploratorii-eco-jurnal-v1`) is the optional copy of the journal, active only if you tick "Keep the journal on this device"; no sessionStorage or IndexedDB. The journal (without the tick), the scores, the glossary notes and the cryptographic identity live only in memory and disappear when the page is reloaded, unless you export them.
+- **Storage:** the only use of `localStorage` (key `exploratoriieco.jurnal-v1`) is the optional copy of the journal, active only if you tick "Keep the journal on this device"; no sessionStorage or IndexedDB. The journal (without the tick), the scores, the glossary notes and the cryptographic identity live only in memory and disappear when the page is reloaded, unless you export them.
 - **Network:** the page loads no external scripts, fonts or images and has no analytics. The only network request is on the user's request: the "Check file integrity" button re-reads the file from the address it is served from. The footer links (ANMAP, iNaturalist, GBIF, IUCN, Salvamont, fiipregatit.ro, GitHub, TROM) open only on click.
 - Browser permissions requested only on action: location (GPS), orientation/compass, speech synthesis, file sharing.
 
@@ -71,6 +71,11 @@ MIT — see the `LICENSE` file. © 2026 Alexandru-Ionuț Chiuță (Alexio). Any 
 Audit: 2026-10-10 — verified with Playwright and axe-core (all 20 sections, both themes); no `localStorage`; the journal and the import tested with `<img onerror>` (escaped). Fixed: invisible headings in the "Day" theme (white text on a light background), contrast, an invalid definition list in the glossary.
 
 ## History / Changelog
+
+### 1.2.8 — 2026-10-23
+- Storage keys now carry the app prefix (`exploratoriieco.lang`, `exploratoriieco.jurnal-v1`); existing data (language, optional journal copy) is migrated automatically at startup, and old `.fff.json` copies can still be imported.
+- fff-kit 1.2.0: unprefixed-storage fixed
+- Native alert/confirm/prompt replaced with accessible, translated FFF.dialog dialogs (fff-kit 1.2.0).
 
 ### 1.2.6 — 2026-10-22
 
