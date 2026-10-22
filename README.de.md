@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 1.2.2 · **Zuletzt aktualisiert:** 2026-10-22
+**Version:** 1.2.3 · **Zuletzt aktualisiert:** 2026-10-22
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -71,6 +71,9 @@ MIT — siehe Datei `LICENSE`. © 2026 Alexandru-Ionuț Chiuță (Alexio). Event
 Audit: 2026-10-10 — geprüft mit Playwright und axe-core (alle 20 Abschnitte, beide Designs); kein `localStorage`; Journal und Import mit `<img onerror>` getestet (maskiert). Behoben: unsichtbare Überschriften im Design „Tag“ (weißer Text auf hellem Hintergrund), Kontrast, ungültige Definitionsliste im Glossar.
 
 ## Verlauf / Changelog
+### 1.2.3 — 2026-10-22
+- Übersetzungskorrektur: Beschreibung (und Name) im Transparenzfenster folgen jetzt der Oberflächensprache.
+
 ### 1.2.2 — 2026-10-22
 - Übersetzungskorrektur: Die Gesangsbeschreibungen im Rufetrainer, der Seitentitel und der Verlauf in der App folgen jetzt der Oberflächensprache.
 

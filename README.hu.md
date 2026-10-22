@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 1.2.2 · **Utolsó frissítés:** 2026-10-22
+**Verzió:** 1.2.3 · **Utolsó frissítés:** 2026-10-22
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -71,6 +71,9 @@ MIT — lásd a `LICENSE` fájlt. © 2026 Alexandru-Ionuț Chiuță (Alexio). A 
 Audit: 2026-10-10 — Playwrighttal és axe-core-ral ellenőrizve (mind a 20 szakasz, mindkét téma); nincs `localStorage`; a napló és az import `<img onerror>` mintával tesztelve (kikerülve). Javítva: láthatatlan címsorok a „Nappal” témában (fehér szöveg világos háttéren), kontraszt, érvénytelen definíciólista a szószedetben.
 
 ## Előzmények / Changelog
+### 1.2.3 — 2026-10-22
+- Fordítási javítás: az átláthatósági panel leírása (és neve) mostantól a felület nyelvét követi.
+
 ### 1.2.2 — 2026-10-22
 - Fordítási javítás: a hívásgyakorló énekleírásai, az oldal címe és az alkalmazáson belüli előzmények mostantól a felület nyelvét követik.
 
