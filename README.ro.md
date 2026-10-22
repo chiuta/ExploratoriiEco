@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 1.2.4 · **Ultima actualizare:** 2026-10-22
+**Versiune:** 1.2.5 · **Ultima actualizare:** 2026-10-22
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -71,6 +71,10 @@ MIT — vezi fișierul `LICENSE`. © 2026 Alexandru-Ionuț Chiuță (Alexio). Ev
 Audit: 2026-10-10 — verificat cu Playwright și axe-core (toate cele 20 de secțiuni, ambele teme); fără `localStorage`; jurnalul și importul testate cu `<img onerror>` (escapat). Corectate: titluri invizibile în tema „Zi" (text alb pe fundal deschis), contrast, listă de definiții invalidă în glosar.
 
 ## Istoric / Changelog
+
+### 1.2.5 — 2026-10-22
+
+fff-kit 1.1.2: PBKDF2 600 000 iterații, protecție anti-clickjacking.
 
 ### 1.2.4 — 2026-10-22
 - Cele șapte dialoguri blocante ale browserului (alertele pentru identitate, geolocalizare și resetarea testului, plus confirmarea) sunt înlocuite cu dialoguri modale traduse (8 limbi).
