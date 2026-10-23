@@ -1,0 +1,30 @@
+// Teste 1.2.9: importul progresului SRS respinge câmpuri ostile. Rulare: node tests/srs-import.test.mjs
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {createRequire} from 'node:module';
+const require = createRequire('/opt/node-tools/package.json');
+const {chromium} = require('playwright');
+const FILE = 'file://' + path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'index.html');
+let ok = 0, bad = 0;
+const check = (n, c, x) => { if (c) { ok++; console.log('  ok   ' + n); } else { bad++; console.log('  FAIL ' + n + (x !== undefined ? '  → ' + JSON.stringify(x) : '')); } };
+const b = await chromium.launch({executablePath: '/opt/pw-browsers/chromium', args: ['--no-sandbox']});
+const ctx = await b.newContext({viewport: {width: 1100, height: 800}});
+await ctx.route(/^https?:/, (r) => r.abort());
+const p = await ctx.newPage(); const errs = [];
+p.on('pageerror', (e) => errs.push(e.message));
+await p.goto(FILE); await p.waitForTimeout(1500);
+const body = JSON.stringify({srsState: {'3': {ef: '2.5', reps: '4', interval: 'x', due: 'abc', lastResult: 'yes', evil: '<img>'}, '4': {ef: 1e300, reps: -5, interval: 1e9, due: -1}, 'a': {ef: 2}},
+  quizStats: {totalCorrect: 1e12, totalAnswered: 10, byCat: {}}});
+await p.setInputFiles('#srsImportFile', {name: 'p.json', mimeType: 'application/json', buffer: Buffer.from(body)});
+await p.waitForTimeout(600);
+const [d] = await Promise.all([p.waitForEvent('download'), p.evaluate(() => document.querySelector('#srsExportBtn').click())]);
+const exp = JSON.parse((await import('node:fs')).readFileSync(await d.path(), 'utf8'));
+const r = {s3: exp.srsState['3'], s4: exp.srsState['4'], sa: exp.srsState.a, qs: [exp.quizStats.totalCorrect, exp.quizStats.totalAnswered]};
+check('fără pageerror', errs.length === 0, errs);
+check('câmpuri numerice normalizate (nu șiruri/NaN)', Object.values(r.s3).every((v) => typeof v === 'number' || typeof v === 'boolean') && r.s3.ef === 2.5 && r.s3.reps === 4 && !('due' in r.s3) && !('interval' in r.s3), r.s3);
+check('câmpuri necunoscute eliminate', !('evil' in r.s3) && !('lastResult' in r.s3), r.s3);
+check('valori extreme limitate', r.s4.ef === 10 && r.s4.reps === 0 && r.s4.interval === 36500 && r.s4.due === 0, r.s4);
+check('cheie nenumerică ignorată', r.sa === undefined, r.sa);
+check('corecte ≤ răspunsuri', r.qs[0] <= r.qs[1], r.qs);
+await b.close();
+console.log(`ExploratoriiEco srs-import: ${ok} ok, ${bad} eșuate`); process.exit(bad ? 1 : 0);

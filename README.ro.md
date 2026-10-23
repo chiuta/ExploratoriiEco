@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 1.2.8 · **Ultima actualizare:** 2026-10-23
+**Versiune:** 1.2.9 · **Ultima actualizare:** 2026-10-23
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -71,6 +71,10 @@ MIT — vezi fișierul `LICENSE`. © 2026 Alexandru-Ionuț Chiuță (Alexio). Ev
 Audit: 2026-10-10 — verificat cu Playwright și axe-core (toate cele 20 de secțiuni, ambele teme); fără `localStorage`; jurnalul și importul testate cu `<img onerror>` (escapat). Corectate: titluri invizibile în tema „Zi" (text alb pe fundal deschis), contrast, listă de definiții invalidă în glosar.
 
 ## Istoric / Changelog
+
+### 1.2.9 — 2026-10-23
+
+- Corectat: importul progresului (SRS) validează câmpurile numerice (ef/reps/interval/due) și limitează corecte ≤ răspunsuri; hash CSP recalculat.
 
 ### 1.2.8 — 2026-10-23
 - Cheile de stocare au acum prefixul aplicației (`exploratoriieco.lang`, `exploratoriieco.jurnal-v1`); datele existente (limba, copia opțională a jurnalului) se migrează automat la pornire, iar copiile vechi `.fff.json` se pot importa în continuare.

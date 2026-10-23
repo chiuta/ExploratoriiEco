@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 1.2.8 · **Ultimo aggiornamento:** 2026-10-23
+**Versione:** 1.2.9 · **Ultimo aggiornamento:** 2026-10-23
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -71,6 +71,10 @@ MIT — vedi il file `LICENSE`. © 2026 Alexandru-Ionuț Chiuță (Alexio). Even
 Audit: 2026-10-10 — verificato con Playwright e axe-core (tutte le 20 sezioni, entrambi i temi); nessun `localStorage`; diario e importazione testati con `<img onerror>` (con escape). Corretti: titoli invisibili nel tema «Giorno» (testo bianco su sfondo chiaro), contrasto, elenco di definizioni non valido nel glossario.
 
 ## Cronologia / Changelog
+
+### 1.2.9 — 2026-10-23
+
+- Fix: spaced-repetition progress import now validates numeric fields (ef/reps/interval/due) and caps correct ≤ answered; CSP hash recalculated.
 
 ### 1.2.8 — 2026-10-23
 - Le chiavi di archiviazione hanno ora il prefisso dell'app (`exploratoriieco.lang`, `exploratoriieco.jurnal-v1`); i dati esistenti (lingua, copia facoltativa del diario) vengono migrati automaticamente all'avvio e le vecchie copie `.fff.json` si possono ancora importare.
