@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 1.2.8 · **Dernière mise à jour :** 2026-10-23
+**Version :** 1.2.9 · **Dernière mise à jour :** 2026-10-23
 
 Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -71,6 +71,10 @@ MIT — voir le fichier `LICENSE`. © 2026 Alexandru-Ionuț Chiuță (Alexio). L
 Audit : 2026-10-10 — vérifié avec Playwright et axe-core (les 20 sections, les deux thèmes) ; pas de `localStorage` ; le carnet et l'import testés avec `<img onerror>` (échappé). Corrigés : titres invisibles dans le thème « Jour » (texte blanc sur fond clair), contraste, liste de définitions invalide dans le glossaire.
 
 ## Historique / Changelog
+
+### 1.2.9 — 2026-10-23
+
+- Fix: spaced-repetition progress import now validates numeric fields (ef/reps/interval/due) and caps correct ≤ answered; CSP hash recalculated.
 
 ### 1.2.8 — 2026-10-23
 - Les clés de stockage portent désormais le préfixe de l'application (`exploratoriieco.lang`, `exploratoriieco.jurnal-v1`) ; les données existantes (langue, copie facultative du carnet) sont migrées automatiquement au démarrage, et les anciennes copies `.fff.json` restent importables.
