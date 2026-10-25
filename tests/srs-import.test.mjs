@@ -1,4 +1,4 @@
-// Teste 1.2.9: importul progresului SRS respinge câmpuri ostile. Rulare: node tests/srs-import.test.mjs
+// Teste 1.2.10: importul progresului SRS respinge câmpuri ostile. Rulare: node tests/srs-import.test.mjs
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {createRequire} from 'node:module';
