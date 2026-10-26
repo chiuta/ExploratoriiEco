@@ -31,6 +31,8 @@ export async function launch({w = 1280, h = 800, args = [], perm = [], bypassCSP
 }
 export async function axeRun(page) {
   if (!AXE) return null;
+  // așteaptă sfârșitul animațiilor/tranzițiilor finite (fadein): altfel axe măsoară opacitate parțială sub încărcare
+  await page.waitForFunction(() => document.getAnimations().every(a => a.playState !== 'running' || a.effect.getComputedTiming().iterations === Infinity), null, {timeout: 20000});
   await page.addScriptTag({content: AXE});
   return page.evaluate(async () => { const r = await window.axe.run(document, {resultTypes: ["violations"]}); return r.violations.map(v => v.id + ":" + v.nodes.length + ":" + v.nodes.slice(0, 2).map(n => n.target.join(" ")).join("|")); });
 }
