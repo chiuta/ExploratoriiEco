@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 1.2.10 · **Ultima actualizare:** 2026-10-26
+**Versiune:** 2.0.0 · **Ultima actualizare:** 2026-10-26
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -23,6 +23,8 @@ Un ghid complet pentru explorarea naturii, în 20 de secțiuni (§0–§19): cla
 - **Calculatoare și unelte** (§11): indice de biodiversitate Shannon–Wiener, locator Maidenhead, azimut și distanță spre o țintă (cu busolă live, dacă dispozitivul o permite), răcirea aerului cu altitudinea, amprenta de carbon a unei deplasări, sechestrare de carbon pentru copaci. Calculele se fac local, în pagină.
 - **Antrenor de chemări** (§4): tonuri sintetizate (nu înregistrări reale) pentru recunoașterea unor tipare, plus citirea cu voce a denumirii onomatopeice prin sinteza vocală a browserului, dacă este disponibilă.
 - **Jurnal de teren** (§13): adaugi observații (specie, număr, dată, oră, loc, comportament, note), cu completare a locului din GPS la cerere; export și import `.json`, partajare ca fișier. Contorul arată „neexportat” până la export, iar la părăsirea paginii cu observații neexportate browserul cere confirmare (jurnalul nu se păstrează în browser decât dacă bifezi „Păstrează jurnalul pe acest dispozitiv”).
+- **Fișe de specie (2.0)**: numele din jurnal se leagă automat de fișa din enciclopedie (floră/faună) și invers; fișa arată observațiile tale, prima/ultima dată și locurile. Calculatoarele își pot salva rezultatul direct în observație (max. 8 măsurători, incluse în export/import și CSV), iar noul calculator de densitate pe transect dă indivizi/ha.
+- **Export CSV** (coloane de tip Darwin Core) din jurnal, cu neutralizarea formulelor.
 - **Test de cunoștințe** (§18): mod aleator sau pe categorii, scor, progres pe categorii cu export/import.
 - **Identitate locală și certificate**: generare de cheie ECDSA P-256 în browser, certificat auto-semnat al categoriilor stăpânite (minimum 80% corect și 5 întrebări pe categorie), verificare, „martor”, revocare. Nu este o diplomă oficială.
 - **Glosar A–Z** cu căutare și notițe proprii (export/import).
