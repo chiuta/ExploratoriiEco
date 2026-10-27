@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 2.0.0 · **Utolsó frissítés:** 2026-10-26
+**Verzió:** 2.0.1 · **Utolsó frissítés:** 2026-10-27
+
+**Állapot:** stabil · **Offline:** teljes
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -70,7 +72,18 @@ MIT — lásd a `LICENSE` fájlt. © 2026 Alexandru-Ionuț Chiuță (Alexio). A 
 
 Audit: 2026-10-10 — Playwrighttal és axe-core-ral ellenőrizve (mind a 20 szakasz, mindkét téma); nincs `localStorage`; a napló és az import `<img onerror>` mintával tesztelve (kikerülve). Javítva: láthatatlan címsorok a „Nappal” témában (fehér szöveg világos háttéren), kontraszt, érvénytelen definíciólista a szószedetben.
 
+## Mit tartalmaz konkrétan (a tényleges kód alapján)
+
+- **Beépített adatok:** 14 taxon (ország → család), 14 nyomtípus, 12 madárhang (szintetizált hangok, nem felvételek), 12 növény- és 18 állatfaj terepre (emlősök, madarak, hüllők, gerinctelenek, halak), 13 nemzeti park, 70 szójegyzék-szócikk, 8 jelvény és 65 kvízkérdés 13 kategóriában (SM-2 időzített ismétlés).
+- **Számolók és eszközök (§11):** Shannon–Wiener-index, Maidenhead-lokátor, irányszög és távolság, hőmérséklet-csökkenés a magassággal, utazás szén-lábnyoma, szénmegkötés (fiatal vs. érett erdő), napkelte/napnyugta és holdfázis, Beaufort-skála (referencia), sűrűség transzekten vagy parcellán.
+- A fenti számok az `index.html` adataiból származnak; a tartalom oktatási célú, a felület román nyelvű (a hosszú szövegek opcionális gépi fordításával).
+
+## Lásd még: FieldObserver és VietAR
+
+Ugyanazon szerző rokon alkalmazásai (nem vontuk össze): [FieldObserver](https://chiuta.github.io/FieldObserver/) — terepi megfigyelési napló, offline, egyetlen fájlban; [VietAR](https://chiuta.github.io/VietAR/) — különálló alkalmazás, amely fényképről, kamerából vagy hangról ismeri fel az állatokat és növényeket (romániai taxonok). A README és az útmutató hivatkozásai csak kattintásra nyílnak meg; az útmutató nem küld hálózati kéréseket.
+
 ## Előzmények / Changelog
+- **2.0.1 — 2026-10-27:** konkrét leírás (meta, manifest, app.json, README) a tényleges adatokból és számolókból; „Lásd még” megjegyzések a FieldObserver és VietAR alkalmazásokra (az útmutatóban és a README-ben); Állapot/Offline sorok; CHANGELOG.md (előző: v2.0.0).
 
 ### 1.2.9 — 2026-10-23
 
