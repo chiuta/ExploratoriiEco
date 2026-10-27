@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 2.0.0 · **Zuletzt aktualisiert:** 2026-10-26
+**Version:** 2.0.1 · **Zuletzt aktualisiert:** 2026-10-27
+
+**Status:** stabil · **Offline:** vollständig
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -70,7 +72,18 @@ MIT — siehe Datei `LICENSE`. © 2026 Alexandru-Ionuț Chiuță (Alexio). Event
 
 Audit: 2026-10-10 — geprüft mit Playwright und axe-core (alle 20 Abschnitte, beide Designs); kein `localStorage`; Journal und Import mit `<img onerror>` getestet (maskiert). Behoben: unsichtbare Überschriften im Design „Tag“ (weißer Text auf hellem Hintergrund), Kontrast, ungültige Definitionsliste im Glossar.
 
+## Was konkret enthalten ist (aus dem tatsächlichen Code)
+
+- **Eingebaute Daten:** 14 Taxa (Reich → Familie), 14 Spurentypen, 12 Vogelrufe (synthetisierte Töne, keine Aufnahmen), 12 Pflanzen- und 18 Tierarten für das Gelände (Säugetiere, Vögel, Reptilien, Wirbellose, Fische), 13 Nationalparks, 70 Glossarbegriffe, 8 Abzeichen und 65 Quizfragen in 13 Kategorien (verteilte Wiederholung SM-2).
+- **Rechner und Werkzeuge (§11):** Shannon–Wiener-Index, Maidenhead-Locator, Peilung und Entfernung, Temperaturabnahme mit der Höhe, CO₂-Fußabdruck einer Fahrt, Kohlenstoffbindung (junger vs. alter Wald), Sonnenauf-/-untergang und Mondphase, Beaufort-Skala (Referenz), Dichte auf Transekt oder Fläche.
+- Die obigen Zahlen sind aus den Daten in `index.html` gezählt; der Inhalt ist lehrreich, die Oberfläche ist rumänisch (mit optionaler maschineller Übersetzung langer Texte).
+
+## Siehe auch: FieldObserver und VietAR
+
+Verwandte Apps desselben Autors (nicht zusammengeführt): [FieldObserver](https://chiuta.github.io/FieldObserver/) — Feldbeobachtungs-Tagebuch, offline, in einer Datei; [VietAR](https://chiuta.github.io/VietAR/) — separate App, die Tiere und Pflanzen anhand eines Fotos, der Kamera oder des Klangs erkennt (Taxa Rumäniens). Die Links in README und Leitfaden öffnen sich nur per Klick; der Leitfaden stellt keine Netzwerkanfragen.
+
 ## Verlauf / Changelog
+- **2.0.1 — 2026-10-27:** konkrete Beschreibung (Meta, Manifest, app.json, README) aus den tatsächlichen Daten und Rechnern; „Siehe auch“-Hinweise auf FieldObserver und VietAR (im Leitfaden und README); Status/Offline-Zeilen; CHANGELOG.md (vorherige: v2.0.0).
 
 ### 1.2.9 — 2026-10-23
 

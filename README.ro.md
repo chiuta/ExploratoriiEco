@@ -2,7 +2,9 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 2.0.0 · **Ultima actualizare:** 2026-10-26
+**Versiune:** 2.0.1 · **Ultima actualizare:** 2026-10-27
+
+**Stare:** stabil · **Offline:** complet
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -72,7 +74,18 @@ MIT — vezi fișierul `LICENSE`. © 2026 Alexandru-Ionuț Chiuță (Alexio). Ev
 
 Audit: 2026-10-10 — verificat cu Playwright și axe-core (toate cele 20 de secțiuni, ambele teme); fără `localStorage`; jurnalul și importul testate cu `<img onerror>` (escapat). Corectate: titluri invizibile în tema „Zi" (text alb pe fundal deschis), contrast, listă de definiții invalidă în glosar.
 
+## Ce conține, concret (din codul real)
+
+- **Date încorporate:** 14 taxoni (regn → familie), 14 tipuri de urme, 12 chemări de păsări (tonuri sintetizate, nu înregistrări), 12 specii de floră și 18 de faună de teren (mamifere, păsări, reptile, nevertebrate, pești), 13 parcuri naționale, 70 de termeni de glosar, 8 insigne și 65 de întrebări de quiz în 13 categorii (cu repetiție spațiată SM-2).
+- **Calculatoare și unelte (§11):** indice Shannon–Wiener, locator Maidenhead, azimut și distanță, răcirea aerului cu altitudinea, amprenta de carbon a unei deplasări, sechestrare de carbon (pădure tânără vs. matură), răsărit/apus și fază lunară, scara Beaufort (referință), densitate pe transect sau parcelă.
+- Cifrele de mai sus sunt numărate din datele din `index.html`; conținutul este educațional, iar interfața este în limba română (cu traducere automată opțională a textelor lungi).
+
+## Vezi și: FieldObserver și VietAR
+
+Aplicații înrudite ale aceluiași autor (nefuzionate): [FieldObserver](https://chiuta.github.io/FieldObserver/) — jurnal de observații de teren, offline, într-un singur fișier; [VietAR](https://chiuta.github.io/VietAR/) — aplicație separată care recunoaște animale și plante din fotografie, cameră sau sunet (taxoni din România). Linkurile din README și din ghid se deschid doar la clic; ghidul nu face cereri de rețea.
+
 ## Istoric / Changelog
+- **2.0.1 — 2026-10-27:** descriere concretă (meta, manifest, app.json, README) din datele și calculatoarele reale; note „vezi și” FieldObserver și VietAR (în ghid și în README); linii Stare/Offline; CHANGELOG.md (anterior: v2.0.0).
 
 ### 1.2.9 — 2026-10-23
 

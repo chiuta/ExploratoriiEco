@@ -2,7 +2,9 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 2.0.0 · **Last updated:** 2026-10-26
+**Version:** 2.0.1 · **Last updated:** 2026-10-27
+
+**Status:** stable · **Offline:** complete
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -70,7 +72,18 @@ MIT — see the `LICENSE` file. © 2026 Alexandru-Ionuț Chiuță (Alexio). Any 
 
 Audit: 2026-10-10 — verified with Playwright and axe-core (all 20 sections, both themes); no `localStorage`; the journal and the import tested with `<img onerror>` (escaped). Fixed: invisible headings in the "Day" theme (white text on a light background), contrast, an invalid definition list in the glossary.
 
+## What it contains, concretely (from the actual code)
+
+- **Built-in data:** 14 taxa (kingdom → family), 14 kinds of tracks, 12 bird calls (synthesized tones, not recordings), 12 flora and 18 fauna field species (mammals, birds, reptiles, invertebrates, fish), 13 national parks, 70 glossary terms, 8 badges and 65 quiz questions in 13 categories (SM-2 spaced repetition).
+- **Calculators and tools (§11):** Shannon–Wiener index, Maidenhead locator, bearing and distance, air cooling with altitude, trip carbon footprint, carbon sequestration (young vs. mature forest), sunrise/sunset and moon phase, Beaufort scale (reference), density on a transect or plot.
+- The figures above are counted from the data in `index.html`; the content is educational and the interface is in Romanian (with optional machine translation of the long texts).
+
+## See also: FieldObserver and VietAR
+
+Related apps by the same author (not merged): [FieldObserver](https://chiuta.github.io/FieldObserver/) — a field observation journal, offline, in a single file; [VietAR](https://chiuta.github.io/VietAR/) — a separate app that recognises animals and plants from a photo, the camera or sound (taxa of Romania). The links in the README and in the guide open only on click; the guide makes no network requests.
+
 ## History / Changelog
+- **2.0.1 — 2026-10-27:** concrete description (meta, manifest, app.json, README) from the real data and calculators; “see also” notes for FieldObserver and VietAR (in the guide and README); Status/Offline lines; CHANGELOG.md (previous: v2.0.0).
 
 ### 1.2.9 — 2026-10-23
 

@@ -2,9 +2,9 @@
   "schema": 1,
   "slug": "exploratoriieco",
   "name": "EXPLORATORII ECO — Enciclopedia exploratorului de teren",
-  "version": "2.0.0",
-  "updated": "2026-10-26",
-  "description": "Ghid complet, off-line, despre explorarea naturii: taxonomie, urme și semne, biomurile României, metode de observare, jurnal de teren, arii protejate și multe altele.",
+  "version": "2.0.1",
+  "updated": "2026-10-27",
+  "description": "Enciclopedie de teren, într-un singur fișier și fără internet: 20 de secțiuni, cu 14 taxoni, 14 tipuri de urme, 12 chemări, 12 plante și 18 animale de teren, 13 parcuri naționale, un glosar de 70 de termeni și 65 de întrebări de quiz cu repetiție spațiată; 9 calculatoare și unelte (Shannon–Wiener, Maidenhead, azimut și distanță, răcirea aerului cu altitudinea, carbon, răsărit/apus și fază lunară, Beaufort, densitate pe transect) și un jurnal de teren exportabil.",
   "egress": [],
   "permissions": [
     "geolocation",
@@ -19,8 +19,8 @@
     "exploratoriieco.jurnal-v1",
     "exploratoriieco.lang"
   ],
-  "sizeBytes": 1161716,
-  "sha256": "2b440639bb3c133a8640cb08b7684a42f1b74c3fcec50bd089bbdb0250631e8f",
+  "sizeBytes": 1168833,
+  "sha256": "6077bf60ec7b030af48b60d86893a826f7cc282d8178cadc02d45657cf685221",
   "csp": {
     "present": true,
     "directives": {

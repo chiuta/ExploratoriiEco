@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 2.0.0 · **Dernière mise à jour :** 2026-10-26
+**Version :** 2.0.1 · **Dernière mise à jour :** 2026-10-27
+
+**État:** stable · **Hors ligne:** complet
 
 Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -70,7 +72,18 @@ MIT — voir le fichier `LICENSE`. © 2026 Alexandru-Ionuț Chiuță (Alexio). L
 
 Audit : 2026-10-10 — vérifié avec Playwright et axe-core (les 20 sections, les deux thèmes) ; pas de `localStorage` ; le carnet et l'import testés avec `<img onerror>` (échappé). Corrigés : titres invisibles dans le thème « Jour » (texte blanc sur fond clair), contraste, liste de définitions invalide dans le glossaire.
 
+## Ce qu’il contient, concrètement (d’après le code réel)
+
+- **Données intégrées :** 14 taxons (règne → famille), 14 types de traces, 12 appels d’oiseaux (tons synthétisés, pas des enregistrements), 12 espèces de flore et 18 de faune de terrain (mammifères, oiseaux, reptiles, invertébrés, poissons), 13 parcs nationaux, 70 termes de glossaire, 8 badges et 65 questions de quiz en 13 catégories (répétition espacée SM-2).
+- **Calculateurs et outils (§11) :** indice de Shannon–Wiener, localisateur Maidenhead, azimut et distance, gradient thermique avec l’altitude, empreinte carbone d’un trajet, séquestration du carbone (forêt jeune vs mature), lever/coucher du soleil et phase lunaire, échelle de Beaufort (référence), densité sur transect ou parcelle.
+- Les chiffres ci-dessus sont comptés à partir des données de `index.html` ; le contenu est éducatif et l’interface est en roumain (avec traduction automatique facultative des textes longs).
+
+## Voir aussi : FieldObserver et VietAR
+
+Applications voisines du même auteur (non fusionnées) : [FieldObserver](https://chiuta.github.io/FieldObserver/) — carnet d’observations de terrain, hors ligne, en un seul fichier ; [VietAR](https://chiuta.github.io/VietAR/) — application distincte qui reconnaît animaux et plantes à partir d’une photo, de la caméra ou du son (taxons de Roumanie). Les liens du README et du guide ne s’ouvrent qu’au clic ; le guide n’effectue aucune requête réseau.
+
 ## Historique / Changelog
+- **2.0.1 — 2026-10-27 :** description concrète (meta, manifeste, app.json, README) d’après les données et calculateurs réels ; notes « voir aussi » FieldObserver et VietAR (dans le guide et le README) ; lignes État/Hors ligne ; CHANGELOG.md (précédente : v2.0.0).
 
 ### 1.2.9 — 2026-10-23
 
