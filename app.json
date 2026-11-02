@@ -19,8 +19,8 @@
     "exploratoriieco.jurnal-v1",
     "exploratoriieco.lang"
   ],
-  "sizeBytes": 1168833,
-  "sha256": "6077bf60ec7b030af48b60d86893a826f7cc282d8178cadc02d45657cf685221",
+  "sizeBytes": 1309267,
+  "sha256": "3d58e20e966a00d32de989a49ec9aae6a77cf05a144203e6d60c7517ffb30b3b",
   "csp": {
     "present": true,
     "directives": {
@@ -63,7 +63,11 @@
       "store",
       "dialog",
       "label",
-      "bundle"
+      "bundle",
+      "qr",
+      "p2p",
+      "sync",
+      "history"
     ]
   },
   "kit": {
@@ -73,7 +77,11 @@
       "store",
       "dialog",
       "label",
-      "bundle"
+      "bundle",
+      "qr",
+      "p2p",
+      "sync",
+      "history"
     ]
   },
   "selfSerializing": false
