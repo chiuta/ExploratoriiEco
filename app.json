@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "slug": "exploratoriieco",
-  "name": "EXPLORATORII ECO — Enciclopedia exploratorului de teren",
-  "version": "2.0.1",
-  "updated": "2026-10-27",
+  "name": "' + xml(tr('pt', { i: i + 1, t: e.title, lat: e.lat, lon: e.lon })) + '",
+  "version": "2.0.2",
+  "updated": "2026-11-03",
   "description": "Enciclopedie de teren, într-un singur fișier și fără internet: 20 de secțiuni, cu 14 taxoni, 14 tipuri de urme, 12 chemări, 12 plante și 18 animale de teren, 13 parcuri naționale, un glosar de 70 de termeni și 65 de întrebări de quiz cu repetiție spațiată; 9 calculatoare și unelte (Shannon–Wiener, Maidenhead, azimut și distanță, răcirea aerului cu altitudinea, carbon, răsărit/apus și fază lunară, Beaufort, densitate pe transect) și un jurnal de teren exportabil.",
   "egress": [],
   "permissions": [
@@ -13,19 +13,20 @@
     "clipboard",
     "serviceWorker",
     "localStorage",
-    "Web Crypto"
+    "Web Crypto",
+    "BroadcastChannel"
   ],
   "storageKeys": [
     "exploratoriieco.jurnal-v1",
     "exploratoriieco.lang"
   ],
-  "sizeBytes": 1309267,
-  "sha256": "3d58e20e966a00d32de989a49ec9aae6a77cf05a144203e6d60c7517ffb30b3b",
+  "sizeBytes": 1377117,
+  "sha256": "43b0172b4dcec461ac1b104c6652703bb90178e7e7fef28e0199136756d1cbcd",
   "csp": {
     "present": true,
     "directives": {
       "default-src": "'none'",
-      "script-src": "sha256×6",
+      "script-src": "sha256×9",
       "style-src": "'unsafe-inline'",
       "img-src": "'self' data: blob:",
       "media-src": "data: blob:",
