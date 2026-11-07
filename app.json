@@ -2,8 +2,8 @@
   "schema": 1,
   "slug": "exploratoriieco",
   "name": "' + xml(tr('pt', { i: i + 1, t: e.title, lat: e.lat, lon: e.lon })) + '",
-  "version": "2.0.2",
-  "updated": "2026-11-03",
+  "version": "2.0.3",
+  "updated": "2026-11-07",
   "description": "Enciclopedie de teren, într-un singur fișier și fără internet: 20 de secțiuni, cu 14 taxoni, 14 tipuri de urme, 12 chemări, 12 plante și 18 animale de teren, 13 parcuri naționale, un glosar de 70 de termeni și 65 de întrebări de quiz cu repetiție spațiată; 9 calculatoare și unelte (Shannon–Wiener, Maidenhead, azimut și distanță, răcirea aerului cu altitudinea, carbon, răsărit/apus și fază lunară, Beaufort, densitate pe transect) și un jurnal de teren exportabil.",
   "egress": [],
   "permissions": [
@@ -20,8 +20,8 @@
     "exploratoriieco.jurnal-v1",
     "exploratoriieco.lang"
   ],
-  "sizeBytes": 1377117,
-  "sha256": "43b0172b4dcec461ac1b104c6652703bb90178e7e7fef28e0199136756d1cbcd",
+  "sizeBytes": 1378723,
+  "sha256": "d5c65503a4b82ffe7836b09dde7fa058f36cf2f4ddcc7865d95efc3a10b23518",
   "csp": {
     "present": true,
     "directives": {
@@ -72,7 +72,7 @@
     ]
   },
   "kit": {
-    "version": "1.2.0",
+    "version": "1.2.1",
     "modules": [
       "core",
       "store",
