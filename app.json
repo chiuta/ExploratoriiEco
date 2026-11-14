@@ -14,19 +14,20 @@
     "serviceWorker",
     "localStorage",
     "Web Crypto",
+    "WebGL",
     "BroadcastChannel"
   ],
   "storageKeys": [
     "exploratoriieco.jurnal-v1",
     "exploratoriieco.lang"
   ],
-  "sizeBytes": 1431227,
-  "sha256": "05a633fbaa89374df065c17840aea904cd90d644600a887a5df8f88680800271",
+  "sizeBytes": 1482866,
+  "sha256": "3af57c8cb3d11470f95fb7d2ad23515315de820ed6a1e6c74e0c24d10ffa6596",
   "csp": {
     "present": true,
     "directives": {
       "default-src": "'none'",
-      "script-src": "sha256×9",
+      "script-src": "sha256×10",
       "style-src": "'unsafe-inline'",
       "img-src": "'self' data: blob:",
       "media-src": "data: blob:",
