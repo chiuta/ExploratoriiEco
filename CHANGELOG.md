@@ -2,6 +2,13 @@
 
 Format: [SemVer](https://semver.org/lang/ro/) MAJOR.MINOR.PATCH.
 
+## 2.1.3 — 2026-11-19
+
+- Fișa speciei: eticheta ARIA (aria-labelledby) este pusă la randarea fișei, nu în marcajul inițial — referința către un titlu inexistent la încărcare a dispărut (constatat de bateria adversarială din 19 noiembrie 2026)
+- Verificarea integrității fișierului: pe file:// nu se mai încearcă re-citirea fișierului (browserul o blochează oricum) — mesajul explicativ apare direct, fără eroare CORS în consolă
+- Kit fff 1.8.1: dacă stocarea locală este indisponibilă (mod privat, politică de browser), aplicația pornește cu o stocare temporară în memorie, în loc să se oprească
+- Metadate: numele aplicației din `app.json` și din `fff-info` era un fragment de cod (un `<title>` dintr-un șablon SVG al scriptului, luat în locul titlului paginii); acum este titlul real (constatat la scanarea tuturor fișierelor app.json din depozite, 19 noiembrie 2026; kit fff 1.8.1 corectează citirea titlului)
+
 ## 2.1.2 — 2026-11-17
 
 - Compatibilitate cu browsere mai vechi (Chrome/Edge 55+, Firefox 52+, Safari 10.1+/iOS 10.3+): kitul 1.8.0 aduce stratul de compatibilitate (rezerve pentru API-urile care lipsesc în motoarele vechi), iar sintaxa JavaScript mai nouă decât ES2017 a fost înlocuită cu forme echivalente acolo unde exista; expresiile regulate noi și `import()` trec prin rezerve. Fără modificări de funcționalitate intenționate. Verificat cu parser ES2017 și într-un motor vechi simulat, nu pe dispozitive reale.
